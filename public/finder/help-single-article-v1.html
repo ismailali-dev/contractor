@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" data-pwa="true">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO Meta Tags -->
+    <title>Monaclick | Help Single Article v.1</title>
+    <meta name="description" content="Monaclick - Directory & Listings Bootstrap HTML Template">
+    <meta name="keywords" content="directory, listings, search, car dealer, real estate, city guide, business listings, medical directories, event listings, e-commerce, market, multipurpose, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
+    <meta name="author" content="US Logo and Web">
+
+    <!-- Webmanifest + Favicon / App icons -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/app-icons/icon-180x180.png">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Preloaded local web font (Inter) -->
+    <link rel="preload" href="assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Font icons -->
+    <link rel="preload" href="assets/icons/finder-icons.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/icons/finder-icons.min.css">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Bootstrap + Theme styles -->
+    <link rel="preload" href="assets/css/theme.min.css" as="style">
+    <link rel="preload" href="assets/css/theme.rtl.min.css" as="style">
+    <link rel="stylesheet" href="assets/css/theme.min.css" id="theme-styles">
+
+    <!-- Customizer -->
+    <script src="assets/js/customizer.min.js"></script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Customizer offcanvas -->
+    <div class="offcanvas offcanvas-end" id="customizer" tabindex="-1">
+      <div class="offcanvas-header border-bottom">
+        <h4 class="h5 offcanvas-title">Customize theme</h4>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+        <!-- Customizer settings -->
+        <div class="customizer-collapse collapse show" id="customizerSettings">
+
+          <!-- Colors -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fi-swatches text-body-tertiary fs-5 me-2"></i>
+              <h5 class="fs-lg mb-0">Colors</h5>
+            </div>
+            <div class="row row-cols-2 g-3" id="theme-colors">
+              <div class="col">
+                <h6 class="fs-sm mb-2">Primary</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-primary" data-color-labels='["theme-primary", "primary", "primary-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#d85151">
+                  <label for="primary" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #d85151"></label>
+                  <input type="color" class="visually-hidden" id="primary" value="#d85151">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Success</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-success" data-color-labels='["theme-success", "success", "success-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#33b36b">
+                  <label for="success" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #33b36b"></label>
+                  <input type="color" class="visually-hidden" id="success" value="#33b36b">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Warning</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-warning" data-color-labels='["theme-warning", "warning", "warning-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#fc9231">
+                  <label for="warning" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #fc9231"></label>
+                  <input type="color" class="visually-hidden" id="warning" value="#fc9231">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Danger</h6>
+                <div class="color-swatch d-flex border rounded gap-2 p-2" id="theme-danger" data-color-labels='["theme-danger", "danger", "danger-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#f03d3d">
+                  <label for="danger" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #f03d3d"></label>
+                  <input type="color" class="visually-hidden" id="danger" value="#f03d3d">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Info</h6>
+                <div class="color-swatch d-flex border rounded gap-2 p-2" id="theme-info" data-color-labels='["theme-info", "info", "info-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#3d7a81">
+                  <label for="info" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #3d7a81"></label>
+                  <input type="color" class="visually-hidden" id="info" value="#3d7a81">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direction -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center pb-1 mb-2">
+              <i class="fi-sort text-body-tertiary fs-lg me-2" style="transform: rotate(90deg)"></i>
+              <h5 class="fs-lg mb-0">Direction</h5>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border rounded p-3">
+              <div class="me-3">
+                <h6 class="mb-1">RTL</h6>
+                <p class="fs-sm mb-0">Change text direction</p>
+              </div>
+              <div class="form-check form-switch m-0">
+                <input type="checkbox" class="form-check-input" role="switch" id="rtl-switch">
+              </div>
+            </div>
+            <div class="alert alert-info p-2 mt-2 mb-0">
+              <div class="d-flex text-body-emphasis fs-xs py-1 pe-1">
+                <i class="fi-info text-info fs-lg mb-2 mb-sm-0" style="margin-top: .125rem"></i>
+                <div class="ps-2">To switch the text direction of your webpage from LTR to RTL, please consult the detailed instructions provided in the relevant section of our documentation.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Border width -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center pb-1 mb-2">
+              <i class="fi-menu text-body-tertiary fs-lg me-2"></i>
+              <h5 class="fs-lg mb-0">Border width, px</h5>
+            </div>
+            <div class="slider-input d-flex align-items-center gap-3 border rounded p-3" id="border-input">
+              <input type="range" class="form-range" min="0" max="10" step="1" value="1">
+              <input type="number" class="form-control" id="border-width" min="0" max="10" value="1" style="max-width: 5.5rem">
+            </div>
+          </div>
+
+          <!-- Rounding -->
+          <div class="d-flex align-items-center pb-1 mb-2">
+            <i class="fi-maximize text-body-tertiary fs-lg me-2"></i>
+            <h5 class="fs-lg mb-0">Rounding, rem</h5>
+          </div>
+          <div class="slider-input d-flex align-items-center gap-3 border rounded p-3">
+            <input type="range" class="form-range" min="0" max="5" step=".05" value="0.5">
+            <input type="number" class="form-control" id="border-radius" min="0" max="5" step=".05" value="0.5" style="max-width: 5.5rem">
+          </div>
+        </div>
+
+        <!-- Customizer code -->
+        <div class="customizer-collapse collapse" id="customizerCode">
+          <div class="nav mb-3">
+            <a class="nav-link position-relative fs-base p-0" href=".customizer-collapse" data-bs-toggle="collapse" aria-expanded="true" aria-controls="customizerSettings customizerCode">
+              <i class="fi-chevron-left fs-lg ms-n1 me-1"></i>
+              <span class="hover-effect-underline stretched-link">Back to settings</span>
+            </a>
+          </div>
+          <p class="fs-sm pb-1">To apply the provided styles to your webpage, enclose them within a <code>&lt;style&gt;</code> tag and insert this tag into the <code>&lt;head&gt;</code> section of your HTML document after the following link to the main stylesheet:<br><code>&lt;link href=&quot;assets/css/theme.min.css&quot;&gt;</code></p>
+          <div class="position-relative bg-body-tertiary rounded overflow-hidden pt-3">
+            <div class="position-absolute top-0 start-0 w-100 p-3">
+              <button type="button" class="btn btn-sm btn-outline-dark w-100" data-copy-text-from="#generated-styles" data-done-label="Code copied">
+                <i class="fi-copy fs-sm me-1"></i>
+                Copy code
+              </button>
+            </div>
+            <pre class="text-wrap bg-transparent border-0 fs-xs text-body-emphasis p-4 pt-5" id="generated-styles"></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offcanvas footer (Action buttons) -->
+      <div class="offcanvas-header border-top gap-3 d-none" id="customizer-btns">
+        <button type="button" class="btn btn-lg btn-secondary w-100 fs-sm" id="customizer-reset">
+          <i class="fi-trash fs-lg me-2 ms-n1"></i>
+          Reset
+        </button>
+        <button class="btn btn-lg btn-primary hiding-collapse-toggle w-100 fs-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".customizer-collapse" aria-expanded="false" aria-controls="customizerSettings customizerCode">
+          <i class="fi-code fs-lg me-2 ms-n1"></i>
+          Show code
+        </button>
+      </div>
+    </div>
+
+
+    <!-- Navigation bar (Page header) -->
+    <header class="navbar navbar-expand-lg bg-body navbar-sticky sticky-top z-fixed px-0" data-sticky-element>
+      <div class="container">
+        <button type="button" class="navbar-toggler me-3 me-lg-0" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand py-1 py-md-2 py-xl-1 me-2 me-sm-n4 me-md-n5 me-lg-0" href="/">
+          <span class="d-none d-sm-flex flex-shrink-0 text-primary rtl-flip me-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"/><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"/><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"/><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"/></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"/><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"/></svg>
+          </span>
+          Monaclick
+        </a>
+
+        <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
+          <div class="offcanvas-header py-3">
+            <h5 class="offcanvas-title" id="navbarNavLabel">Browse Monaclick</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body pt-2 pb-4 py-lg-0 mx-lg-auto">
+            <ul class="navbar-nav position-relative">
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link" href="/listings/contractors">Contractors</a>
+              </li>
+              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">Account</a>
+                <ul class="dropdown-menu">
+                  <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Auth Pages</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/signin">Sign In</a></li>
+                      <li><a class="dropdown-item" href="/signup">Sign Up</a></li>
+                      <li><a class="dropdown-item" href="/password-recovery">Password Recovery</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="/account/profile">My Profile</a></li>
+                  <li><a class="dropdown-item" href="/account/settings">Account Settings</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/about">About</a></li>
+                  <li><a class="dropdown-item" href="/blog">Blog</a></li>
+                  <li><a class="dropdown-item" href="/contact">Contact</a></li>
+                  <li><a class="dropdown-item" href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="d-flex gap-sm-1">
+          <div class="dropdown">
+            <button type="button" class="theme-switcher btn btn-icon btn-outline-secondary fs-lg border-0 animate-scale" data-bs-toggle="dropdown" data-bs-display="dynamic" aria-expanded="false" aria-label="Toggle theme (light)">
+              <span class="theme-icon-active d-flex animate-target">
+                <i class="fi-sun"></i>
+              </span>
+            </button>
+            <ul class="dropdown-menu start-50 translate-middle-x" style="--fn-dropdown-min-width: 9rem; --fn-dropdown-spacer: .5rem">
+              <li>
+                <button type="button" class="dropdown-item active" data-bs-theme-value="light" aria-pressed="true">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-sun"></i></span>
+                  <span class="theme-label">Light</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="dark" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-moon"></i></span>
+                  <span class="theme-label">Dark</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="auto" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-auto"></i></span>
+                  <span class="theme-label">Auto</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <a class="btn btn-icon btn-outline-secondary fs-lg border-0 animate-shake me-2" href="/signin" aria-label="Sign in to account">
+            <i class="fi-user animate-target"></i>
+          </a>
+
+          <a class="btn btn-primary animate-scale" href="/add-contractor">
+            <i class="fi-plus fs-lg animate-target ms-n2 me-1 me-sm-2"></i>
+            Join<span class="d-none d-xl-inline ms-1">Pro Network</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Page content -->
+    <main class="content-wrapper">
+
+      <!-- Hero with search input -->
+      <section class="container pb-5 mb-lg-3">
+        <div class="bg-info rounded" data-bs-theme="light">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 col-lg-6 offset-lg-1">
+              <div class="pt-5 pb-3 pb-md-5 px-4 px-sm-5 ps-lg-0 pe-md-0">
+                <h1 class="display-6 text-white text-center text-md-start mb-4">How can we help you?</h1>
+                <div class="bg-body border rounded p-2">
+                  <form class="d-flex flex-column flex-sm-row gap-2 p-1">
+                    <div class="position-relative w-100">
+                      <i class="fi-search position-absolute top-50 start-0 translate-middle-y fs-xl text-secondary-emphasis ms-2"></i>
+                      <input type="search" class="form-control form-control-lg form-icon-start border-0 rounded-0" placeholder="What do you need help with?">
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary">Search</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-8 col-sm-6 col-md-5 col-xl-4 offset-xl-1 align-self-end">
+              <div class="ps-md-5 ms-lg-2 ms-xl-0 ps-xl-0">
+                <div class="ratio" style="--fn-aspect-ratio: calc(356 / 416 * 100%)">
+                  <img src="assets/img/help/v1/hero.png" alt="Image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Help topics -->
+      <section class="container pb-5 mb-2 mb-sm-3 mb-md-4 mb-xl-5">
+
+        <!-- Nav pills -->
+        <ul class="nav nav-pills gap-2 pb-1 pb-sm-2 pb-md-3 pb-lg-0 mb-4 mb-lg-5">
+          <li class="nav-item me-1">
+            <a class="nav-link active" aria-current="page" href="#!">For tenants</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!">For hosts</a>
+          </li>
+        </ul>
+
+        <div class="row g-0">
+          <div class="col-md-4 col-lg-3 pb-2 pb-sm-3 pb-md-0 mb-4 mb-md-0">
+            <h2 class="h5 border-bottom pb-3 pb-sm-4 mb-0">Help topics</h2>
+
+            <!-- Nav in format of list group -->
+            <div class="list-group list-group-borderless pt-4 pe-md-4" role="tablist">
+              <a class="list-group-item list-group-item-action d-flex align-items-center fs-base active" href="help-topics-v1.html">Accommodation</a>
+              <a class="list-group-item list-group-item-action d-flex align-items-center fs-base" href="help-topics-v1.html">Booking</a>
+              <a class="list-group-item list-group-item-action d-flex align-items-center fs-base" href="help-topics-v1.html">Payment</a>
+              <a class="list-group-item list-group-item-action d-flex align-items-center fs-base" href="help-topics-v1.html">After a booking</a>
+              <a class="list-group-item list-group-item-action d-flex align-items-center fs-base" href="help-topics-v1.html">Cancellation, notice, extension</a>
+              <a class="list-group-item list-group-item-action d-flex align-items-center fs-base" href="help-topics-v1.html">Regulations</a>
+              <a class="list-group-item list-group-item-action d-flex align-items-center fs-base" href="help-topics-v1.html">Insurances</a>
+            </div>
+
+          </div>
+          <!-- Article content -->
+          <div class="col-md-8 col-lg-9">
+            <div class="d-flex align-items-start border-bottom ps-md-4 pb-3 pb-sm-4">
+              <a class="btn btn-sm btn-outline-secondary border-0 p-0 pe-2" href="help-topics-v1.html" aria-label="Back to main topic">
+                <i class="fi-chevron-left fs-4"></i>
+              </a>
+              <h2 class="h5 d-flex min-w-0 mb-0">
+                <span class="d-md-none">What is included in my rental accommodation?</span>
+                <span class="text-truncate d-none d-md-inline">What is included in my rental accommodation?</span>
+              </h2>
+            </div>
+            <div class="position-relative">
+              <div class="position-absolute top-0 start-0 h-100 border-start d-none d-md-block"></div>
+              <div class="row g-0">
+                <div class="col-xl-11 col-xxl-10 pt-4 ps-md-4">
+                  <p>When you rent a property, it's important to understand exactly what is included in your rental accommodation to ensure that it meets your needs and expectations. Here's a breakdown of the typical inclusions and what you should consider:</p>
+                  <h3 class="h6 pt-2 pt-lg-3">1. Furnishings</h3>
+                  <p>The level of furnishing can vary significantly between rental properties. Typically, rental accommodations are categorized as:</p>
+                  <ul>
+                    <li><span class="text-body-emphasis fw-medium">Fully furnished:</span> Includes essential furniture such as beds, sofas, dining tables, chairs, and sometimes even decor items like lamps, artwork, and rugs. Kitchens are usually equipped with basic appliances and utensils.</li>
+                    <li><span class="text-body-emphasis fw-medium">Partially furnished:</span> Includes some essential furniture but may not have everything you need. For example, the property might include a bed and sofa, but you'll need to provide your own kitchenware and additional furnishings.</li>
+                    <li><span class="text-body-emphasis fw-medium">Unfurnished:</span> Contains no furniture or only basic appliances like a stove and refrigerator. This option gives you the freedom to furnish the space according to your taste but requires an initial investment in furniture.</li>
+                  </ul>
+                  <h3 class="h6 pt-2 pt-lg-3">2. Appliances</h3>
+                  <p>Most rental accommodations include essential appliances, but the specific items can vary:</p>
+                  <ul>
+                    <li><span class="text-body-emphasis fw-medium">Kitchen appliances:</span> Standard inclusions often cover a refrigerator, stove/oven, and microwave. Some rentals may also include a dishwasher, toaster, and coffee maker.</li>
+                    <li><span class="text-body-emphasis fw-medium">Laundry:</span> Depending on the property, you might have an in-unit washer and dryer, access to shared laundry facilities, or no laundry facilities at all.</li>
+                    <li><span class="text-body-emphasis fw-medium">Heating and cooling:</span> Central heating and air conditioning are common, but some properties may only have portable heaters or window A/C units. It's important to check what's available to ensure comfort throughout the year.</li>
+                  </ul>
+                  <h3 class="h6 pt-2 pt-lg-3">3. Utilities</h3>
+                  <p>Utilities are sometimes included in the rent, but this varies by property:</p>
+                  <ul>
+                    <li><span class="text-body-emphasis fw-medium">Included utilities:</span> Some rentals include the cost of water, electricity, gas, heating, and even internet or cable in the rent. This can simplify budgeting, as you won't have separate utility bills to pay.</li>
+                    <li><span class="text-body-emphasis fw-medium">Excluded utilities:</span> If utilities are not included, you'll be responsible for setting up and paying for these services separately. Be sure to ask for an estimate of monthly utility costs so you can budget accordingly.</li>
+                  </ul>
+                  <h3 class="h6 pt-2 pt-lg-3">4. Internet and cable</h3>
+                  <p>Some rental accommodations come with pre-installed internet and cable services, either included in the rent or available as an add-on. If these services are not provided, you'll need to arrange for installation and pay for them separately.</p>
+                  <h3 class="h6 pt-2 pt-lg-3">5. Maintenance and repairs</h3>
+                  <p>Most rental agreements specify that the landlord is responsible for the maintenance and repair of essential services like plumbing, heating, and electrical systems. However, tenants are usually responsible for minor maintenance, such as changing light bulbs or keeping the property clean.</p>
+                  <ul>
+                    <li><span class="text-body-emphasis fw-medium">Emergency repairs:</span> It's important to know how to report urgent issues, such as leaks or heating failures, and what the expected response time is.</li>
+                  </ul>
+                  <h3 class="h6 pt-2 pt-lg-3">6. Parking</h3>
+                  <p>If you have a vehicle, parking is an essential consideration:</p>
+                  <ul>
+                    <li><span class="text-body-emphasis fw-medium">Included parking:</span> Some properties offer dedicated parking spaces, either in a garage or an outdoor lot, as part of the rental agreement.</li>
+                    <li><span class="text-body-emphasis fw-medium">Additional parking:</span> In some cases, parking is available but at an additional cost, or you may need to apply for a permit for street parking.</li>
+                  </ul>
+                  <h3 class="h6 pt-2 pt-lg-3">7. Outdoor space</h3>
+                  <p>Depending on the property type, you may have access to outdoor areas:</p>
+                  <ul>
+                    <li><span class="text-body-emphasis fw-medium">Private outdoor space:</span> Some rentals include a private balcony, patio, or yard, which is typically your responsibility to maintain.</li>
+                    <li><span class="text-body-emphasis fw-medium">Shared outdoor areas:</span> In multi-unit buildings, you might have access to shared spaces like gardens, courtyards, or rooftop terraces.</li>
+                  </ul>
+                  <h3 class="h6 pt-2 pt-lg-3">8. Lease terms</h3>
+                  <p>The inclusions and responsibilities associated with your rental accommodation should be clearly outlined in your lease agreement. This document will specify what is covered by your rent and what additional costs or responsibilities you may incur.</p>
+                  <h3 class="h6 pt-2 pt-lg-3">9. Tenant's responsibilities</h3>
+                  <p>While the landlord typically covers major maintenance and repairs, you may be responsible for maintaining cleanliness, minor repairs, and following specific rules regarding the use of shared facilities.</p>
+                  <h3 class="h6 pt-2 pt-lg-3">Conclusion</h3>
+                  <p>Understanding what is included in your rental accommodation is essential for avoiding surprises and ensuring that the property meets your needs. Always clarify with the landlord or property manager exactly what is provided and what you're responsible for before signing the lease.</p>
+
+                  <div class="pt-4">
+                    <h4 class="h6 pb-1">Was this information helpful?</h4>
+                    <div class="d-flex gap-3">
+                      <button type="button" class="btn btn-outline-secondary">
+                        <i class="fi-thumbs-up fs-base me-1 ms-n1"></i>
+                        Yes
+                      </button>
+                      <button type="button" class="btn btn-outline-secondary">
+                        <i class="fi-thumbs-down fs-base me-1 ms-n1"></i>
+                        No
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="pt-4 mt-2 mt-sm-3">
+          <h3 class="fs-base pb-sm-1">Can't find an answer to your question?</h3>
+          <a class="btn btn-lg btn-primary" href="contact-v1.html">Contact us</a>
+        </div>
+      </section>
+
+
+      <!-- Popular articles -->
+      <section class="bg-body-tertiary py-5">
+        <div class="container py-1 py-sm-3 py-md-4 py-xl-5">
+          <h2 class="pb-2 pb-md-3">Popular articles</h2>
+
+          <!-- Filter nav pills -->
+          <div class="d-flex align-items-center justify-content-between gap-3">
+            <div class="overflow-x-auto pb-3 mb-3 mb-lg-4">
+              <ul class="nav nav-pills flex-nowrap gap-2">
+                <li class="nav-item me-1">
+                  <a class="nav-link text-nowrap active" aria-current="page" href="#!">All</a>
+                </li>
+                <li class="nav-item me-1">
+                  <a class="nav-link text-nowrap" href="#!">Accommodation</a>
+                </li>
+                <li class="nav-item me-1">
+                  <a class="nav-link text-nowrap" href="#!">Booking</a>
+                </li>
+                <li class="nav-item me-1">
+                  <a class="nav-link text-nowrap" href="#!">Payment</a>
+                </li>
+                <li class="nav-item me-1">
+                  <a class="nav-link text-nowrap" href="#!">Cancellation</a>
+                </li>
+                <li class="nav-item me-1">
+                  <a class="nav-link text-nowrap" href="#!">Insurances</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav pb-3 mb-3 mb-lg-4">
+              <a class="nav-link position-relative text-nowrap p-0" href="#!">
+                <span class="hover-effect-underline stretched-link">Browse all<span class="d-none d-sm-inline"> topics</span></span>
+                <i class="fi-chevron-right fs-base mt-1 ms-1 me-n1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Grid of articles that turns into carousel on screens <992px wide (lg breakpoint) -->
+          <div class="swiper" data-swiper='{
+            "slidesPerView": 1,
+            "spaceBetween": 24,
+            "autoHeight": true,
+            "pagination": {
+              "el": ".swiper-pagination",
+              "clickable": true
+            },
+            "breakpoints": {
+              "500": {
+                "slidesPerView": 2
+              },
+              "992": {
+                "slidesPerView": 3
+              }
+            }
+          }'>
+            <div class="swiper-wrapper">
+
+              <!-- Article -->
+              <article class="swiper-slide">
+                <a class="ratio d-flex hover-effect-scale bg-body-secondary rounded overflow-hidden" href="#!" style="--fn-aspect-ratio: calc(300 / 416 * 100%)">
+                  <img src="assets/img/help/v1/01.jpg" class="hover-effect-target" alt="Image">
+                </a>
+                <div class="pt-4">
+                  <div class="text-body-secondary fs-xs text-uppercase pb-2 mt-n1 mb-1">Accommodation</div>
+                  <h3 class="h5 mb-2">
+                    <a class="hover-effect-underline" href="#!">Renting out a condo</a>
+                  </h3>
+                  <p class="fs-sm mb-0">Maximize your investment by renting out your condo - unlock a steady income stream and build wealth over time...</p>
+                </div>
+              </article>
+
+              <!-- Article -->
+              <article class="swiper-slide">
+                <a class="ratio d-flex hover-effect-scale bg-body-secondary rounded overflow-hidden" href="#!" style="--fn-aspect-ratio: calc(300 / 416 * 100%)">
+                  <img src="assets/img/help/v1/02.jpg" class="hover-effect-target" alt="Image">
+                </a>
+                <div class="pt-4">
+                  <div class="text-body-secondary fs-xs text-uppercase pb-2 mt-n1 mb-1">Insurances</div>
+                  <h3 class="h5 mb-2">
+                    <a class="hover-effect-underline" href="#!">What is renters' insurance?</a>
+                  </h3>
+                  <p class="fs-sm mb-0">Renters' insurance is a type of insurance policy that provides coverage for tenants renting a home or apartment...</p>
+                </div>
+              </article>
+
+              <!-- Article -->
+              <article class="swiper-slide">
+                <a class="ratio d-flex hover-effect-scale bg-body-secondary rounded overflow-hidden" href="#!" style="--fn-aspect-ratio: calc(300 / 416 * 100%)">
+                  <img src="assets/img/help/v1/03.jpg" class="hover-effect-target" alt="Image">
+                </a>
+                <div class="pt-4">
+                  <div class="text-body-secondary fs-xs text-uppercase pb-2 mt-n1 mb-1">Booking</div>
+                  <h3 class="h5 mb-2">
+                    <a class="hover-effect-underline" href="#!">Tips and tricks for renters</a>
+                  </h3>
+                  <p class="fs-sm mb-0">Unlock your best renting experience with our essential tips and tricks, designed to help you save money and find the...</p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Pagination (Bullets) -->
+            <div class="swiper-pagination position-static mt-3 mt-md-4"></div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- FAQ (Accordion) -->
+      <section class="container py-5 mb-xxl-3">
+        <div class="row py-1 py-sm-2 py-md-3 py-lg-4 py-xl-5">
+          <div class="col-md-4 col-xl-3 mb-4 mb-md-0" style="margin-top: -120px">
+            <div class="sticky-md-top text-center text-md-start pe-md-4 pe-lg-5 pe-xl-0" style="padding-top: 120px;">
+              <h2>Popular FAQs</h2>
+              <p class="pb-2 pb-md-3">Still have unanswered questions and need to get in touch?</p>
+              <a class="btn btn-lg btn-primary" href="contact-v1.html">Contact us</a>
+            </div>
+          </div>
+          <div class="col-md-8 offset-xl-1">
+
+            <!-- Accordion of questions -->
+            <div class="accordion" id="faq">
+
+              <!-- Question -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading-1">
+                  <button type="button" class="accordion-button hover-effect-underline collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-1" aria-expanded="false" aria-controls="faqCollapse-1">
+                    <span class="me-2">How do I start the process of buying a home?</span>
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" id="faqCollapse-1" aria-labelledby="faqHeading-1" data-bs-parent="#faq">
+                  <div class="accordion-body">The first step is to assess your financial situation and get pre-approved for a mortgage. This will give you a clear understanding of your budget. After that, you can start searching for properties that match your criteria and work with a real estate agent to guide you through the process.</div>
+                </div>
+              </div>
+
+              <!-- Question -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading-2">
+                  <button type="button" class="accordion-button hover-effect-underline collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-2" aria-expanded="false" aria-controls="faqCollapse-2">
+                    <span class="me-2">What should I consider when choosing a neighborhood?</span>
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" id="faqCollapse-2" aria-labelledby="faqHeading-2" data-bs-parent="#faq">
+                  <div class="accordion-body">Consider factors such as the proximity to schools, work, public transportation, safety, and local amenities like shops and parks. It’s also important to research the neighborhood's future development plans and property value trends.</div>
+                </div>
+              </div>
+
+              <!-- Question -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading-3">
+                  <button type="button" class="accordion-button hover-effect-underline collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-3" aria-expanded="false" aria-controls="faqCollapse-3">
+                    <span class="me-2">How much should I budget for closing costs?</span>
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" id="faqCollapse-3" aria-labelledby="faqHeading-3" data-bs-parent="#faq">
+                  <div class="accordion-body">Closing costs typically range from 2% to 5% of the home's purchase price. These costs can include loan origination fees, title insurance, attorney fees, and other related expenses. It's advisable to set aside additional funds for these costs.</div>
+                </div>
+              </div>
+
+              <!-- Question -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading-4">
+                  <button type="button" class="accordion-button hover-effect-underline collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-4" aria-expanded="false" aria-controls="faqCollapse-4">
+                    <span class="me-2">Is it better to rent or buy a home?</span>
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" id="faqCollapse-4" aria-labelledby="faqHeading-4" data-bs-parent="#faq">
+                  <div class="accordion-body">This depends on your personal financial situation, lifestyle, and long-term goals. Buying is often considered a good investment, but it requires a significant upfront cost and ongoing maintenance. Renting offers more flexibility and fewer responsibilities, but you won't build equity.</div>
+                </div>
+              </div>
+
+              <!-- Question -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading-5">
+                  <button type="button" class="accordion-button hover-effect-underline collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-5" aria-expanded="false" aria-controls="faqCollapse-5">
+                    <span class="me-2">How do I determine the right price to offer on a home?</span>
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" id="faqCollapse-5" aria-labelledby="faqHeading-5" data-bs-parent="#faq">
+                  <div class="accordion-body">Research comparable properties in the area that have recently sold to get a sense of the market value. Your real estate agent can also provide a comparative market analysis (CMA) to help determine a fair offer based on the property's condition, location, and market demand.</div>
+                </div>
+              </div>
+
+              <!-- Question -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading-6">
+                  <button type="button" class="accordion-button hover-effect-underline collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-6" aria-expanded="false" aria-controls="faqCollapse-6">
+                    <span class="me-2">What should I look for during a home inspection?</span>
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" id="faqCollapse-6" aria-labelledby="faqHeading-6" data-bs-parent="#faq">
+                  <div class="accordion-body">During a home inspection, focus on the structural integrity of the property, including the roof, foundation, plumbing, electrical systems, and HVAC. Look for signs of water damage, mold, and pests. The inspector will provide a detailed report, which can be used to negotiate repairs or price adjustments.</div>
+                </div>
+              </div>
+
+              <!-- Question -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading-7">
+                  <button type="button" class="accordion-button hover-effect-underline collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-7" aria-expanded="false" aria-controls="faqCollapse-7">
+                    <span class="me-2">What are the benefits of getting a pre-approved mortgage?</span>
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" id="faqCollapse-7" aria-labelledby="faqHeading-7" data-bs-parent="#faq">
+                  <div class="accordion-body">Getting pre-approved for a mortgage shows sellers that you are a serious buyer and can afford the property. It also helps you set a realistic budget and speeds up the home-buying process since your financial documents are already in order.</div>
+                </div>
+              </div>
+
+              <!-- Question -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading-8">
+                  <button type="button" class="accordion-button hover-effect-underline collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-8" aria-expanded="false" aria-controls="faqCollapse-8">
+                    <span class="me-2">How can I make my home more appealing to buyers?</span>
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" id="faqCollapse-8" aria-labelledby="faqHeading-8" data-bs-parent="#faq">
+                  <div class="accordion-body">To make your home more appealing, focus on curb appeal by maintaining the exterior, landscaping, and entryway. Inside, declutter, clean thoroughly, and consider staging the home with neutral décor to allow buyers to envision themselves living there. Address any necessary repairs and updates.</div>
+                </div>
+              </div>
+
+              <!-- Question -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading-9">
+                  <button type="button" class="accordion-button hover-effect-underline collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-9" aria-expanded="false" aria-controls="faqCollapse-9">
+                    <span class="me-2">What is a seller's market vs. a buyer's market?</span>
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" id="faqCollapse-9" aria-labelledby="faqHeading-9" data-bs-parent="#faq">
+                  <div class="accordion-body">A seller's market occurs when there are more buyers than available properties, leading to higher prices and quicker sales. A buyer's market happens when there are more properties than buyers, giving buyers more negotiating power and typically leading to lower prices.</div>
+                </div>
+              </div>
+
+              <!-- Question -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading-10">
+                  <button type="button" class="accordion-button hover-effect-underline collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-10" aria-expanded="false" aria-controls="faqCollapse-10">
+                    <span class="me-2">How long does it take to close on a home?</span>
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" id="faqCollapse-10" aria-labelledby="faqHeading-10" data-bs-parent="#faq">
+                  <div class="accordion-body">The closing process typically takes 30 to 45 days, depending on various factors such as the type of loan, the efficiency of the involved parties, and any unforeseen issues that may arise. Staying organized and responsive can help ensure a smoother, faster closing process.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Page footer -->
+    <footer class="footer bg-body border-top" data-bs-theme="dark">
+      <div class="container pb-md-2">
+        <div class="d-md-flex align-items-center justify-content-between border-bottom pt-5 pb-4 pb-md-5">
+          <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center gap-3 gap-sm-4 mb-4 mb-md-0">
+            <div class="d-flex align-items-center">
+              <i class="fi-mail fs-4 lh-0 text-body d-none d-sm-block me-2"></i>
+              <i class="fi-mail text-body d-sm-none me-2"></i>
+              <h6 class="ps-sm-1 mb-0">
+                <span class="h5 d-none d-sm-block mb-0">Subscribe to our newsletter</span>
+                <span class="d-sm-none">Subscribe to our newsletter</span>
+              </h6>
+            </div>
+            <button type="button" class="btn btn-primary">Subscribe</button>
+          </div>
+          <div class="h5 d-none d-sm-block text-center mb-0">
+            <span class="text-body-secondary fw-normal me-3">Need help?</span>
+            <a class="text-white text-decoration-none hover-effect-underline" href="/contact">Contact us</a>
+          </div>
+          <div class="h6 d-sm-none text-center mb-0">
+            <span class="text-body-secondary fw-normal me-2">Need help?</span>
+            <a class="text-white text-decoration-none hover-effect-underline" href="/contact">Contact us</a>
+          </div>
+        </div>
+
+        <div class="accordion row pt-4 pt-sm-5 mt-3 mt-sm-0" id="footerLinks">
+          <div class="col-md-4 col-lg-5 mb-4 mb-sm-5 mb-md-0">
+            <a class="d-inline-flex align-items-center text-dark-emphasis text-decoration-none mb-3" href="/">
+              <span class="flex-shrink-0 text-primary rtl-flip me-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"/><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"/><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"/><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"/></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"/><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"/></svg>
+              </span>
+              <span class="fs-4 fw-semibold">Monaclick</span>
+            </a>
+            <p class="fs-sm text-body-secondary pt-md-1" style="max-width: 260px">Connecting you with reliable local contractors for all your service needs.</p>
+            <div class="d-flex gap-3 pt-2 pt-md-3">
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/about" aria-label="Follow us on Instagram">
+                <i class="fi-instagram fs-sm"></i>
+              </a>
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/about" aria-label="Follow us on Facebook">
+                <i class="fi-facebook fs-sm"></i>
+              </a>
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/blog" aria-label="Follow us on X (Twitter)">
+                <i class="fi-x fs-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-8 col-md-5 col-lg-4">
+            <div class="accordion-item border-0">
+              <h6 class="accordion-header" id="categoryLinksHeading">
+                <span class="h5 d-none d-sm-block">Popular categories</span>
+                <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#categoryLinks" aria-expanded="false" aria-controls="categoryLinks">Popular categories</button>
+              </h6>
+              <div class="accordion-collapse collapse d-sm-block" id="categoryLinks" aria-labelledby="categoryLinksHeading" data-bs-parent="#footerLinks">
+                <div class="row row-cols-2">
+                  <div class="col">
+                    <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+<li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/listings/contractors">Contractors</a></li>
+</ul>
+                  </div>
+                  <div class="col">
+                    <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+<li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/account/profile">My profile</a></li>
+                      <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/admin">Admin</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <hr class="d-sm-none my-0">
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-3 col-lg-2 offset-lg-1">
+            <div class="accordion-item border-0">
+              <h6 class="accordion-header" id="companyLinksHeading">
+                <span class="h5 d-none d-sm-block">Company</span>
+                <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#companyLinks" aria-expanded="false" aria-controls="companyLinks">Company</button>
+              </h6>
+              <div class="accordion-collapse collapse d-sm-block" id="companyLinks" aria-labelledby="companyLinksHeading" data-bs-parent="#footerLinks">
+                <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/about">About</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/blog">Press &amp; announcements</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/about">Careers at Monaclick</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/contact">Contact us</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/terms-and-conditions">Terms of use</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/terms-and-conditions">Privacy</a></li>
+                </ul>
+              </div>
+              <hr class="d-sm-none my-0">
+            </div>
+          </div>
+        </div>
+
+        <div class="d-md-flex gap-4 pt-4 pt-sm-5">
+          <h6 class="mt-1 mb-md-0">
+            <span class="h5 text-nowrap d-none d-sm-block mb-0">Top cities</span>
+            <span class="text-nowrap d-sm-none">Top cities</span>
+          </h6>
+          <ul class="nav nav-pills gap-2 gap-md-3">
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=new+york">New York</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=chicago">Chicago</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=indianapolis">Indianapolis</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=boston">Boston</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=atlanta">Atlanta</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=cincinnati">Cincinnati</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=los+angeles">Los Angeles</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=dallas">Dallas</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=pittsburgh">Pittsburgh</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=tampa">Tampa</a></li>
+          </ul>
+        </div>
+
+        <div class="d-md-flex align-items-center py-4 pt-sm-5 mt-3 mt-sm-0">
+          <div class="d-flex gap-2 gap-sm-3 justify-content-center ms-md-auto mb-4 mb-md-0 order-md-2">
+            <div><img src="/finder/assets/img/payment-methods/visa-dark-mode.svg" alt="Visa"></div>
+            <div><img src="/finder/assets/img/payment-methods/mastercard.svg" alt="Mastercard"></div>
+            <div><img src="/finder/assets/img/payment-methods/paypal-dark-mode.svg" alt="PayPal"></div>
+            <div><img src="/finder/assets/img/payment-methods/google-pay-dark-mode.svg" alt="Google Pay"></div>
+            <div><img src="/finder/assets/img/payment-methods/apple-pay-dark-mode.svg" alt="Apple Pay"></div>
+          </div>
+          <p class="text-body-secondary fs-sm text-center text-md-start mb-0 me-md-4 order-md-1">&copy; All rights reserved. Developed by <span class="text-body fw-medium">US Logo and Web</span></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <div class="floating-buttons position-fixed top-50 end-0 z-sticky me-3 me-xl-4 pb-4">
+      <a class="btn-scroll-top btn btn-sm bg-body border-0 rounded-pill shadow animate-slide-end" href="#top">
+        Top
+        <i class="fi-arrow-right fs-base ms-1 me-n1 animate-target"></i>
+        <span class="position-absolute top-0 start-0 w-100 h-100 border rounded-pill z-0"></span>
+        <svg class="position-absolute top-0 start-0 w-100 h-100 z-1" viewBox="0 0 62 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x=".75" y=".75" width="60.5" height="30.5" rx="15.25" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+        </svg>
+      </a>
+      <a class="btn btn-sm btn-outline-secondary text-uppercase bg-body rounded-pill shadow animate-rotate ms-2 me-n5" href="#customizer" style="font-size: .625rem; letter-spacing: .05rem;" data-bs-toggle="offcanvas" role="button" aria-controls="customizer">
+        Customize<i class="fi-settings fs-base ms-1 me-n2 animate-target"></i>
+      </a>
+    </div>
+
+
+    <!-- Vendor scripts -->
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/finder/assets/js/monaclick-global-footer.js?v=20260306-3"></script>
+
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
+
+
+

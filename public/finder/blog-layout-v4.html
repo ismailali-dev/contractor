@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" data-pwa="true">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO Meta Tags -->
+    <title>Monaclick | Blog Layout v.4</title>
+    <meta name="description" content="Monaclick - Directory & Listings Bootstrap HTML Template">
+    <meta name="keywords" content="directory, listings, search, car dealer, real estate, city guide, business listings, medical directories, event listings, e-commerce, market, multipurpose, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
+    <meta name="author" content="US Logo and Web">
+
+    <!-- Webmanifest + Favicon / App icons -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/app-icons/icon-180x180.png">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Preloaded local web font (Inter) -->
+    <link rel="preload" href="assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Font icons -->
+    <link rel="preload" href="assets/icons/finder-icons.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/icons/finder-icons.min.css">
+
+    <!-- Bootstrap + Theme styles -->
+    <link rel="preload" href="assets/css/theme.min.css" as="style">
+    <link rel="preload" href="assets/css/theme.rtl.min.css" as="style">
+    <link rel="stylesheet" href="assets/css/theme.min.css" id="theme-styles">
+
+    <!-- Customizer -->
+    <script src="assets/js/customizer.min.js"></script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Customizer offcanvas -->
+    <div class="offcanvas offcanvas-end" id="customizer" tabindex="-1">
+      <div class="offcanvas-header border-bottom">
+        <h4 class="h5 offcanvas-title">Customize theme</h4>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+        <!-- Customizer settings -->
+        <div class="customizer-collapse collapse show" id="customizerSettings">
+
+          <!-- Colors -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fi-swatches text-body-tertiary fs-5 me-2"></i>
+              <h5 class="fs-lg mb-0">Colors</h5>
+            </div>
+            <div class="row row-cols-2 g-3" id="theme-colors">
+              <div class="col">
+                <h6 class="fs-sm mb-2">Primary</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-primary" data-color-labels='["theme-primary", "primary", "primary-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#d85151">
+                  <label for="primary" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #d85151"></label>
+                  <input type="color" class="visually-hidden" id="primary" value="#d85151">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Success</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-success" data-color-labels='["theme-success", "success", "success-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#33b36b">
+                  <label for="success" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #33b36b"></label>
+                  <input type="color" class="visually-hidden" id="success" value="#33b36b">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Warning</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-warning" data-color-labels='["theme-warning", "warning", "warning-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#fc9231">
+                  <label for="warning" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #fc9231"></label>
+                  <input type="color" class="visually-hidden" id="warning" value="#fc9231">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Danger</h6>
+                <div class="color-swatch d-flex border rounded gap-2 p-2" id="theme-danger" data-color-labels='["theme-danger", "danger", "danger-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#f03d3d">
+                  <label for="danger" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #f03d3d"></label>
+                  <input type="color" class="visually-hidden" id="danger" value="#f03d3d">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Info</h6>
+                <div class="color-swatch d-flex border rounded gap-2 p-2" id="theme-info" data-color-labels='["theme-info", "info", "info-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#3d7a81">
+                  <label for="info" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #3d7a81"></label>
+                  <input type="color" class="visually-hidden" id="info" value="#3d7a81">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direction -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center pb-1 mb-2">
+              <i class="fi-sort text-body-tertiary fs-lg me-2" style="transform: rotate(90deg)"></i>
+              <h5 class="fs-lg mb-0">Direction</h5>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border rounded p-3">
+              <div class="me-3">
+                <h6 class="mb-1">RTL</h6>
+                <p class="fs-sm mb-0">Change text direction</p>
+              </div>
+              <div class="form-check form-switch m-0">
+                <input type="checkbox" class="form-check-input" role="switch" id="rtl-switch">
+              </div>
+            </div>
+            <div class="alert alert-info p-2 mt-2 mb-0">
+              <div class="d-flex text-body-emphasis fs-xs py-1 pe-1">
+                <i class="fi-info text-info fs-lg mb-2 mb-sm-0" style="margin-top: .125rem"></i>
+                <div class="ps-2">To switch the text direction of your webpage from LTR to RTL, please consult the detailed instructions provided in the relevant section of our documentation.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Border width -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center pb-1 mb-2">
+              <i class="fi-menu text-body-tertiary fs-lg me-2"></i>
+              <h5 class="fs-lg mb-0">Border width, px</h5>
+            </div>
+            <div class="slider-input d-flex align-items-center gap-3 border rounded p-3" id="border-input">
+              <input type="range" class="form-range" min="0" max="10" step="1" value="1">
+              <input type="number" class="form-control" id="border-width" min="0" max="10" value="1" style="max-width: 5.5rem">
+            </div>
+          </div>
+
+          <!-- Rounding -->
+          <div class="d-flex align-items-center pb-1 mb-2">
+            <i class="fi-maximize text-body-tertiary fs-lg me-2"></i>
+            <h5 class="fs-lg mb-0">Rounding, rem</h5>
+          </div>
+          <div class="slider-input d-flex align-items-center gap-3 border rounded p-3">
+            <input type="range" class="form-range" min="0" max="5" step=".05" value="0.5">
+            <input type="number" class="form-control" id="border-radius" min="0" max="5" step=".05" value="0.5" style="max-width: 5.5rem">
+          </div>
+        </div>
+
+        <!-- Customizer code -->
+        <div class="customizer-collapse collapse" id="customizerCode">
+          <div class="nav mb-3">
+            <a class="nav-link position-relative fs-base p-0" href=".customizer-collapse" data-bs-toggle="collapse" aria-expanded="true" aria-controls="customizerSettings customizerCode">
+              <i class="fi-chevron-left fs-lg ms-n1 me-1"></i>
+              <span class="hover-effect-underline stretched-link">Back to settings</span>
+            </a>
+          </div>
+          <p class="fs-sm pb-1">To apply the provided styles to your webpage, enclose them within a <code>&lt;style&gt;</code> tag and insert this tag into the <code>&lt;head&gt;</code> section of your HTML document after the following link to the main stylesheet:<br><code>&lt;link href=&quot;assets/css/theme.min.css&quot;&gt;</code></p>
+          <div class="position-relative bg-body-tertiary rounded overflow-hidden pt-3">
+            <div class="position-absolute top-0 start-0 w-100 p-3">
+              <button type="button" class="btn btn-sm btn-outline-dark w-100" data-copy-text-from="#generated-styles" data-done-label="Code copied">
+                <i class="fi-copy fs-sm me-1"></i>
+                Copy code
+              </button>
+            </div>
+            <pre class="text-wrap bg-transparent border-0 fs-xs text-body-emphasis p-4 pt-5" id="generated-styles"></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offcanvas footer (Action buttons) -->
+      <div class="offcanvas-header border-top gap-3 d-none" id="customizer-btns">
+        <button type="button" class="btn btn-lg btn-secondary w-100 fs-sm" id="customizer-reset">
+          <i class="fi-trash fs-lg me-2 ms-n1"></i>
+          Reset
+        </button>
+        <button class="btn btn-lg btn-primary hiding-collapse-toggle w-100 fs-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".customizer-collapse" aria-expanded="false" aria-controls="customizerSettings customizerCode">
+          <i class="fi-code fs-lg me-2 ms-n1"></i>
+          Show code
+        </button>
+      </div>
+    </div>
+
+
+    <!-- Navigation bar (Page header) -->
+    <header class="navbar navbar-expand-lg bg-body navbar-sticky sticky-top z-fixed px-0" data-sticky-element>
+      <div class="container">
+        <button type="button" class="navbar-toggler me-3 me-lg-0" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand py-1 py-md-2 py-xl-1 me-2 me-sm-n4 me-md-n5 me-lg-0" href="/">
+          <span class="d-none d-sm-flex flex-shrink-0 text-primary rtl-flip me-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"/><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"/><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"/><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"/></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"/><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"/></svg>
+          </span>
+          Monaclick
+        </a>
+
+        <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
+          <div class="offcanvas-header py-3">
+            <h5 class="offcanvas-title" id="navbarNavLabel">Browse Monaclick</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body pt-2 pb-4 py-lg-0 mx-lg-auto">
+            <ul class="navbar-nav position-relative">
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link" href="/listings/contractors">Contractors</a>
+              </li>
+              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">Account</a>
+                <ul class="dropdown-menu">
+                  <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Auth Pages</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/signin">Sign In</a></li>
+                      <li><a class="dropdown-item" href="/signup">Sign Up</a></li>
+                      <li><a class="dropdown-item" href="/password-recovery">Password Recovery</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="/account/profile">My Profile</a></li>
+                  <li><a class="dropdown-item" href="/account/settings">Account Settings</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/about">About</a></li>
+                  <li><a class="dropdown-item" href="/blog">Blog</a></li>
+                  <li><a class="dropdown-item" href="/contact">Contact</a></li>
+                  <li><a class="dropdown-item" href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="d-flex gap-sm-1">
+          <div class="dropdown">
+            <button type="button" class="theme-switcher btn btn-icon btn-outline-secondary fs-lg border-0 animate-scale" data-bs-toggle="dropdown" data-bs-display="dynamic" aria-expanded="false" aria-label="Toggle theme (light)">
+              <span class="theme-icon-active d-flex animate-target">
+                <i class="fi-sun"></i>
+              </span>
+            </button>
+            <ul class="dropdown-menu start-50 translate-middle-x" style="--fn-dropdown-min-width: 9rem; --fn-dropdown-spacer: .5rem">
+              <li>
+                <button type="button" class="dropdown-item active" data-bs-theme-value="light" aria-pressed="true">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-sun"></i></span>
+                  <span class="theme-label">Light</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="dark" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-moon"></i></span>
+                  <span class="theme-label">Dark</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="auto" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-auto"></i></span>
+                  <span class="theme-label">Auto</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <a class="btn btn-icon btn-outline-secondary fs-lg border-0 animate-shake me-2" href="/signin" aria-label="Sign in to account">
+            <i class="fi-user animate-target"></i>
+          </a>
+
+          <a class="btn btn-primary animate-scale" href="/add-contractor">
+            <i class="fi-plus fs-lg animate-target ms-n2 me-1 me-sm-2"></i>
+            Join<span class="d-none d-xl-inline ms-1">Pro Network</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Page content -->
+    <main class="content-wrapper">
+
+      <!-- Featured posts -->
+      <section class="container pt-4 mt-2 mt-lg-3">
+        <h1 class="h2 pb-2 pb-md-3">Our blog</h1>
+        <div class="row row-cols-1 row-cols-sm-2 gy-5 gx-4 g-sm-3 g-md-4 pb-4 pb-sm-5 mb-3 mb-sm-0 mb-md-2 mb-lg-3 mb-xl-4">
+
+          <!-- Post -->
+          <article class="col">
+            <a class="ratio d-flex hover-effect-scale rounded overflow-hidden mb-3 mb-sm-4" href="blog-single-v3.html" style="--fn-aspect-ratio: calc(421 / 636 * 100%)">
+              <img src="assets/img/blog/v4/featured01.jpg" class="hover-effect-target" alt="Image">
+            </a>
+            <div class="d-flex align-items-center gap-1 text-body-secondary pt-1 pt-sm-0 mb-3">
+              <div class="position-relative nav flex-nowrap align-items-center">
+                <div class="ratio ratio-1x1 flex-shrink-0 me-2" style="width: 24px">
+                  <img class="rounded-circle" src="assets/img/blog/v4/author/01.jpg" alt="Avatar">
+                </div>
+                <a class="nav-link stretched-link p-0" href="#!">Dr. Martha Simpson</a>
+              </div>
+              <i class="fi-bullet"></i>
+              <div class="fs-sm">May 13, 2024</div>
+            </div>
+            <h3 class="h4">
+              <a class="hover-effect-underline" href="blog-single-v3.html">Herbal medicines: advantages and disadvantages</a>
+            </h3>
+            <a class="badge text-secondary-emphasis bg-body-secondary text-uppercase text-decoration-none" href="#!">Herbal medicine</a>
+          </article>
+
+          <!-- Post -->
+          <article class="col">
+            <a class="ratio d-flex hover-effect-scale rounded overflow-hidden mb-3 mb-sm-4" href="blog-single-v3.html" style="--fn-aspect-ratio: calc(421 / 636 * 100%)">
+              <img src="assets/img/blog/v4/featured02.jpg" class="hover-effect-target" alt="Image">
+            </a>
+            <div class="d-flex align-items-center gap-1 text-body-secondary pt-1 pt-sm-0 mb-3">
+              <div class="position-relative nav flex-nowrap align-items-center">
+                <div class="ratio ratio-1x1 flex-shrink-0 me-2" style="width: 24px">
+                  <img class="rounded-circle" src="assets/img/blog/v4/author/02.jpg" alt="Avatar">
+                </div>
+                <a class="nav-link stretched-link p-0" href="#!">Dr. Guy Hawkins</a>
+              </div>
+              <i class="fi-bullet"></i>
+              <div class="fs-sm">April 25, 2024</div>
+            </div>
+            <h3 class="h4">
+              <a class="hover-effect-underline" href="blog-single-v3.html">Five healthcare consumerism trends to watch</a>
+            </h3>
+            <a class="badge text-secondary-emphasis bg-body-secondary text-uppercase text-decoration-none" href="#!">Healthcare system</a>
+          </article>
+        </div>
+        <hr class="m-0">
+      </section>
+
+
+      <!-- Blog posts list + Sidebar -->
+      <section class="container pb-5 pt-4 pt-sm-5 mt-3 mt-sm-0 mt-md-2 mt-lg-3 mt-xl-4">
+        <div class="row pb-2 pb-sm-3 pb-md-4 pb-lg-5 mb-xxl-3">
+
+          <!-- Blog posts list -->
+          <div class="col-lg-8 position-relative z-2">
+
+            <!-- Filter nav pills -->
+            <div class="overflow-x-auto pb-3 mb-3 mb-lg-4">
+              <ul class="nav nav-pills flex-nowrap gap-2">
+                <li class="nav-item me-1">
+                  <a class="nav-link text-nowrap active" aria-current="page" href="#!">Blog</a>
+                </li>
+                <li class="nav-item me-1">
+                  <a class="nav-link text-nowrap" href="#!">News</a>
+                </li>
+                <li class="nav-item me-1">
+                  <a class="nav-link text-nowrap" href="#!">Doctors</a>
+                </li>
+                <li class="nav-item me-1">
+                  <a class="nav-link text-nowrap" href="#!">Patients</a>
+                </li>
+                <li class="nav-item me-1">
+                  <a class="nav-link text-nowrap" href="#!">Healthy tips</a>
+                </li>
+                <li class="nav-item me-1">
+                  <a class="nav-link text-nowrap" href="#!">What to do if...</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Posts list + Pagination -->
+            <div class="vstack gap-3 gap-lg-4">
+
+              <!-- Post -->
+              <article class="d-sm-flex align-items-center justify-content-between">
+                <a class="ratio d-flex hover-effect-scale rounded overflow-hidden order-sm-2" href="blog-single-v3.html" style="max-width: 132px; --fn-aspect-ratio: calc(124 / 132 * 100%)">
+                  <img src="assets/img/blog/v4/01.jpg" class="hover-effect-target" alt="Image">
+                </a>
+                <div class="order-sm-1 pt-4 pt-sm-0 pe-sm-4 pe-md-5 me-sm-2 me-md-0">
+                  <div class="d-flex align-items-center gap-1 text-body-secondary pt-1 pt-sm-0 mb-3">
+                    <div class="position-relative nav flex-nowrap align-items-center">
+                      <div class="ratio ratio-1x1 flex-shrink-0 me-2" style="width: 24px">
+                        <img class="rounded-circle" src="assets/img/blog/v4/author/01.jpg" alt="Avatar">
+                      </div>
+                      <a class="nav-link stretched-link p-0" href="#!">Dr. Martha Simpson</a>
+                    </div>
+                    <i class="fi-bullet"></i>
+                    <div class="fs-sm">June 23, 2024</div>
+                  </div>
+                  <h3 class="h5 mb-2">
+                    <a class="hover-effect-underline" href="blog-single-v3.html">Best practices for using AI in digital pharma advertising</a>
+                  </h3>
+                  <p>Today's healthcare consumers have a strong preference for a patient-centric approach, prioritizing personalized experiences and convenience...</p>
+                  <a class="badge text-secondary-emphasis bg-body-secondary text-uppercase text-decoration-none" href="#!">Healthcare trends</a>
+                </div>
+              </article>
+
+              <!-- Divider -->
+              <hr class="my-3">
+
+              <!-- Post -->
+              <article class="d-sm-flex align-items-center justify-content-between">
+                <a class="ratio d-flex hover-effect-scale rounded overflow-hidden order-sm-2" href="blog-single-v3.html" style="max-width: 132px; --fn-aspect-ratio: calc(124 / 132 * 100%)">
+                  <img src="assets/img/blog/v4/02.jpg" class="hover-effect-target" alt="Image">
+                </a>
+                <div class="order-sm-1 pt-4 pt-sm-0 pe-sm-4 pe-md-5 me-sm-2 me-md-0">
+                  <div class="d-flex align-items-center gap-1 text-body-secondary pt-1 pt-sm-0 mb-3">
+                    <div class="position-relative nav flex-nowrap align-items-center">
+                      <div class="ratio ratio-1x1 flex-shrink-0 me-2" style="width: 24px">
+                        <img class="rounded-circle" src="assets/img/blog/v4/author/03.jpg" alt="Avatar">
+                      </div>
+                      <a class="nav-link stretched-link p-0" href="#!">Dr. Bessie Cooper</a>
+                    </div>
+                    <i class="fi-bullet"></i>
+                    <div class="fs-sm">June 09, 2024</div>
+                  </div>
+                  <h3 class="h5 mb-2">
+                    <a class="hover-effect-underline" href="blog-single-v3.html">How Healthgrades rates America's best hospitals</a>
+                  </h3>
+                  <p>Since its establishment in 1998, Healthgrades has been aiding consumers in assessing and contrasting hospital performance concerning care delivered during a hospital...</p>
+                  <a class="badge text-secondary-emphasis bg-body-secondary text-uppercase text-decoration-none" href="#!">Hospital quality</a>
+                </div>
+              </article>
+
+              <!-- Divider -->
+              <hr class="my-3">
+
+              <!-- Post -->
+              <article class="d-sm-flex align-items-center justify-content-between">
+                <a class="ratio d-flex hover-effect-scale rounded overflow-hidden order-sm-2" href="blog-single-v3.html" style="max-width: 132px; --fn-aspect-ratio: calc(124 / 132 * 100%)">
+                  <img src="assets/img/blog/v4/03.jpg" class="hover-effect-target" alt="Image">
+                </a>
+                <div class="order-sm-1 pt-4 pt-sm-0 pe-sm-4 pe-md-5 me-sm-2 me-md-0">
+                  <div class="d-flex align-items-center gap-1 text-body-secondary pt-1 pt-sm-0 mb-3">
+                    <div class="position-relative nav flex-nowrap align-items-center">
+                      <div class="ratio ratio-1x1 flex-shrink-0 me-2" style="width: 24px">
+                        <img class="rounded-circle" src="assets/img/blog/v4/author/04.jpg" alt="Avatar">
+                      </div>
+                      <a class="nav-link stretched-link p-0" href="#!">Dr. Jerome Bell</a>
+                    </div>
+                    <i class="fi-bullet"></i>
+                    <div class="fs-sm">May 28, 2024</div>
+                  </div>
+                  <h3 class="h5 mb-2">
+                    <a class="hover-effect-underline" href="blog-single-v3.html">Men's healthcare behaviors and attitudes</a>
+                  </h3>
+                  <p>Understanding men's healthcare behaviors and attitudes is crucial for improving their overall well-being. This blog post explores common trends, challenges...</p>
+                  <a class="badge text-secondary-emphasis bg-body-secondary text-uppercase text-decoration-none" href="#!">Medical industry</a>
+                </div>
+              </article>
+
+              <!-- Divider -->
+              <hr class="my-3">
+
+              <!-- Post -->
+              <article class="d-sm-flex align-items-center justify-content-between">
+                <a class="ratio d-flex hover-effect-scale rounded overflow-hidden order-sm-2" href="blog-single-v3.html" style="max-width: 132px; --fn-aspect-ratio: calc(124 / 132 * 100%)">
+                  <img src="assets/img/blog/v4/04.jpg" class="hover-effect-target" alt="Image">
+                </a>
+                <div class="order-sm-1 pt-4 pt-sm-0 pe-sm-4 pe-md-5 me-sm-2 me-md-0">
+                  <div class="d-flex align-items-center gap-1 text-body-secondary pt-1 pt-sm-0 mb-3">
+                    <div class="position-relative nav flex-nowrap align-items-center">
+                      <div class="ratio ratio-1x1 flex-shrink-0 me-2" style="width: 24px">
+                        <img class="rounded-circle" src="assets/img/blog/v4/author/05.jpg" alt="Avatar">
+                      </div>
+                      <a class="nav-link stretched-link p-0" href="#!">Dr. Darlene Robertson</a>
+                    </div>
+                    <i class="fi-bullet"></i>
+                    <div class="fs-sm">May 16, 2024</div>
+                  </div>
+                  <h3 class="h5 mb-2">
+                    <a class="hover-effect-underline" href="blog-single-v3.html">Seven trends affecting pharma marketing</a>
+                  </h3>
+                  <p>The dynamics of how physicians engage with pharmaceutical brands are evolving—has your pharmaceutical marketing strategy adjusted accordingly?...</p>
+                  <a class="badge text-secondary-emphasis bg-body-secondary text-uppercase text-decoration-none" href="#!">Healthcare trends</a>
+                </div>
+              </article>
+
+              <!-- Divider -->
+              <hr class="my-3">
+
+              <!-- Post -->
+              <article class="d-sm-flex align-items-center justify-content-between">
+                <a class="ratio d-flex hover-effect-scale rounded overflow-hidden order-sm-2" href="blog-single-v3.html" style="max-width: 132px; --fn-aspect-ratio: calc(124 / 132 * 100%)">
+                  <img src="assets/img/blog/v4/05.jpg" class="hover-effect-target" alt="Image">
+                </a>
+                <div class="order-sm-1 pt-4 pt-sm-0 pe-sm-4 pe-md-5 me-sm-2 me-md-0">
+                  <div class="d-flex align-items-center gap-1 text-body-secondary pt-1 pt-sm-0 mb-3">
+                    <div class="position-relative nav flex-nowrap align-items-center">
+                      <div class="ratio ratio-1x1 flex-shrink-0 me-2" style="width: 24px">
+                        <img class="rounded-circle" src="assets/img/blog/v4/author/02.jpg" alt="Avatar">
+                      </div>
+                      <a class="nav-link stretched-link p-0" href="#!">Dr. Guy Hawkins</a>
+                    </div>
+                    <i class="fi-bullet"></i>
+                    <div class="fs-sm">May 05, 2024</div>
+                  </div>
+                  <h3 class="h5 mb-2">
+                    <a class="hover-effect-underline" href="blog-single-v3.html">How health systems can thrive as retail clinics rise</a>
+                  </h3>
+                  <p>To appeal to these discerning consumers and stay ahead of the competition, it's crucial to understand and incorporate the following five healthcare consumerism trends...</p>
+                  <a class="badge text-secondary-emphasis bg-body-secondary text-uppercase text-decoration-none" href="#!">Healthcare system</a>
+                </div>
+              </article>
+
+              <!-- Divider -->
+              <hr class="my-3">
+
+              <!-- Post -->
+              <article class="d-sm-flex align-items-center justify-content-between">
+                <a class="ratio d-flex hover-effect-scale rounded overflow-hidden order-sm-2" href="blog-single-v3.html" style="max-width: 132px; --fn-aspect-ratio: calc(124 / 132 * 100%)">
+                  <img src="assets/img/blog/v4/06.jpg" class="hover-effect-target" alt="Image">
+                </a>
+                <div class="order-sm-1 pt-4 pt-sm-0 pe-sm-4 pe-md-5 me-sm-2 me-md-0">
+                  <div class="d-flex align-items-center gap-1 text-body-secondary pt-1 pt-sm-0 mb-3">
+                    <div class="position-relative nav flex-nowrap align-items-center">
+                      <div class="ratio ratio-1x1 flex-shrink-0 me-2" style="width: 24px">
+                        <img class="rounded-circle" src="assets/img/blog/v4/author/06.jpg" alt="Avatar">
+                      </div>
+                      <a class="nav-link stretched-link p-0" href="#!">Dr. Jacob Jones</a>
+                    </div>
+                    <i class="fi-bullet"></i>
+                    <div class="fs-sm">April 17, 2024</div>
+                  </div>
+                  <h3 class="h5 mb-2">
+                    <a class="hover-effect-underline" href="blog-single-v3.html">Five healthcare consumerism trends to watch</a>
+                  </h3>
+                  <p>Today's healthcare consumers have a strong preference for a patient-centric approach, prioritizing personalized experiences and convenience...</p>
+                  <a class="badge text-secondary-emphasis bg-body-secondary text-uppercase text-decoration-none" href="#!">Healthcare trends</a>
+                </div>
+              </article>
+
+              <!-- Divider -->
+              <hr class="my-3">
+
+              <!-- Post -->
+              <article class="d-sm-flex align-items-center justify-content-between">
+                <a class="ratio d-flex hover-effect-scale rounded overflow-hidden order-sm-2" href="blog-single-v3.html" style="max-width: 132px; --fn-aspect-ratio: calc(124 / 132 * 100%)">
+                  <img src="assets/img/blog/v4/07.jpg" class="hover-effect-target" alt="Image">
+                </a>
+                <div class="order-sm-1 pt-4 pt-sm-0 pe-sm-4 pe-md-5 me-sm-2 me-md-0">
+                  <div class="d-flex align-items-center gap-1 text-body-secondary pt-1 pt-sm-0 mb-3">
+                    <div class="position-relative nav flex-nowrap align-items-center">
+                      <div class="ratio ratio-1x1 flex-shrink-0 me-2" style="width: 24px">
+                        <img class="rounded-circle" src="assets/img/blog/v4/author/07.jpg" alt="Avatar">
+                      </div>
+                      <a class="nav-link stretched-link p-0" href="#!">Dr. Brooklyn Simmons</a>
+                    </div>
+                    <i class="fi-bullet"></i>
+                    <div class="fs-sm">April 12, 2024</div>
+                  </div>
+                  <h3 class="h5 mb-2">
+                    <a class="hover-effect-underline" href="blog-single-v3.html">2024 Hospital quality awards calendar</a>
+                  </h3>
+                  <p>The current healthcare landscape emphasizes the need for fast, digital interactions and effective, affordable treatment options...</p>
+                  <a class="badge text-secondary-emphasis bg-body-secondary text-uppercase text-decoration-none" href="#!">Healthcare quality</a>
+                </div>
+              </article>
+
+              <!-- Divider -->
+              <hr class="my-3">
+
+              <!-- Post -->
+              <article class="d-sm-flex align-items-center justify-content-between">
+                <a class="ratio d-flex hover-effect-scale rounded overflow-hidden order-sm-2" href="blog-single-v3.html" style="max-width: 132px; --fn-aspect-ratio: calc(124 / 132 * 100%)">
+                  <img src="assets/img/blog/v4/08.jpg" class="hover-effect-target" alt="Image">
+                </a>
+                <div class="order-sm-1 pt-4 pt-sm-0 pe-sm-4 pe-md-5 me-sm-2 me-md-0">
+                  <div class="d-flex align-items-center gap-1 text-body-secondary pt-1 pt-sm-0 mb-3">
+                    <div class="position-relative nav flex-nowrap align-items-center">
+                      <div class="ratio ratio-1x1 flex-shrink-0 me-2" style="width: 24px">
+                        <img class="rounded-circle" src="assets/img/blog/v4/author/08.jpg" alt="Avatar">
+                      </div>
+                      <a class="nav-link stretched-link p-0" href="#!">Dr. Arlene McCoy</a>
+                    </div>
+                    <i class="fi-bullet"></i>
+                    <div class="fs-sm">March 30, 2024</div>
+                  </div>
+                  <h3 class="h5 mb-2">
+                    <a class="hover-effect-underline" href="blog-single-v3.html">What physicians value most when making referrals</a>
+                  </h3>
+                  <p>Discover what physicians value most when making referrals. This blog post delves into the key factors influencing their decisions, including trust, patient...</p>
+                  <a class="badge text-secondary-emphasis bg-body-secondary text-uppercase text-decoration-none" href="#!">Treatment options</a>
+                </div>
+              </article>
+
+              <!-- Divider -->
+              <hr class="my-3">
+
+              <!-- Pagination -->
+              <nav aria-label="Blog pagination">
+                <ul class="pagination pagination-lg">
+                  <li class="page-item active" aria-current="page">
+                    <span class="page-link">
+                      1
+                      <span class="visually-hidden">(current)</span>
+                    </span>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#!">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#!">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#!">4</a>
+                  </li>
+                  <li class="page-item">
+                    <span class="page-link pe-none">...</span>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#!">8</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+
+          <!-- Sidebar that turns into offcanvas on screens < 992px wide (lg breakpoint) -->
+          <aside class="col-lg-4 col-xl-3 offset-xl-1" style="margin-top: -105px">
+            <div class="offcanvas-lg offcanvas-end sticky-lg-top ps-lg-4 ps-xl-0" id="blogSidebar">
+              <div class="d-none d-lg-block" style="height: 105px"></div>
+              <div class="offcanvas-header border-bottom py-3">
+                <h3 class="h5 offcanvas-title">Sidebar</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#blogSidebar" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body d-block">
+
+                <!-- Categories -->
+                <div class="pb-3 mb-3 mb-lg-4">
+                  <h4 class="h5 d-none d-lg-block">Categories</h4>
+                  <h4 class="h6 d-lg-none">Categories</h4>
+                  <ul class="nav flex-column gap-1 my-n1">
+                    <li class="nav-item">
+                      <a class="nav-link position-relative justify-content-between fw-semibold py-1 px-0" href="#!">
+                        <span class="hover-effect-underline stretched-link">All topics</span>
+                        <span class="fs-xs text-body-secondary">(130)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link position-relative justify-content-between fw-normal py-1 px-0" href="#!">
+                        <span class="hover-effect-underline stretched-link">Healthcare system</span>
+                        <span class="fs-xs text-body-secondary">(8)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link position-relative justify-content-between fw-normal py-1 px-0" href="#!">
+                        <span class="hover-effect-underline stretched-link">Hospital quality</span>
+                        <span class="fs-xs text-body-secondary">(15)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link position-relative justify-content-between fw-normal py-1 px-0" href="#!">
+                        <span class="hover-effect-underline stretched-link">Wellness guides</span>
+                        <span class="fs-xs text-body-secondary">(10)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link position-relative justify-content-between fw-normal py-1 px-0" href="#!">
+                        <span class="hover-effect-underline stretched-link">Medical industry</span>
+                        <span class="fs-xs text-body-secondary">(9)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link position-relative justify-content-between fw-normal py-1 px-0" href="#!">
+                        <span class="hover-effect-underline stretched-link">Life science</span>
+                        <span class="fs-xs text-body-secondary">(4)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link position-relative justify-content-between fw-normal py-1 px-0" href="#!">
+                        <span class="hover-effect-underline stretched-link">Herbal medicine</span>
+                        <span class="fs-xs text-body-secondary">(12)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link position-relative justify-content-between fw-normal py-1 px-0" href="#!">
+                        <span class="hover-effect-underline stretched-link">Upcoming events</span>
+                        <span class="fs-xs text-body-secondary">(3)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link position-relative justify-content-between fw-normal py-1 px-0" href="#!">
+                        <span class="hover-effect-underline stretched-link">Family medicine</span>
+                        <span class="fs-xs text-body-secondary">(7)</span>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <!-- Categories collapse -->
+                  <div class="collapse" id="moreCategories">
+                    <ul class="nav flex-column gap-1 mt-2">
+                      <li class="nav-item">
+                        <a class="nav-link position-relative justify-content-between fw-normal py-1 px-0" href="#!">
+                          <span class="hover-effect-underline stretched-link">Medical news</span>
+                          <span class="fs-xs text-body-secondary">(18)</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link position-relative justify-content-between fw-normal py-1 px-0" href="#!">
+                          <span class="hover-effect-underline stretched-link">Health tips</span>
+                          <span class="fs-xs text-body-secondary">(11)</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link position-relative justify-content-between fw-normal py-1 px-0" href="#!">
+                          <span class="hover-effect-underline stretched-link">Doctor advice</span>
+                          <span class="fs-xs text-body-secondary">(25)</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link position-relative justify-content-between fw-normal py-1 px-0" href="#!">
+                          <span class="hover-effect-underline stretched-link">Treatment options</span>
+                          <span class="fs-xs text-body-secondary">(6)</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link position-relative justify-content-between fw-normal py-1 px-0" href="#!">
+                          <span class="hover-effect-underline stretched-link">Healthcare trends</span>
+                          <span class="fs-xs text-body-secondary">(2)</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Show more button -->
+                  <div class="nav">
+                    <a class="nav-link position-relative px-0 pb-0 mt-2 collapsed" href="#moreCategories" data-bs-toggle="collapse" aria-expanded="false" aria-controls="moreCategories" aria-label="Show / hide categories">
+                      <span class="hover-effect-underline stretched-link" data-label-collapsed="Show more" data-label-expanded="Show less"></span>
+                      <i class="collapse-toggle-icon fi-chevron-down fs-base mt-1 ms-1"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Subscription form -->
+                <div class="bg-body-tertiary rounded p-4">
+                  <div class="position-relative mx-auto mb-2" style="width: 40px">
+                    <div class="ratio bg-body-secondary" style="--fn-aspect-ratio: calc(33 / 40 * 100%); -webkit-clip-path: url(#mask); clip-path: url(#mask)">
+                      <img src="assets/img/blog/v4/subscribe.jpg" alt="Image">
+                    </div>
+                    <svg class="position-absolute" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 40 33" fill="none">
+                      <defs>
+                        <clipPath id="mask" clipPathUnits="objectBoundingBox" transform="scale(0.025, 0.0303030303)">
+                          <path d="M28.6582 0.00077145C25.3214 -0.0169982 22.1493 1.4433 20 3.98667C17.8641 1.42591 14.6831 -0.0385342 11.3417 0.00077145C5.07783 0.00077145 0 5.06077 0 11.3026C0 21.9992 18.7342 32.4433 19.4937 32.847C19.8001 33.051 20.1998 33.051 20.5063 32.847C21.2658 32.4433 40 22.1505 40 11.3026C40 5.06077 34.9221 0.00077145 28.6582 0.00077145Z"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <h4 class="h6 text-center">Stay updated with Monaclick</h4>
+                  <form class="vstack gap-3 needs-validation" novalidate>
+                    <input type="email" class="form-control" placeholder="Your email" aria-label="Email input" required>
+                    <button type="submit" class="btn btn-info px-4">Subscribe</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+
+      <!-- Mobile app CTA -->
+      <section class="bg-body-tertiary">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-6 col-lg-5 text-center text-md-start pt-5 pb-md-5 my-md-3">
+              <h2 class="h1">Get the top-rated App!</h2>
+              <p class="pb-3">Choose the best doctor nearby, conduct an online consultation with a specialist, or order medicine in pharmacies at a better price — all this can be done quickly and easily in the Monaclick application. Install and be healthy!</p>
+              <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-3">
+                <a class="btn btn-market btn-lg" href="#!" aria-label="Download on App Store">
+                  <i class="fi-apple lead ms-n1 me-2"></i>
+                  <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="77" height="24" viewBox="0 0 77 24" fill="currentColor"><path d="M40.713 15.797c.701-.624 1.055-1.431 1.055-2.427 0-.806-.242-1.486-.733-2.032-.483-.546-1.232-1.02-2.255-1.423-.838-.324-1.418-.625-1.732-.901a1.41 1.41 0 0 1-.548-1.138 1.39 1.39 0 0 1 .475-1.059c.379-.316.91-.482 1.579-.482.854 0 1.611.182 2.288.538l.483-1.518c-.717-.372-1.619-.553-2.699-.553-1.216 0-2.191.308-2.924.917a2.94 2.94 0 0 0-1.103 2.356c0 1.463 1.039 2.577 3.142 3.344.765.277 1.313.577 1.643.901a1.63 1.63 0 0 1 .491 1.194c0 .53-.201.957-.604 1.273-.395.316-.959.474-1.675.474-.999 0-1.917-.245-2.755-.727l-.443 1.557c.773.482 1.796.727 3.077.727 1.386 0 2.465-.34 3.238-1.02zm-31.706.846h2.03L7.195 4.966H4.826L1 16.644h1.974l1.055-3.431h3.867l1.112 3.431zM6.558 8.729l1.007 3.044H4.367l.991-3.044.564-2.198h.04l.596 2.198zm13.122 6.997c.797-.83 1.192-1.961 1.192-3.392 0-1.289-.338-2.316-1.031-3.107-.677-.783-1.514-1.178-2.529-1.178-1.289 0-2.255.506-2.892 1.51h-.032l-.105-1.336h-1.675l.072 2.767v9.068h1.909v-4.42c.499.798 1.313 1.194 2.449 1.194 1.047 0 1.933-.364 2.642-1.107zm-1.313-5.353c.379.53.564 1.202.564 2.024 0 .893-.201 1.605-.604 2.15-.403.538-.959.814-1.675.814-.612 0-1.112-.213-1.49-.633s-.572-.941-.572-1.55v-1.407c0-.15.032-.34.089-.569a2.11 2.11 0 0 1 .749-1.202c.387-.3.814-.459 1.281-.459a1.96 1.96 0 0 1 1.659.83zm12.366 1.961c0 1.431-.395 2.562-1.192 3.392-.709.743-1.595 1.107-2.642 1.107-1.136 0-1.949-.395-2.449-1.194v4.42H22.54v-9.068l-.072-2.767h1.675l.105 1.336h.032c.636-1.004 1.603-1.51 2.892-1.51 1.015 0 1.853.395 2.529 1.178.693.791 1.031 1.818 1.031 3.107zm-1.941.063c0-.822-.185-1.494-.564-2.024a1.96 1.96 0 0 0-1.659-.83c-.467 0-.894.158-1.281.459-.379.308-.628.704-.749 1.202-.056.229-.089.419-.089.569v1.407c0 .609.193 1.131.572 1.55s.878.633 1.49.633c.717 0 1.281-.277 1.676-.814.411-.546.604-1.257.604-2.15zM48.083 9.63h-2.102v4.087c0 1.036.37 1.557 1.112 1.557.338 0 .62-.032.846-.087l.056 1.423c-.379.134-.87.206-1.482.206-.757 0-1.337-.229-1.764-.68s-.636-1.21-.636-2.269V9.623h-1.248V8.223h1.249V6.681l1.869-.553v2.095h2.102V9.63zm8.329 5.922c.749-.83 1.128-1.89 1.128-3.186 0-1.257-.362-2.285-1.096-3.075-.765-.822-1.78-1.233-3.037-1.233-1.305 0-2.344.419-3.117 1.249-.765.83-1.152 1.897-1.152 3.202 0 1.249.37 2.285 1.12 3.099s1.756 1.225 3.013 1.225c1.305 0 2.352-.427 3.142-1.281zm-1.353-5.131c.338.553.508 1.21.508 1.984s-.177 1.439-.524 2.008c-.419.68-.991 1.02-1.716 1.02-.741 0-1.321-.332-1.732-1.004-.338-.546-.508-1.21-.508-1.984 0-.799.161-1.471.508-2.024.395-.672.983-1.004 1.748-1.004.741 0 1.313.332 1.716 1.004zm8.683-.553c-.185-.032-.387-.047-.604-.047-.669 0-1.192.245-1.555.743-.314.435-.475.996-.475 1.66v4.419h-1.909v-5.771l-.056-2.649h1.659l.072 1.613h.056c.201-.553.516-1.004.951-1.336.427-.3.886-.451 1.377-.451a4.09 4.09 0 0 1 .475.032l.008 1.787zm8.451 3.012c.048-.229.072-.514.072-.846 0-1.051-.258-1.929-.765-2.656-.628-.901-1.571-1.352-2.803-1.352-1.257 0-2.255.451-2.997 1.352-.709.846-1.063 1.905-1.063 3.17 0 1.289.379 2.324 1.136 3.091s1.804 1.154 3.133 1.154c1.104 0 2.062-.174 2.876-.522l-.298-1.297c-.693.261-1.466.395-2.312.395-.765 0-1.386-.198-1.869-.585-.532-.435-.806-1.075-.83-1.905h5.719zm-2.119-2.767c.258.403.387.886.371 1.439l-3.963-.008c.056-.561.25-1.051.564-1.455a1.82 1.82 0 0 1 1.514-.759c.677 0 1.184.261 1.514.783z"/></svg>
+                </a>
+                <a class="btn btn-market btn-lg" href="#!" aria-label="Download on Google Play">
+                  <svg class="flex-shrink-0 ms-n1 me-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19.665 10.561l-3.251-1.878-3.329 3.329 3.328 3.329 3.263-1.884c.509-.309.812-.849.812-1.444s-.304-1.135-.823-1.451z" fill="#ffce00"/><path d="M13.085 12.011L4.018 2.879a1.71 1.71 0 0 0-.507 1.216v15.804a1.71 1.71 0 0 0 .507 1.217l9.067-9.105z" fill="#01daff"/><path d="M13.086 12.011l3.329-3.329.005-.005-4.46-2.568L6.08 2.654c-.529-.327-1.171-.338-1.712-.034a2.54 2.54 0 0 0-.349.259l9.067 9.132z" fill="#00f076"/><path d="M4.019 21.116c.113.101.225.18.349.259.27.146.552.225.834.225.304 0 .597-.09.867-.248l5.891-3.439 4.46-2.568-.005-.005-3.329-3.329-9.067 9.104z" fill="#f63448"/></svg>
+                  <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="77" height="24" viewBox="0 0 77 24" fill="currentColor"><path d="M24.575 9.45c-2.184 0-3.914 1.704-3.914 4.071 0 2.272 1.729 4.071 3.914 4.071s3.914-1.704 3.914-4.071c0-2.461-1.729-4.071-3.914-4.071zm0 6.438c-1.183 0-2.184-1.041-2.184-2.462s1.001-2.462 2.184-2.462 2.184.947 2.184 2.462c0 1.42-1.001 2.462-2.184 2.462zM16.11 9.45c-2.184 0-3.914 1.704-3.914 4.071 0 2.272 1.729 4.071 3.914 4.071s3.914-1.704 3.914-4.071c0-2.461-1.729-4.071-3.914-4.071zm0 6.438c-1.183 0-2.184-1.041-2.184-2.462s1.001-2.462 2.184-2.462 2.184.947 2.184 2.462c0 1.42-1.001 2.462-2.184 2.462zM6.007 10.681v1.704h3.914c-.091.947-.455 1.704-.91 2.177-.546.568-1.456 1.231-3.004 1.231-2.457 0-4.278-1.988-4.278-4.544s1.911-4.544 4.278-4.544c1.274 0 2.275.568 3.004 1.231l1.183-1.231C9.193 5.757 7.918 5 6.098 5 2.822 5 0 7.84 0 11.249s2.822 6.249 6.098 6.249c1.82 0 3.095-.568 4.187-1.799 1.092-1.136 1.456-2.745 1.456-3.976 0-.379 0-.757-.091-1.041H6.007zm41.322 1.325c-.364-.947-1.274-2.556-3.277-2.556s-3.641 1.61-3.641 4.071c0 2.272 1.638 4.071 3.823 4.071 1.729 0 2.822-1.136 3.186-1.799l-1.274-.947c-.455.663-1.001 1.136-1.911 1.136s-1.456-.379-1.911-1.231l5.188-2.272-.182-.473zm-5.279 1.326c0-1.515 1.183-2.367 2.002-2.367.637 0 1.274.379 1.456.852l-3.459 1.515zm-4.278 3.882h1.729V5.379h-1.729v11.834zm-2.73-6.911c-.455-.473-1.183-.947-2.093-.947-1.911 0-3.732 1.799-3.732 4.071s1.729 3.976 3.732 3.976c.91 0 1.638-.473 2.002-.947h.091v.568c0 1.515-.819 2.367-2.093 2.367-1.001 0-1.729-.757-1.911-1.42l-1.456.663C30.036 19.675 31.128 21 33.039 21c2.002 0 3.641-1.231 3.641-4.166V9.639h-1.638v.663zm-2.002 5.586c-1.183 0-2.184-1.041-2.184-2.462s1.001-2.462 2.184-2.462 2.093 1.041 2.093 2.462-.91 2.462-2.093 2.462zM55.247 5.379h-4.096v11.834h1.729v-4.45h2.367c1.911 0 3.732-1.42 3.732-3.692s-1.82-3.692-3.732-3.692zm.091 5.681h-2.457V6.988h2.457c1.274 0 2.002 1.136 2.002 1.988-.091 1.041-.819 2.083-2.002 2.083zm10.467-1.704c-1.274 0-2.549.568-3.004 1.799l1.547.663c.364-.663.91-.852 1.547-.852.91 0 1.729.568 1.82 1.515v.095c-.273-.189-1.001-.473-1.729-.473-1.638 0-3.277.947-3.277 2.651 0 1.609 1.365 2.651 2.821 2.651 1.183 0 1.729-.568 2.184-1.136h.091v.947h1.638v-4.544c-.182-2.083-1.729-3.314-3.641-3.314zm-.182 6.533c-.546 0-1.365-.284-1.365-1.041 0-.947 1.001-1.231 1.82-1.231.728 0 1.092.189 1.547.379-.182 1.136-1.092 1.894-2.002 1.894zm9.557-6.249l-1.911 5.112h-.091l-2.002-5.112h-1.82l3.004 7.195-1.729 3.976h1.729L77 9.639h-1.82zm-15.291 7.574h1.729V5.379h-1.729v11.834z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-7 d-flex justify-content-end align-self-end pt-4 pt-sm-5 mt-3 mt-sm-0 mt-xl-2 mt-xxl-4">
+              <div class="position-relative w-100" style="max-width: 663px">
+                <div class="position-absolute rounded-circle overflow-hidden" style="top: 57.46%; left: 36.86%; width: 21.23%">
+                  <div class="ratio ratio-1x1">
+                    <img src="assets/img/home/doctors/app-cta/avatar01.png" alt="Avatar">
+                  </div>
+                </div>
+                <div class="position-absolute rounded-circle overflow-hidden" style="top: 26.71%; right: 0; width: 15.38%">
+                  <div class="ratio ratio-1x1">
+                    <img src="assets/img/home/doctors/app-cta/avatar02.png" alt="Avatar">
+                  </div>
+                </div>
+                <div class="position-absolute top-0 rounded-circle overflow-hidden" style="left: 0; width: 11.61%">
+                  <div class="ratio ratio-1x1">
+                    <img src="assets/img/home/doctors/app-cta/avatar03.png" alt="Avatar">
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="663" viewBox="0 0 663 453" fill="none"><path class="d-none-dark" d="M490.337 190.791h-.683v-72.446c0-24.013-19.446-43.516-43.464-43.516H182.81c-23.984 0-43.464 19.469-43.464 43.516v72.446h-.683c-3.138 0-5.663 2.527-5.663 5.67v50.107c0 3.143 2.525 5.67 5.663 5.67h.683v11.955h-.683c-3.138 0-5.663 2.528-5.663 5.67v50.108c0 3.142 2.525 5.67 5.663 5.67h.683v438.946c0 24.012 19.446 43.515 43.464 43.515h263.38c23.984 0 43.464-19.469 43.464-43.515V283.013h.683c3.138 0 5.663-2.527 5.663-5.67v-80.882c0-3.143-2.525-5.67-5.663-5.67z" fill="#333d4c"/><path class="d-none d-block-dark" d="M490.337 190.791h-.683v-72.446c0-24.013-19.446-43.516-43.464-43.516H182.81c-23.984 0-43.464 19.469-43.464 43.516v72.446h-.683c-3.138 0-5.663 2.527-5.663 5.67v50.107c0 3.143 2.525 5.67 5.663 5.67h.683v11.955h-.683c-3.138 0-5.663 2.528-5.663 5.67v50.108c0 3.142 2.525 5.67 5.663 5.67h.683v438.946c0 24.012 19.446 43.515 43.464 43.515h263.38c23.984 0 43.464-19.469 43.464-43.515V283.013h.683c3.138 0 5.663-2.527 5.663-5.67v-80.882c0-3.143-2.525-5.67-5.663-5.67z" fill="#111827"/><path class="d-none-dark" d="M441.689 797.411H187.316c-19.481 0-35.277-15.814-35.277-35.318V120.906c0-19.503 15.796-35.318 35.277-35.318h254.407c19.48 0 35.276 15.815 35.276 35.318v641.153c0 19.538-15.796 35.352-35.31 35.352z" fill="#fff"/><path class="d-none d-block-dark" d="M441.689 797.411H187.316c-19.481 0-35.277-15.814-35.277-35.318V120.906c0-19.503 15.796-35.318 35.277-35.318h254.407c19.48 0 35.276 15.815 35.276 35.318v641.153c0 19.538-15.796 35.352-35.31 35.352z" fill="#1d2735"/><path class="text-dark-emphasis" d="M228.009 235v-20.364h13.045v3.093h-9.357v5.528h8.462v3.092h-8.462V235h-3.688zm16.247 0v-15.273h3.599V235h-3.599zm1.809-17.44c-.57 0-1.06-.189-1.471-.567-.411-.385-.617-.845-.617-1.382 0-.544.206-1.004.617-1.382.411-.385.901-.577 1.471-.577.577 0 1.068.192 1.472.577.411.378.616.838.616 1.382 0 .537-.205.997-.616 1.382-.404.378-.895.567-1.472.567zm9.091 8.491V235h-3.6v-15.273h3.441v2.595h.179a4.36 4.36 0 0 1 1.68-2.038c.776-.504 1.734-.756 2.874-.756 1.054 0 1.972.226 2.754.677.789.45 1.399 1.103 1.83 1.958.437.855.653 1.893.646 3.113V235h-3.6v-9.168c0-1.02-.265-1.819-.795-2.396-.524-.577-1.25-.865-2.178-.865-.629 0-1.189.139-1.68.418-.484.271-.865.666-1.143 1.183-.272.517-.408 1.143-.408 1.879zm19.131 9.217c-1.2 0-2.274-.308-3.222-.924s-1.697-1.512-2.247-2.685-.825-2.598-.825-4.275c0-1.697.278-3.129.835-4.296.563-1.173 1.322-2.058 2.277-2.655a5.85 5.85 0 0 1 3.192-.905c.894 0 1.63.153 2.207.458.577.298 1.034.659 1.372 1.084a6.64 6.64 0 0 1 .786 1.183h.149v-7.617h3.609V235h-3.54v-2.406h-.218a6.16 6.16 0 0 1-.806 1.183c-.351.411-.815.762-1.392 1.054s-1.302.437-2.177.437zm1.004-2.953c.762 0 1.412-.205 1.949-.616.537-.418.944-.998 1.223-1.74s.417-1.608.417-2.595-.139-1.846-.417-2.576c-.272-.729-.676-1.296-1.213-1.7-.531-.404-1.184-.606-1.959-.606-.802 0-1.472.208-2.009.626s-.941.994-1.213 1.73-.407 1.578-.407 2.526c0 .954.135 1.806.407 2.555.279.742.686 1.329 1.223 1.76.544.424 1.21.636 1.999.636zm22.305 2.993c-.968 0-1.84-.172-2.615-.517-.769-.351-1.379-.868-1.83-1.551-.444-.683-.666-1.525-.666-2.526 0-.861.159-1.574.477-2.137a3.7 3.7 0 0 1 1.303-1.353 6.56 6.56 0 0 1 1.859-.765c.696-.179 1.416-.308 2.158-.388l2.178-.249c.556-.079.961-.198 1.213-.358.258-.165.387-.42.387-.765v-.06c0-.749-.222-1.329-.666-1.74s-1.084-.616-1.919-.616c-.881 0-1.581.192-2.098.576-.51.385-.855.839-1.034 1.363l-3.361-.478c.265-.928.703-1.703 1.313-2.326.61-.63 1.355-1.101 2.237-1.412.882-.318 1.856-.478 2.923-.478.736 0 1.469.087 2.198.259s1.395.457 1.998.855c.603.391 1.087.925 1.452 1.601.371.676.557 1.521.557 2.535V235h-3.46v-2.098h-.12a4.39 4.39 0 0 1-.924 1.193c-.392.365-.885.66-1.482.885-.59.219-1.283.328-2.078.328zm.935-2.645c.722 0 1.348-.142 1.879-.427.53-.292.938-.676 1.223-1.154a2.94 2.94 0 0 0 .437-1.561v-1.799c-.112.092-.305.179-.576.258s-.564.149-.895.209l-.985.159-.845.119c-.537.073-1.017.193-1.442.358s-.759.398-1.004.696c-.245.292-.368.67-.368 1.134 0 .663.242 1.163.726 1.501s1.1.507 1.85.507zm23.361 2.605c-1.2 0-2.274-.308-3.222-.924s-1.697-1.512-2.247-2.685-.825-2.598-.825-4.275c0-1.697.278-3.129.835-4.296.564-1.173 1.323-2.058 2.277-2.655.955-.603 2.019-.905 3.192-.905.895 0 1.631.153 2.207.458.577.298 1.034.659 1.373 1.084a6.63 6.63 0 0 1 .785 1.183h.149v-7.617h3.61V235h-3.54v-2.406h-.219c-.186.371-.454.765-.805 1.183-.352.411-.816.762-1.392 1.054s-1.303.437-2.178.437zm1.004-2.953c.763 0 1.412-.205 1.949-.616.537-.418.945-.998 1.223-1.74s.418-1.608.418-2.595-.139-1.846-.418-2.576c-.272-.729-.676-1.296-1.213-1.7-.53-.404-1.183-.606-1.959-.606-.802 0-1.471.208-2.008.626s-.942.994-1.213 1.73-.408 1.578-.408 2.526c0 .954.136 1.806.408 2.555.278.742.686 1.329 1.223 1.76.543.424 1.209.636 1.998.636zm17.627 2.983c-1.491 0-2.784-.328-3.878-.984s-1.942-1.574-2.545-2.754c-.597-1.18-.895-2.559-.895-4.137s.298-2.959.895-4.146c.603-1.187 1.451-2.108 2.545-2.764s2.387-.985 3.878-.985 2.784.329 3.878.985 1.939 1.577 2.535 2.764c.604 1.187.905 2.569.905 4.146s-.301 2.957-.905 4.137c-.596 1.18-1.441 2.098-2.535 2.754s-2.386.984-3.878.984zm.02-2.883c.809 0 1.485-.222 2.028-.666.544-.451.948-1.054 1.213-1.81.272-.756.408-1.598.408-2.526 0-.934-.136-1.779-.408-2.535-.265-.762-.669-1.369-1.213-1.82s-1.219-.676-2.028-.676c-.829 0-1.518.225-2.068.676-.544.451-.951 1.058-1.223 1.82-.265.756-.398 1.601-.398 2.535 0 .928.133 1.77.398 2.526.272.756.679 1.359 1.223 1.81.55.444 1.239.666 2.068.666zm17.015 2.883c-1.524 0-2.834-.334-3.927-1.004-1.087-.669-1.926-1.594-2.516-2.774-.583-1.187-.875-2.552-.875-4.097 0-1.551.298-2.92.895-4.106.597-1.193 1.438-2.121 2.526-2.784 1.093-.67 2.386-1.005 3.877-1.005 1.24 0 2.337.229 3.292.686.961.451 1.726 1.091 2.296 1.92.57.821.895 1.783.975 2.883h-3.44c-.14-.736-.471-1.349-.995-1.839-.517-.498-1.21-.746-2.078-.746-.736 0-1.382.199-1.939.596s-.991.955-1.302 1.691c-.305.736-.458 1.617-.458 2.645 0 1.04.153 1.935.458 2.684.305.743.732 1.316 1.282 1.72.557.398 1.21.597 1.959.597.53 0 1.004-.099 1.422-.298a2.87 2.87 0 0 0 1.064-.885c.285-.385.48-.852.587-1.402h3.44c-.086 1.08-.405 2.038-.955 2.873-.55.829-1.299 1.479-2.247 1.949-.948.464-2.061.696-3.341.696zm17.125-15.571v2.784h-8.78v-2.784h8.78zm-6.612-3.659h3.599v14.338c0 .484.073.855.219 1.114.152.252.351.424.596.517s.517.139.816.139a3.43 3.43 0 0 0 .616-.05l.438-.089.606 2.814a8.19 8.19 0 0 1-.825.219c-.351.079-.782.126-1.293.139-.901.026-1.713-.11-2.436-.408-.722-.305-1.296-.775-1.72-1.412-.417-.636-.623-1.432-.616-2.386v-14.935zm16.12 19.23c-1.491 0-2.784-.328-3.878-.984s-1.942-1.574-2.545-2.754c-.597-1.18-.895-2.559-.895-4.137s.298-2.959.895-4.146c.603-1.187 1.451-2.108 2.545-2.764s2.387-.985 3.878-.985 2.784.329 3.878.985 1.939 1.577 2.535 2.764c.604 1.187.905 2.569.905 4.146s-.301 2.957-.905 4.137c-.596 1.18-1.441 2.098-2.535 2.754s-2.386.984-3.878.984zm.02-2.883c.809 0 1.485-.222 2.028-.666.544-.451.948-1.054 1.213-1.81.272-.756.408-1.598.408-2.526 0-.934-.136-1.779-.408-2.535-.265-.762-.669-1.369-1.213-1.82s-1.219-.676-2.028-.676c-.829 0-1.518.225-2.068.676-.544.451-.951 1.058-1.223 1.82-.265.756-.398 1.601-.398 2.535 0 .928.133 1.77.398 2.526.272.756.679 1.359 1.223 1.81.55.444 1.239.666 2.068.666zM394.564 235v-15.273h3.49v2.546h.159c.279-.882.756-1.561 1.432-2.039a3.94 3.94 0 0 1 2.337-.725l.666.029c.252.014.461.037.627.07v3.311c-.153-.053-.395-.099-.726-.139a6.6 6.6 0 0 0-.945-.07c-.656 0-1.246.143-1.77.428-.517.278-.925.666-1.223 1.163s-.447 1.071-.447 1.72V235h-3.6z" fill="currentColor"/><path d="M382 334.5c0 37.279-30.221 67.5-67.5 67.5S247 371.779 247 334.5s30.221-67.5 67.5-67.5 67.5 30.221 67.5 67.5z" fill="currentColor" style="color: var(--fn-primary-bg-subtle)"/><path class="text-primary" d="M290 138.4v10.1a6.02 6.02 0 0 1-6 6h-10-.8c-8.4-.4-15.2-7.4-15.2-16 0-8.8 7.2-16 16-16s16 7.1 16 15.9z" fill="currentColor"/><path d="M273.999 134.978c-2.918 0-5.322 2.404-5.322 5.322s2.404 5.322 5.322 5.322 5.322-2.404 5.322-5.322-2.404-5.322-5.322-5.322zm-8.878 5.322a8.91 8.91 0 0 1 8.878-8.878 8.91 8.91 0 0 1 8.878 8.878 8.81 8.81 0 0 1-1.477 4.887l2.256 2.256a1.78 1.78 0 0 1 0 2.514c-.694.695-1.82.695-2.514 0l-2.256-2.256c-1.404.933-3.085 1.477-4.887 1.477a8.91 8.91 0 0 1-8.878-8.878z" fill="#000" fill-opacity=".05"/><g fill="#fff"><path d="M273.901 132.055c-3.504 0-6.345 2.841-6.345 6.345s2.841 6.344 6.345 6.344 6.344-2.84 6.344-6.344-2.84-6.345-6.344-6.345zm-9.456 6.345a9.46 9.46 0 0 1 9.456-9.456 9.46 9.46 0 0 1 9.455 9.456c0 5.222-4.233 9.455-9.455 9.455a9.46 9.46 0 0 1-9.456-9.455z"/><path d="M279.202 143.7c.607-.607 1.592-.607 2.2 0l3 3c.607.608.607 1.593 0 2.2s-1.593.608-2.2 0l-3-3c-.608-.607-.608-1.592 0-2.2z"/></g><path d="M279.803 136.3a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 1 0 0 7.2z" fill="#fff"/><path class="text-primary" fill-rule="evenodd" d="M279.801 130.433a2.27 2.27 0 0 0-2.267 2.267 2.27 2.27 0 0 0 2.267 2.267c1.251 0 2.266-1.015 2.266-2.267s-1.015-2.267-2.266-2.267zm-4.934 2.267c0-2.725 2.209-4.933 4.934-4.933s4.933 2.208 4.933 4.933-2.209 4.933-4.933 4.933-4.934-2.208-4.934-4.933z" fill="currentColor"/><path class="text-dark-emphasis" d="M299.253 147.5v-17.455h11.182v2.651h-8.02v4.739h7.253v2.65h-7.253v7.415h-3.162zm13.926 0v-13.091h3.085V147.5h-3.085zm1.551-14.949c-.489 0-.909-.162-1.261-.486a1.56 1.56 0 0 1-.529-1.184c0-.466.176-.861.529-1.185.352-.33.772-.494 1.261-.494a1.76 1.76 0 0 1 1.261.494c.353.324.529.719.529 1.185a1.56 1.56 0 0 1-.529 1.184c-.346.324-.767.486-1.261.486zm7.792 7.279v7.67h-3.085v-13.091h2.949v2.225h.153c.301-.733.781-1.316 1.44-1.748.665-.431 1.486-.647 2.463-.647.904 0 1.691.193 2.361.579.676.387 1.199.946 1.568 1.679.375.733.56 1.622.554 2.668v8.335h-3.085v-7.858c0-.875-.227-1.56-.682-2.054-.448-.494-1.071-.741-1.866-.741-.54 0-1.02.119-1.44.358a2.48 2.48 0 0 0-.981 1.014c-.233.443-.349.98-.349 1.611zm16.398 7.9c-1.029 0-1.949-.264-2.762-.792s-1.454-1.296-1.926-2.302-.707-2.227-.707-3.664c0-1.455.238-2.682.716-3.682.483-1.006 1.133-1.764 1.951-2.276a5.02 5.02 0 0 1 2.736-.775c.767 0 1.398.13 1.892.392.495.255.887.565 1.176.929.29.358.515.696.674 1.014h.128v-6.529h3.093V147.5h-3.034v-2.062h-.187a5.24 5.24 0 0 1-.691 1.014c-.301.352-.698.653-1.193.903s-1.116.375-1.866.375zm.861-2.531c.653 0 1.21-.176 1.67-.529s.81-.855 1.048-1.491.358-1.378.358-2.224-.119-1.583-.358-2.208c-.233-.625-.579-1.111-1.039-1.457-.455-.347-1.015-.52-1.679-.52-.688 0-1.262.179-1.722.537s-.807.852-1.04 1.483-.349 1.352-.349 2.165.116 1.548.349 2.19c.239.636.588 1.139 1.048 1.508.466.364 1.037.546 1.714.546zm15.193 2.557c-1.312 0-2.446-.273-3.4-.818-.949-.552-1.679-1.33-2.19-2.336s-.768-2.201-.768-3.571c0-1.346.256-2.528.768-3.545.517-1.023 1.238-1.818 2.164-2.387s2.014-.86 3.264-.86c.807 0 1.569.13 2.285.392.721.255 1.358.653 1.909 1.193.557.54.994 1.227 1.312 2.062s.477 1.819.477 2.966v.946h-10.73v-2.079h7.773c-.006-.591-.133-1.117-.383-1.577-.25-.466-.6-.832-1.049-1.099-.443-.267-.96-.401-1.551-.401-.631 0-1.185.153-1.662.46a3.17 3.17 0 0 0-1.116 1.193c-.262.489-.395 1.026-.401 1.611v1.816c0 .761.139 1.414.418 1.96.278.54.667.954 1.167 1.244.5.284 1.086.426 1.756.426.449 0 .855-.062 1.219-.187.363-.131.679-.321.946-.571s.469-.56.605-.929l2.881.324c-.182.761-.529 1.426-1.04 1.994-.506.562-1.154 1-1.943 1.312s-1.694.461-2.711.461zm8.432-.256v-13.091h2.991v2.182h.136c.239-.756.648-1.338 1.228-1.747.585-.415 1.252-.622 2.002-.622l.572.025c.215.012.394.031.536.06v2.838c-.13-.046-.338-.085-.622-.119-.278-.04-.548-.06-.809-.06a3.12 3.12 0 0 0-1.517.366 2.68 2.68 0 0 0-1.049.998c-.255.426-.383.917-.383 1.474v7.696h-3.085z" fill="currentColor"/><path class="text-secondary-emphasis" d="M412.983 328.485a.73.73 0 0 1 1.031 0l5 5a.73.73 0 0 1 0 1.031l-5 5a.73.73 0 0 1-1.031 0 .73.73 0 0 1 0-1.031l4.485-4.485-4.485-4.484a.73.73 0 0 1 0-1.031zm-196.969 0a.73.73 0 0 1 0 1.031L211.53 334l4.484 4.485a.73.73 0 0 1 0 1.031.73.73 0 0 1-1.031 0l-5-5a.73.73 0 0 1 0-1.031l5-5a.73.73 0 0 1 1.031 0z" fill="currentColor"/><circle cx="612" cy="170" r="51" fill="currentColor" style="color: var(--fn-primary-border-subtle)"/><circle cx="38.5" cy="38.5" r="38.5" fill="currentColor" style="color: var(--fn-primary-bg-subtle)"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Page footer -->
+    <footer class="footer bg-body border-top" data-bs-theme="dark">
+      <div class="container pb-md-2">
+        <div class="d-md-flex align-items-center justify-content-between border-bottom pt-5 pb-4 pb-md-5">
+          <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center gap-3 gap-sm-4 mb-4 mb-md-0">
+            <div class="d-flex align-items-center">
+              <i class="fi-mail fs-4 lh-0 text-body d-none d-sm-block me-2"></i>
+              <i class="fi-mail text-body d-sm-none me-2"></i>
+              <h6 class="ps-sm-1 mb-0">
+                <span class="h5 d-none d-sm-block mb-0">Subscribe to our newsletter</span>
+                <span class="d-sm-none">Subscribe to our newsletter</span>
+              </h6>
+            </div>
+            <button type="button" class="btn btn-primary">Subscribe</button>
+          </div>
+          <div class="h5 d-none d-sm-block text-center mb-0">
+            <span class="text-body-secondary fw-normal me-3">Need help?</span>
+            <a class="text-white text-decoration-none hover-effect-underline" href="/contact">Contact us</a>
+          </div>
+          <div class="h6 d-sm-none text-center mb-0">
+            <span class="text-body-secondary fw-normal me-2">Need help?</span>
+            <a class="text-white text-decoration-none hover-effect-underline" href="/contact">Contact us</a>
+          </div>
+        </div>
+
+        <div class="accordion row pt-4 pt-sm-5 mt-3 mt-sm-0" id="footerLinks">
+          <div class="col-md-4 col-lg-5 mb-4 mb-sm-5 mb-md-0">
+            <a class="d-inline-flex align-items-center text-dark-emphasis text-decoration-none mb-3" href="/">
+              <span class="flex-shrink-0 text-primary rtl-flip me-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"/><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"/><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"/><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"/></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"/><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"/></svg>
+              </span>
+              <span class="fs-4 fw-semibold">Monaclick</span>
+            </a>
+            <p class="fs-sm text-body-secondary pt-md-1" style="max-width: 260px">Connecting you with reliable local contractors for all your service needs.</p>
+            <div class="d-flex gap-3 pt-2 pt-md-3">
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/about" aria-label="Follow us on Instagram">
+                <i class="fi-instagram fs-sm"></i>
+              </a>
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/about" aria-label="Follow us on Facebook">
+                <i class="fi-facebook fs-sm"></i>
+              </a>
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/blog" aria-label="Follow us on X (Twitter)">
+                <i class="fi-x fs-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-8 col-md-5 col-lg-4">
+            <div class="accordion-item border-0">
+              <h6 class="accordion-header" id="categoryLinksHeading">
+                <span class="h5 d-none d-sm-block">Popular categories</span>
+                <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#categoryLinks" aria-expanded="false" aria-controls="categoryLinks">Popular categories</button>
+              </h6>
+              <div class="accordion-collapse collapse d-sm-block" id="categoryLinks" aria-labelledby="categoryLinksHeading" data-bs-parent="#footerLinks">
+                <div class="row row-cols-2">
+                  <div class="col">
+                    <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+<li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/listings/contractors">Contractors</a></li>
+</ul>
+                  </div>
+                  <div class="col">
+                    <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+<li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/account/profile">My profile</a></li>
+                      <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/admin">Admin</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <hr class="d-sm-none my-0">
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-3 col-lg-2 offset-lg-1">
+            <div class="accordion-item border-0">
+              <h6 class="accordion-header" id="companyLinksHeading">
+                <span class="h5 d-none d-sm-block">Company</span>
+                <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#companyLinks" aria-expanded="false" aria-controls="companyLinks">Company</button>
+              </h6>
+              <div class="accordion-collapse collapse d-sm-block" id="companyLinks" aria-labelledby="companyLinksHeading" data-bs-parent="#footerLinks">
+                <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/about">About</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/blog">Press &amp; announcements</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/about">Careers at Monaclick</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/contact">Contact us</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/terms-and-conditions">Terms of use</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/terms-and-conditions">Privacy</a></li>
+                </ul>
+              </div>
+              <hr class="d-sm-none my-0">
+            </div>
+          </div>
+        </div>
+
+        <div class="d-md-flex gap-4 pt-4 pt-sm-5">
+          <h6 class="mt-1 mb-md-0">
+            <span class="h5 text-nowrap d-none d-sm-block mb-0">Top cities</span>
+            <span class="text-nowrap d-sm-none">Top cities</span>
+          </h6>
+          <ul class="nav nav-pills gap-2 gap-md-3">
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=new+york">New York</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=chicago">Chicago</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=indianapolis">Indianapolis</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=boston">Boston</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=atlanta">Atlanta</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=cincinnati">Cincinnati</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=los+angeles">Los Angeles</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=dallas">Dallas</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=pittsburgh">Pittsburgh</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=tampa">Tampa</a></li>
+          </ul>
+        </div>
+
+        <div class="d-md-flex align-items-center py-4 pt-sm-5 mt-3 mt-sm-0">
+          <div class="d-flex gap-2 gap-sm-3 justify-content-center ms-md-auto mb-4 mb-md-0 order-md-2">
+            <div><img src="/finder/assets/img/payment-methods/visa-dark-mode.svg" alt="Visa"></div>
+            <div><img src="/finder/assets/img/payment-methods/mastercard.svg" alt="Mastercard"></div>
+            <div><img src="/finder/assets/img/payment-methods/paypal-dark-mode.svg" alt="PayPal"></div>
+            <div><img src="/finder/assets/img/payment-methods/google-pay-dark-mode.svg" alt="Google Pay"></div>
+            <div><img src="/finder/assets/img/payment-methods/apple-pay-dark-mode.svg" alt="Apple Pay"></div>
+          </div>
+          <p class="text-body-secondary fs-sm text-center text-md-start mb-0 me-md-4 order-md-1">&copy; All rights reserved. Developed by <span class="text-body fw-medium">US Logo and Web</span></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Blog sidebar offcanvas toggle that is visible on screens < 992px wide (lg breakpoint) -->
+    <button type="button" class="fixed-bottom z-sticky w-100 btn btn-lg btn-dark border-0 border-top border-light border-opacity-10 rounded-0 pb-4 d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#blogSidebar" aria-controls="blogSidebar" data-bs-theme="light">
+      <i class="fi-sidebar fs-base me-2"></i>
+      Sidebar
+    </button>
+
+
+    <!-- Back to top button -->
+    <div class="floating-buttons position-fixed top-50 end-0 z-sticky me-3 me-xl-4 pb-4">
+      <a class="btn-scroll-top btn btn-sm bg-body border-0 rounded-pill shadow animate-slide-end" href="#top">
+        Top
+        <i class="fi-arrow-right fs-base ms-1 me-n1 animate-target"></i>
+        <span class="position-absolute top-0 start-0 w-100 h-100 border rounded-pill z-0"></span>
+        <svg class="position-absolute top-0 start-0 w-100 h-100 z-1" viewBox="0 0 62 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x=".75" y=".75" width="60.5" height="30.5" rx="15.25" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+        </svg>
+      </a>
+      <a class="btn btn-sm btn-outline-secondary text-uppercase bg-body rounded-pill shadow animate-rotate ms-2 me-n5" href="#customizer" style="font-size: .625rem; letter-spacing: .05rem;" data-bs-toggle="offcanvas" role="button" aria-controls="customizer">
+        Customize<i class="fi-settings fs-base ms-1 me-n2 animate-target"></i>
+      </a>
+    </div>
+    <script src="/finder/assets/js/monaclick-global-footer.js?v=20260306-3"></script>
+
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
+
+
+
