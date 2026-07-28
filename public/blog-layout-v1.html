@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" data-pwa="true">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO Meta Tags -->
+    <title>Monaclick | Blog Layout v.1</title>
+    <meta name="description" content="Monaclick - Directory & Listings Bootstrap HTML Template">
+    <meta name="keywords" content="directory, listings, search, car dealer, real estate, city guide, business listings, medical directories, event listings, e-commerce, market, multipurpose, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
+    <meta name="author" content="US Logo and Web">
+
+    <!-- Webmanifest + Favicon / App icons -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="/finder/manifest.json">
+    <link rel="icon" type="image/png" href="/finder/assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/finder/assets/app-icons/icon-180x180.png">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="/finder/assets/js/theme-switcher.js"></script>
+
+    <!-- Preloaded local web font (Inter) -->
+    <link rel="preload" href="/finder/assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Font icons -->
+    <link rel="preload" href="/finder/assets/icons/finder-icons.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/finder/assets/icons/finder-icons.min.css">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="/finder/assets/vendor/choices.js/public/assets/styles/choices.min.css">
+
+    <!-- Bootstrap + Theme styles -->
+    <link rel="preload" href="/finder/assets/css/theme.min.css" as="style">
+    <link rel="preload" href="/finder/assets/css/theme.rtl.min.css" as="style">
+    <link rel="stylesheet" href="/finder/assets/css/theme.min.css" id="theme-styles">
+
+    <!-- Customizer -->
+    <script src="/finder/assets/js/customizer.min.js"></script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Customizer offcanvas -->
+    <div class="offcanvas offcanvas-end" id="customizer" tabindex="-1">
+      <div class="offcanvas-header border-bottom">
+        <h4 class="h5 offcanvas-title">Customize theme</h4>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+        <!-- Customizer settings -->
+        <div class="customizer-collapse collapse show" id="customizerSettings">
+
+          <!-- Colors -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fi-swatches text-body-tertiary fs-5 me-2"></i>
+              <h5 class="fs-lg mb-0">Colors</h5>
+            </div>
+            <div class="row row-cols-2 g-3" id="theme-colors">
+              <div class="col">
+                <h6 class="fs-sm mb-2">Primary</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-primary" data-color-labels='["theme-primary", "primary", "primary-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#d85151">
+                  <label for="primary" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #d85151"></label>
+                  <input type="color" class="visually-hidden" id="primary" value="#d85151">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Success</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-success" data-color-labels='["theme-success", "success", "success-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#33b36b">
+                  <label for="success" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #33b36b"></label>
+                  <input type="color" class="visually-hidden" id="success" value="#33b36b">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Warning</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-warning" data-color-labels='["theme-warning", "warning", "warning-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#fc9231">
+                  <label for="warning" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #fc9231"></label>
+                  <input type="color" class="visually-hidden" id="warning" value="#fc9231">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Danger</h6>
+                <div class="color-swatch d-flex border rounded gap-2 p-2" id="theme-danger" data-color-labels='["theme-danger", "danger", "danger-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#f03d3d">
+                  <label for="danger" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #f03d3d"></label>
+                  <input type="color" class="visually-hidden" id="danger" value="#f03d3d">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Info</h6>
+                <div class="color-swatch d-flex border rounded gap-2 p-2" id="theme-info" data-color-labels='["theme-info", "info", "info-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#3d7a81">
+                  <label for="info" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #3d7a81"></label>
+                  <input type="color" class="visually-hidden" id="info" value="#3d7a81">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direction -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center pb-1 mb-2">
+              <i class="fi-sort text-body-tertiary fs-lg me-2" style="transform: rotate(90deg)"></i>
+              <h5 class="fs-lg mb-0">Direction</h5>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border rounded p-3">
+              <div class="me-3">
+                <h6 class="mb-1">RTL</h6>
+                <p class="fs-sm mb-0">Change text direction</p>
+              </div>
+              <div class="form-check form-switch m-0">
+                <input type="checkbox" class="form-check-input" role="switch" id="rtl-switch">
+              </div>
+            </div>
+            <div class="alert alert-info p-2 mt-2 mb-0">
+              <div class="d-flex text-body-emphasis fs-xs py-1 pe-1">
+                <i class="fi-info text-info fs-lg mb-2 mb-sm-0" style="margin-top: .125rem"></i>
+                <div class="ps-2">To switch the text direction of your webpage from LTR to RTL, please consult the detailed instructions provided in the relevant section of our documentation.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Border width -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center pb-1 mb-2">
+              <i class="fi-menu text-body-tertiary fs-lg me-2"></i>
+              <h5 class="fs-lg mb-0">Border width, px</h5>
+            </div>
+            <div class="slider-input d-flex align-items-center gap-3 border rounded p-3" id="border-input">
+              <input type="range" class="form-range" min="0" max="10" step="1" value="1">
+              <input type="number" class="form-control" id="border-width" min="0" max="10" value="1" style="max-width: 5.5rem">
+            </div>
+          </div>
+
+          <!-- Rounding -->
+          <div class="d-flex align-items-center pb-1 mb-2">
+            <i class="fi-maximize text-body-tertiary fs-lg me-2"></i>
+            <h5 class="fs-lg mb-0">Rounding, rem</h5>
+          </div>
+          <div class="slider-input d-flex align-items-center gap-3 border rounded p-3">
+            <input type="range" class="form-range" min="0" max="5" step=".05" value="0.5">
+            <input type="number" class="form-control" id="border-radius" min="0" max="5" step=".05" value="0.5" style="max-width: 5.5rem">
+          </div>
+        </div>
+
+        <!-- Customizer code -->
+        <div class="customizer-collapse collapse" id="customizerCode">
+          <div class="nav mb-3">
+            <a class="nav-link position-relative fs-base p-0" href=".customizer-collapse" data-bs-toggle="collapse" aria-expanded="true" aria-controls="customizerSettings customizerCode">
+              <i class="fi-chevron-left fs-lg ms-n1 me-1"></i>
+              <span class="hover-effect-underline stretched-link">Back to settings</span>
+            </a>
+          </div>
+          <p class="fs-sm pb-1">To apply the provided styles to your webpage, enclose them within a <code>&lt;style&gt;</code> tag and insert this tag into the <code>&lt;head&gt;</code> section of your HTML document after the following link to the main stylesheet:<br><code>&lt;link href=&quot;assets/css/theme.min.css&quot;&gt;</code></p>
+          <div class="position-relative bg-body-tertiary rounded overflow-hidden pt-3">
+            <div class="position-absolute top-0 start-0 w-100 p-3">
+              <button type="button" class="btn btn-sm btn-outline-dark w-100" data-copy-text-from="#generated-styles" data-done-label="Code copied">
+                <i class="fi-copy fs-sm me-1"></i>
+                Copy code
+              </button>
+            </div>
+            <pre class="text-wrap bg-transparent border-0 fs-xs text-body-emphasis p-4 pt-5" id="generated-styles"></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offcanvas footer (Action buttons) -->
+      <div class="offcanvas-header border-top gap-3 d-none" id="customizer-btns">
+        <button type="button" class="btn btn-lg btn-secondary w-100 fs-sm" id="customizer-reset">
+          <i class="fi-trash fs-lg me-2 ms-n1"></i>
+          Reset
+        </button>
+        <button class="btn btn-lg btn-primary hiding-collapse-toggle w-100 fs-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".customizer-collapse" aria-expanded="false" aria-controls="customizerSettings customizerCode">
+          <i class="fi-code fs-lg me-2 ms-n1"></i>
+          Show code
+        </button>
+      </div>
+    </div>
+
+
+    <!-- Categories modal -->
+    <div class="modal fade" id="categoriesModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Categories</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-pills gap-2">
+              <li class="nav-item d-md-none me-1">
+                <a class="nav-link active" aria-current="page" href="#!">All</a>
+              </li>
+              <li class="nav-item d-md-none me-1">
+                <a class="nav-link" href="#!">Real estate news</a>
+              </li>
+              <li class="nav-item d-md-none me-1">
+                <a class="nav-link" href="#!">Buying tips</a>
+              </li>
+              <li class="nav-item d-lg-none me-1">
+                <a class="nav-link" href="#!">Selling strategies</a>
+              </li>
+              <li class="nav-item d-xl-none me-1">
+                <a class="nav-link" href="#!">Market trends</a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link" href="#!">Home improvement</a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link" href="#!">Interior design</a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link" href="#!">Renting advice</a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link" href="#!">Neighborhood guides</a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link" href="#!">Property management</a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link" href="#!">Legal and tax issues</a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link" href="#!">Investment advice</a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link" href="#!">Mortgage and financing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Navigation bar (Page header) -->
+    <header class="navbar navbar-expand-lg bg-body navbar-sticky sticky-top z-fixed px-0" data-sticky-element>
+      <div class="container">
+        <button type="button" class="navbar-toggler me-3 me-lg-0" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand py-1 py-md-2 py-xl-1 me-2 me-sm-n4 me-md-n5 me-lg-0" href="/">
+          <span class="d-none d-sm-flex flex-shrink-0 text-primary rtl-flip me-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"/><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"/><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"/><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"/></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"/><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"/></svg>
+          </span>
+          Monaclick
+        </a>
+
+        <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
+          <div class="offcanvas-header py-3">
+            <h5 class="offcanvas-title" id="navbarNavLabel">Browse Monaclick</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body pt-2 pb-4 py-lg-0 mx-lg-auto">
+            <ul class="navbar-nav position-relative">
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link" href="/listings/contractors">Contractors</a>
+              </li>
+              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">Account</a>
+                <ul class="dropdown-menu">
+                  <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Auth Pages</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/signin">Sign In</a></li>
+                      <li><a class="dropdown-item" href="/signup">Sign Up</a></li>
+                      <li><a class="dropdown-item" href="/password-recovery">Password Recovery</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="/account/profile">My Profile</a></li>
+                  <li><a class="dropdown-item" href="/account/settings">Account Settings</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/about">About</a></li>
+                  <li><a class="dropdown-item" href="/blog">Blog</a></li>
+                  <li><a class="dropdown-item" href="/contact">Contact</a></li>
+                  <li><a class="dropdown-item" href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="d-flex gap-sm-1">
+          <div class="dropdown">
+            <button type="button" class="theme-switcher btn btn-icon btn-outline-secondary fs-lg border-0 animate-scale" data-bs-toggle="dropdown" data-bs-display="dynamic" aria-expanded="false" aria-label="Toggle theme (light)">
+              <span class="theme-icon-active d-flex animate-target">
+                <i class="fi-sun"></i>
+              </span>
+            </button>
+            <ul class="dropdown-menu start-50 translate-middle-x" style="--fn-dropdown-min-width: 9rem; --fn-dropdown-spacer: .5rem">
+              <li>
+                <button type="button" class="dropdown-item active" data-bs-theme-value="light" aria-pressed="true">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-sun"></i></span>
+                  <span class="theme-label">Light</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="dark" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-moon"></i></span>
+                  <span class="theme-label">Dark</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="auto" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-auto"></i></span>
+                  <span class="theme-label">Auto</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <a class="btn btn-icon btn-outline-secondary fs-lg border-0 animate-shake me-2" href="/signin" aria-label="Sign in to account">
+            <i class="fi-user animate-target"></i>
+          </a>
+
+          <a class="btn btn-primary animate-scale" href="/add-contractor">
+            <i class="fi-plus fs-lg animate-target ms-n2 me-1 me-sm-2"></i>
+            Join<span class="d-none d-xl-inline ms-1">Pro Network</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Page content -->
+    <main class="content-wrapper">
+
+      <!-- Featured post -->
+      <section class="container pb-5 mb-1 mb-md-2 mb-md-3 mb-lg-4">
+        <div class="bg-body-tertiary rounded overflow-hidden">
+          <div class="row row-cols-1 row-cols-sm-2 g-0">
+            <div class="col position-relative" style="min-height: 220px">
+              <a class="hover-effect-scale position-absolute top-0 start-0 w-100 h-100 overflow-hidden" href="blog-single-v1.html">
+                <img src="/finder/assets/img/blog/v1/featured.jpg" class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Image">
+              </a>
+            </div>
+            <div class="col p-4 p-md-5">
+              <div class="p-sm-2 p-md-0 p-lg-2 p-xl-4 p-xxl-5">
+                <div class="nav mb-3">
+                  <a class="nav-link fs-xs text-uppercase p-0" href="#!">Real estate news</a>
+                </div>
+                <h1>Top trends shaping modern real estate design</h1>
+                <p class="pb-sm-1 pb-md-2 pb-lg-3 pb-xl-0 mb-4 mb-xl-5">Discover the latest trends in contemporary architecture that are transforming modern real estate design today.</p>
+                <a class="btn btn-lg btn-dark" href="blog-single-v1.html">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Blog posts grid -->
+      <section class="container pb-5 mb-xxl-3">
+        <div class="pb-2 pb-sm-3 pb-md-4 pb-lg-5">
+
+          <!-- Categories + Sorting select -->
+          <div class="d-flex align-items-center justify-content-between pb-3 mb-2 mb-md-3">
+            <ul class="nav nav-pills gap-2 d-none d-md-flex">
+              <li class="nav-item me-1">
+                <a class="nav-link active" aria-current="page" href="#!">All</a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link" href="#!">Real estate news</a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link" href="#!">Buying tips</a>
+              </li>
+              <li class="nav-item d-none d-lg-block me-1">
+                <a class="nav-link" href="#!">Selling strategies</a>
+              </li>
+              <li class="nav-item d-none d-xl-block me-1">
+                <a class="nav-link" href="#!">Market trends</a>
+              </li>
+              <li class="nav-item me-1">
+                <button type="button" class="nav-link position-relative border-0" data-bs-toggle="modal" data-bs-target="#categoriesModal">
+                  <span class="hover-effect-underline stretched-link">More categories</span>
+                  <i class="fi-plus fs-base ms-1"></i>
+                </button>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-outline-secondary d-md-none" data-bs-toggle="modal" data-bs-target="#categoriesModal">
+              <i class="fi-list fs-base ms-n1 me-2"></i>
+              Categories
+            </button>
+            <div class="position-relative" style="width: 125px">
+              <i class="fi-sort position-absolute top-50 start-0 translate-middle-y z-2"></i>
+              <select class="form-select border-0 rounded-0 ps-4 pe-1" data-select='{
+                "removeItemButton": false,
+                "classNames": {
+                  "containerInner": ["form-select", "border-0", "rounded-0", "ps-4", "pe-1"]
+                }
+              }'>
+                <option value="Newest">Newest</option>
+                <option value="Popular">Popular</option>
+              </select>
+            </div>
+          </div>
+
+
+          <!-- Posts grid -->
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-5">
+
+            <!-- Article -->
+            <article class="col mb-xl-2">
+              <a class="ratio d-flex hover-effect-scale rounded overflow-hidden mb-3 mb-sm-4" href="blog-single-v1.html" style="--fn-aspect-ratio: calc(300 / 416 * 100%)">
+                <img src="/finder/assets/img/blog/v1/01.jpg" class="hover-effect-target" alt="Image">
+              </a>
+              <div class="nav pb-1 mb-2">
+                <a class="nav-link text-body-secondary fs-xs text-uppercase p-0" href="#!">Renting advice</a>
+              </div>
+              <h3 class="h5 mb-2">
+                <a class="hover-effect-underline" href="blog-single-v1.html">What to know when renting an apartment</a>
+              </h3>
+              <p class="fs-sm">It is quite difficult to find a good apartment for long-term rent in large cities. In addition, potential tenants can face prob...</p>
+              <div class="nav fs-sm gap-3">
+                <a class="nav-link fw-semibold p-0" href="#!">by Cody Fisher</a>
+                <span class="text-body-secondary">July 09, 2024</span>
+              </div>
+            </article>
+
+            <!-- Article -->
+            <article class="col mb-xl-2">
+              <a class="ratio d-flex hover-effect-scale rounded overflow-hidden mb-3 mb-sm-4" href="blog-single-v1.html" style="--fn-aspect-ratio: calc(300 / 416 * 100%)">
+                <img src="/finder/assets/img/blog/v1/02.jpg" class="hover-effect-target" alt="Image">
+              </a>
+              <div class="nav pb-1 mb-2">
+                <a class="nav-link text-body-secondary fs-xs text-uppercase p-0" href="#!">Investment advice</a>
+              </div>
+              <h3 class="h5 mb-2">
+                <a class="hover-effect-underline" href="blog-single-v1.html">Types of luxury housing</a>
+              </h3>
+              <p class="fs-sm">What luxury housing is clear to every person. Housing characterized by increased comfort, interior, quality and ma...</p>
+              <div class="nav fs-sm gap-3">
+                <a class="nav-link fw-semibold p-0" href="#!">by Kristin Watson</a>
+                <span class="text-body-secondary">June 26, 2024</span>
+              </div>
+            </article>
+
+            <!-- Article -->
+            <article class="col mb-xl-2">
+              <a class="ratio d-flex hover-effect-scale rounded overflow-hidden mb-3 mb-sm-4" href="blog-single-v1.html" style="--fn-aspect-ratio: calc(300 / 416 * 100%)">
+                <img src="/finder/assets/img/blog/v1/03.jpg" class="hover-effect-target" alt="Image">
+              </a>
+              <div class="nav pb-1 mb-2">
+                <a class="nav-link text-body-secondary fs-xs text-uppercase p-0" href="#!">Home improvement</a>
+              </div>
+              <h3 class="h5 mb-2">
+                <a class="hover-effect-underline" href="blog-single-v1.html">How to modernize your home on a budget</a>
+              </h3>
+              <p class="fs-sm">Modernizing your home doesn't have to break the bank. Here are some budget-friendly tips to give your living space a mo...</p>
+              <div class="nav fs-sm gap-3">
+                <a class="nav-link fw-semibold p-0" href="#!">by Darrell Steward</a>
+                <span class="text-body-secondary">May 13, 2024</span>
+              </div>
+            </article>
+
+            <!-- Article -->
+            <article class="col mb-xl-2">
+              <a class="ratio d-flex hover-effect-scale rounded overflow-hidden mb-3 mb-sm-4" href="blog-single-v1.html" style="--fn-aspect-ratio: calc(300 / 416 * 100%)">
+                <img src="/finder/assets/img/blog/v1/04.jpg" class="hover-effect-target" alt="Image">
+              </a>
+              <div class="nav pb-1 mb-2">
+                <a class="nav-link text-body-secondary fs-xs text-uppercase p-0" href="#!">Selling strategies</a>
+              </div>
+              <h3 class="h5 mb-2">
+                <a class="hover-effect-underline" href="blog-single-v1.html">How real estate drone photography can elevate your listing?</a>
+              </h3>
+              <p class="fs-sm">In the competitive world of real estate, first impressions matter, and drone photography has become a game-chang...</p>
+              <div class="nav fs-sm gap-3">
+                <a class="nav-link fw-semibold p-0" href="#!">by Jacob Jones</a>
+                <span class="text-body-secondary">May 05, 2024</span>
+              </div>
+            </article>
+
+            <!-- Article -->
+            <article class="col mb-xl-2">
+              <a class="ratio d-flex hover-effect-scale rounded overflow-hidden mb-3 mb-sm-4" href="blog-single-v1.html" style="--fn-aspect-ratio: calc(300 / 416 * 100%)">
+                <img src="/finder/assets/img/blog/v1/05.jpg" class="hover-effect-target" alt="Image">
+              </a>
+              <div class="nav pb-1 mb-2">
+                <a class="nav-link text-body-secondary fs-xs text-uppercase p-0" href="#!">Interior design</a>
+              </div>
+              <h3 class="h5 mb-2">
+                <a class="hover-effect-underline" href="blog-single-v1.html">10 delightful dining room decor trends for spring season</a>
+              </h3>
+              <p class="fs-sm">As the seasons change, so do the trends in interior design, and the dining room is no exception. Spring brings with it a...</p>
+              <div class="nav fs-sm gap-3">
+                <a class="nav-link fw-semibold p-0" href="#!">by Cody Fisher</a>
+                <span class="text-body-secondary">April 17, 2024</span>
+              </div>
+            </article>
+
+            <!-- Post -->
+            <article class="col mb-xl-2">
+              <a class="ratio d-flex hover-effect-scale rounded overflow-hidden mb-3 mb-sm-4" href="blog-single-v1.html" style="--fn-aspect-ratio: calc(300 / 416 * 100%)">
+                <img src="/finder/assets/img/blog/v1/06.jpg" class="hover-effect-target" alt="Image">
+              </a>
+              <div class="nav pb-1 mb-2">
+                <a class="nav-link text-body-secondary fs-xs text-uppercase p-0" href="#!">Home improvement</a>
+              </div>
+              <h3 class="h5 mb-2">
+                <a class="hover-effect-underline" href="blog-single-v1.html">5 easy-to-ambitious projects to improve your home</a>
+              </h3>
+              <p class="fs-sm">Embarking on home improvement projects not only enhances your living space but also provides a fulfilling sense of acc...</p>
+              <div class="nav fs-sm gap-3">
+                <a class="nav-link fw-semibold p-0" href="#!">by Kathryn Murphy</a>
+                <span class="text-body-secondary">April 12, 2024</span>
+              </div>
+            </article>
+
+            <!-- Article -->
+            <article class="col mb-xl-2">
+              <a class="ratio d-flex hover-effect-scale rounded overflow-hidden mb-3 mb-sm-4" href="blog-single-v1.html" style="--fn-aspect-ratio: calc(300 / 416 * 100%)">
+                <img src="/finder/assets/img/blog/v1/07.jpg" class="hover-effect-target" alt="Image">
+              </a>
+              <div class="nav pb-1 mb-2">
+                <a class="nav-link text-body-secondary fs-xs text-uppercase p-0" href="#!">Home improvement</a>
+              </div>
+              <h3 class="h5 mb-2">
+                <a class="hover-effect-underline" href="blog-single-v1.html">When is the right time to downsize home?</a>
+              </h3>
+              <p class="fs-sm">Deciding when to downsize your home is a personal choice that depends on various factors. Here are some common...</p>
+              <div class="nav fs-sm gap-3">
+                <a class="nav-link fw-semibold p-0" href="#!">by Darrell Steward</a>
+                <span class="text-body-secondary">March 29, 2024</span>
+              </div>
+            </article>
+
+            <!-- Article -->
+            <article class="col mb-xl-2">
+              <a class="ratio d-flex hover-effect-scale rounded overflow-hidden mb-3 mb-sm-4" href="blog-single-v1.html" style="--fn-aspect-ratio: calc(300 / 416 * 100%)">
+                <img src="/finder/assets/img/blog/v1/08.jpg" class="hover-effect-target" alt="Image">
+              </a>
+              <div class="nav pb-1 mb-2">
+                <a class="nav-link text-body-secondary fs-xs text-uppercase p-0" href="#!">Interior design</a>
+              </div>
+              <h3 class="h5 mb-2">
+                <a class="hover-effect-underline" href="blog-single-v1.html">7 tips for achieving maximum coziness</a>
+              </h3>
+              <p class="fs-sm">Creating a cozy atmosphere in your home is a delightful way to enhance comfort and relaxation. Here are seven tips to...</p>
+              <div class="nav fs-sm gap-3">
+                <a class="nav-link fw-semibold p-0" href="#!">by Bessie Cooper</a>
+                <span class="text-body-secondary">March 10, 2024</span>
+              </div>
+            </article>
+
+            <!-- Article -->
+            <article class="col mb-xl-2">
+              <a class="ratio d-flex hover-effect-scale rounded overflow-hidden mb-3 mb-sm-4" href="blog-single-v1.html" style="--fn-aspect-ratio: calc(300 / 416 * 100%)">
+                <img src="/finder/assets/img/blog/v1/09.jpg" class="hover-effect-target" alt="Image">
+              </a>
+              <div class="nav pb-1 mb-2">
+                <a class="nav-link text-body-secondary fs-xs text-uppercase p-0" href="#!">Investment advice</a>
+              </div>
+              <h3 class="h5 mb-2">
+                <a class="hover-effect-underline" href="blog-single-v1.html">Strategies for real estate investments</a>
+              </h3>
+              <p class="fs-sm">Discover key strategies for successful real estate investments in this guide. From identifying profitable properties to und...</p>
+              <div class="nav fs-sm gap-3">
+                <a class="nav-link fw-semibold p-0" href="#!">by Andrew Richards</a>
+                <span class="text-body-secondary">February 19, 2024</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Pagination -->
+          <nav class="pt-5" aria-label="Pagination">
+            <ul class="pagination pagination-lg justify-content-center">
+              <li class="page-item active" aria-current="page">
+                <span class="page-link">
+                  1
+                  <span class="visually-hidden">(current)</span>
+                </span>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#!">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#!">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#!">4</a>
+              </li>
+              <li class="page-item">
+                <span class="page-link pe-none">...</span>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#!">8</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Page footer -->
+    <footer class="footer bg-body border-top" data-bs-theme="dark">
+      <div class="container pb-md-2">
+        <div class="d-md-flex align-items-center justify-content-between border-bottom pt-5 pb-4 pb-md-5">
+          <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center gap-3 gap-sm-4 mb-4 mb-md-0">
+            <div class="d-flex align-items-center">
+              <i class="fi-mail fs-4 lh-0 text-body d-none d-sm-block me-2"></i>
+              <i class="fi-mail text-body d-sm-none me-2"></i>
+              <h6 class="ps-sm-1 mb-0">
+                <span class="h5 d-none d-sm-block mb-0">Subscribe to our newsletter</span>
+                <span class="d-sm-none">Subscribe to our newsletter</span>
+              </h6>
+            </div>
+            <button type="button" class="btn btn-primary">Subscribe</button>
+          </div>
+          <div class="h5 d-none d-sm-block text-center mb-0">
+            <span class="text-body-secondary fw-normal me-3">Need help?</span>
+            <a class="text-white text-decoration-none hover-effect-underline" href="/contact">Contact us</a>
+          </div>
+          <div class="h6 d-sm-none text-center mb-0">
+            <span class="text-body-secondary fw-normal me-2">Need help?</span>
+            <a class="text-white text-decoration-none hover-effect-underline" href="/contact">Contact us</a>
+          </div>
+        </div>
+
+        <div class="accordion row pt-4 pt-sm-5 mt-3 mt-sm-0" id="footerLinks">
+          <div class="col-md-4 col-lg-5 mb-4 mb-sm-5 mb-md-0">
+            <a class="d-inline-flex align-items-center text-dark-emphasis text-decoration-none mb-3" href="/">
+              <span class="flex-shrink-0 text-primary rtl-flip me-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"/><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"/><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"/><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"/></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"/><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"/></svg>
+              </span>
+              <span class="fs-4 fw-semibold">Monaclick</span>
+            </a>
+            <p class="fs-sm text-body-secondary pt-md-1" style="max-width: 260px">Connecting you with reliable local contractors for all your service needs.</p>
+            <div class="d-flex gap-3 pt-2 pt-md-3">
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/about" aria-label="Follow us on Instagram">
+                <i class="fi-instagram fs-sm"></i>
+              </a>
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/about" aria-label="Follow us on Facebook">
+                <i class="fi-facebook fs-sm"></i>
+              </a>
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/blog" aria-label="Follow us on X (Twitter)">
+                <i class="fi-x fs-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-8 col-md-5 col-lg-4">
+            <div class="accordion-item border-0">
+              <h6 class="accordion-header" id="categoryLinksHeading">
+                <span class="h5 d-none d-sm-block">Popular categories</span>
+                <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#categoryLinks" aria-expanded="false" aria-controls="categoryLinks">Popular categories</button>
+              </h6>
+              <div class="accordion-collapse collapse d-sm-block" id="categoryLinks" aria-labelledby="categoryLinksHeading" data-bs-parent="#footerLinks">
+                <div class="row row-cols-2">
+                  <div class="col">
+                    <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+<li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/listings/contractors">Contractors</a></li>
+</ul>
+                  </div>
+                  <div class="col">
+                    <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+<li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/account/profile">My profile</a></li>
+                      <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/admin">Admin</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <hr class="d-sm-none my-0">
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-3 col-lg-2 offset-lg-1">
+            <div class="accordion-item border-0">
+              <h6 class="accordion-header" id="companyLinksHeading">
+                <span class="h5 d-none d-sm-block">Company</span>
+                <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#companyLinks" aria-expanded="false" aria-controls="companyLinks">Company</button>
+              </h6>
+              <div class="accordion-collapse collapse d-sm-block" id="companyLinks" aria-labelledby="companyLinksHeading" data-bs-parent="#footerLinks">
+                <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/about">About</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/blog">Press &amp; announcements</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/about">Careers at Monaclick</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/contact">Contact us</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/terms-and-conditions">Terms of use</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/terms-and-conditions">Privacy</a></li>
+                </ul>
+              </div>
+              <hr class="d-sm-none my-0">
+            </div>
+          </div>
+        </div>
+
+        <div class="d-md-flex gap-4 pt-4 pt-sm-5">
+          <h6 class="mt-1 mb-md-0">
+            <span class="h5 text-nowrap d-none d-sm-block mb-0">Top cities</span>
+            <span class="text-nowrap d-sm-none">Top cities</span>
+          </h6>
+          <ul class="nav nav-pills gap-2 gap-md-3">
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=new+york">New York</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=chicago">Chicago</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=indianapolis">Indianapolis</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=boston">Boston</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=atlanta">Atlanta</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=cincinnati">Cincinnati</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=los+angeles">Los Angeles</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=dallas">Dallas</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=pittsburgh">Pittsburgh</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=tampa">Tampa</a></li>
+          </ul>
+        </div>
+
+        <div class="d-md-flex align-items-center py-4 pt-sm-5 mt-3 mt-sm-0">
+          <div class="d-flex gap-2 gap-sm-3 justify-content-center ms-md-auto mb-4 mb-md-0 order-md-2">
+            <div><img src="/finder/assets/img/payment-methods/visa-dark-mode.svg" alt="Visa"></div>
+            <div><img src="/finder/assets/img/payment-methods/mastercard.svg" alt="Mastercard"></div>
+            <div><img src="/finder/assets/img/payment-methods/paypal-dark-mode.svg" alt="PayPal"></div>
+            <div><img src="/finder/assets/img/payment-methods/google-pay-dark-mode.svg" alt="Google Pay"></div>
+            <div><img src="/finder/assets/img/payment-methods/apple-pay-dark-mode.svg" alt="Apple Pay"></div>
+          </div>
+          <p class="text-body-secondary fs-sm text-center text-md-start mb-0 me-md-4 order-md-1">&copy; All rights reserved. Developed by <span class="text-body fw-medium">US Logo and Web</span></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <div class="floating-buttons position-fixed top-50 end-0 z-sticky me-3 me-xl-4 pb-4">
+      <a class="btn-scroll-top btn btn-sm bg-body border-0 rounded-pill shadow animate-slide-end" href="#top">
+        Top
+        <i class="fi-arrow-right fs-base ms-1 me-n1 animate-target"></i>
+        <span class="position-absolute top-0 start-0 w-100 h-100 border rounded-pill z-0"></span>
+        <svg class="position-absolute top-0 start-0 w-100 h-100 z-1" viewBox="0 0 62 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x=".75" y=".75" width="60.5" height="30.5" rx="15.25" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+        </svg>
+      </a>
+      <a class="btn btn-sm btn-outline-secondary text-uppercase bg-body rounded-pill shadow animate-rotate ms-2 me-n5" href="#customizer" style="font-size: .625rem; letter-spacing: .05rem;" data-bs-toggle="offcanvas" role="button" aria-controls="customizer">
+        Customize<i class="fi-settings fs-base ms-1 me-n2 animate-target"></i>
+      </a>
+    </div>
+
+
+    <!-- Vendor scripts -->
+    <script src="/finder/assets/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="/finder/assets/js/monaclick-global-footer.js?v=20260306-3"></script>
+
+    <script src="/finder/assets/js/theme.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+

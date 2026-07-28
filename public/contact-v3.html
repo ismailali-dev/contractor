@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" data-pwa="true">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO Meta Tags -->
+    <title>Monaclick | Contact v.3</title>
+    <meta name="description" content="Monaclick - Directory & Listings Bootstrap HTML Template">
+    <meta name="keywords" content="directory, listings, search, car dealer, real estate, city guide, business listings, medical directories, event listings, e-commerce, market, multipurpose, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
+    <meta name="author" content="US Logo and Web">
+
+    <!-- Webmanifest + Favicon / App icons -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="/finder/manifest.json">
+    <link rel="icon" type="image/png" href="/finder/assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/finder/assets/app-icons/icon-180x180.png">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="/finder/assets/js/theme-switcher.js"></script>
+
+    <!-- Preloaded local web font (Inter) -->
+    <link rel="preload" href="/finder/assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Font icons -->
+    <link rel="preload" href="/finder/assets/icons/finder-icons.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/finder/assets/icons/finder-icons.min.css">
+
+    <!-- Bootstrap + Theme styles -->
+    <link rel="preload" href="/finder/assets/css/theme.min.css" as="style">
+    <link rel="preload" href="/finder/assets/css/theme.rtl.min.css" as="style">
+    <link rel="stylesheet" href="/finder/assets/css/theme.min.css" id="theme-styles">
+
+    <!-- Customizer -->
+    <script src="/finder/assets/js/customizer.min.js"></script>
+  </head>
+
+
+  <!-- Body -->
+  <body class="bg-body-tertiary">
+
+    <!-- Customizer offcanvas -->
+    <div class="offcanvas offcanvas-end" id="customizer" tabindex="-1">
+      <div class="offcanvas-header border-bottom">
+        <h4 class="h5 offcanvas-title">Customize theme</h4>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+        <!-- Customizer settings -->
+        <div class="customizer-collapse collapse show" id="customizerSettings">
+
+          <!-- Colors -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fi-swatches text-body-tertiary fs-5 me-2"></i>
+              <h5 class="fs-lg mb-0">Colors</h5>
+            </div>
+            <div class="row row-cols-2 g-3" id="theme-colors">
+              <div class="col">
+                <h6 class="fs-sm mb-2">Primary</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-primary" data-color-labels='["theme-primary", "primary", "primary-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#d85151">
+                  <label for="primary" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #d85151"></label>
+                  <input type="color" class="visually-hidden" id="primary" value="#d85151">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Success</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-success" data-color-labels='["theme-success", "success", "success-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#33b36b">
+                  <label for="success" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #33b36b"></label>
+                  <input type="color" class="visually-hidden" id="success" value="#33b36b">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Warning</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-warning" data-color-labels='["theme-warning", "warning", "warning-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#fc9231">
+                  <label for="warning" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #fc9231"></label>
+                  <input type="color" class="visually-hidden" id="warning" value="#fc9231">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Danger</h6>
+                <div class="color-swatch d-flex border rounded gap-2 p-2" id="theme-danger" data-color-labels='["theme-danger", "danger", "danger-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#f03d3d">
+                  <label for="danger" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #f03d3d"></label>
+                  <input type="color" class="visually-hidden" id="danger" value="#f03d3d">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Info</h6>
+                <div class="color-swatch d-flex border rounded gap-2 p-2" id="theme-info" data-color-labels='["theme-info", "info", "info-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#3d7a81">
+                  <label for="info" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #3d7a81"></label>
+                  <input type="color" class="visually-hidden" id="info" value="#3d7a81">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direction -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center pb-1 mb-2">
+              <i class="fi-sort text-body-tertiary fs-lg me-2" style="transform: rotate(90deg)"></i>
+              <h5 class="fs-lg mb-0">Direction</h5>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border rounded p-3">
+              <div class="me-3">
+                <h6 class="mb-1">RTL</h6>
+                <p class="fs-sm mb-0">Change text direction</p>
+              </div>
+              <div class="form-check form-switch m-0">
+                <input type="checkbox" class="form-check-input" role="switch" id="rtl-switch">
+              </div>
+            </div>
+            <div class="alert alert-info p-2 mt-2 mb-0">
+              <div class="d-flex text-body-emphasis fs-xs py-1 pe-1">
+                <i class="fi-info text-info fs-lg mb-2 mb-sm-0" style="margin-top: .125rem"></i>
+                <div class="ps-2">To switch the text direction of your webpage from LTR to RTL, please consult the detailed instructions provided in the relevant section of our documentation.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Border width -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center pb-1 mb-2">
+              <i class="fi-menu text-body-tertiary fs-lg me-2"></i>
+              <h5 class="fs-lg mb-0">Border width, px</h5>
+            </div>
+            <div class="slider-input d-flex align-items-center gap-3 border rounded p-3" id="border-input">
+              <input type="range" class="form-range" min="0" max="10" step="1" value="1">
+              <input type="number" class="form-control" id="border-width" min="0" max="10" value="1" style="max-width: 5.5rem">
+            </div>
+          </div>
+
+          <!-- Rounding -->
+          <div class="d-flex align-items-center pb-1 mb-2">
+            <i class="fi-maximize text-body-tertiary fs-lg me-2"></i>
+            <h5 class="fs-lg mb-0">Rounding, rem</h5>
+          </div>
+          <div class="slider-input d-flex align-items-center gap-3 border rounded p-3">
+            <input type="range" class="form-range" min="0" max="5" step=".05" value="0.5">
+            <input type="number" class="form-control" id="border-radius" min="0" max="5" step=".05" value="0.5" style="max-width: 5.5rem">
+          </div>
+        </div>
+
+        <!-- Customizer code -->
+        <div class="customizer-collapse collapse" id="customizerCode">
+          <div class="nav mb-3">
+            <a class="nav-link position-relative fs-base p-0" href=".customizer-collapse" data-bs-toggle="collapse" aria-expanded="true" aria-controls="customizerSettings customizerCode">
+              <i class="fi-chevron-left fs-lg ms-n1 me-1"></i>
+              <span class="hover-effect-underline stretched-link">Back to settings</span>
+            </a>
+          </div>
+          <p class="fs-sm pb-1">To apply the provided styles to your webpage, enclose them within a <code>&lt;style&gt;</code> tag and insert this tag into the <code>&lt;head&gt;</code> section of your HTML document after the following link to the main stylesheet:<br><code>&lt;link href=&quot;assets/css/theme.min.css&quot;&gt;</code></p>
+          <div class="position-relative bg-body-tertiary rounded overflow-hidden pt-3">
+            <div class="position-absolute top-0 start-0 w-100 p-3">
+              <button type="button" class="btn btn-sm btn-outline-dark w-100" data-copy-text-from="#generated-styles" data-done-label="Code copied">
+                <i class="fi-copy fs-sm me-1"></i>
+                Copy code
+              </button>
+            </div>
+            <pre class="text-wrap bg-transparent border-0 fs-xs text-body-emphasis p-4 pt-5" id="generated-styles"></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offcanvas footer (Action buttons) -->
+      <div class="offcanvas-header border-top gap-3 d-none" id="customizer-btns">
+        <button type="button" class="btn btn-lg btn-secondary w-100 fs-sm" id="customizer-reset">
+          <i class="fi-trash fs-lg me-2 ms-n1"></i>
+          Reset
+        </button>
+        <button class="btn btn-lg btn-primary hiding-collapse-toggle w-100 fs-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".customizer-collapse" aria-expanded="false" aria-controls="customizerSettings customizerCode">
+          <i class="fi-code fs-lg me-2 ms-n1"></i>
+          Show code
+        </button>
+      </div>
+    </div>
+
+
+    <!-- Navigation bar (Page header) -->
+    <header class="navbar navbar-expand-lg bg-body navbar-sticky sticky-top z-fixed px-0" data-sticky-element>
+      <div class="container">
+        <button type="button" class="navbar-toggler me-3 me-lg-0" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand py-1 py-md-2 py-xl-1 me-2 me-sm-n4 me-md-n5 me-lg-0" href="/">
+          <span class="d-none d-sm-flex flex-shrink-0 text-primary rtl-flip me-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"/><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"/><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"/><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"/></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"/><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"/></svg>
+          </span>
+          Monaclick
+        </a>
+
+        <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
+          <div class="offcanvas-header py-3">
+            <h5 class="offcanvas-title" id="navbarNavLabel">Browse Monaclick</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body pt-2 pb-4 py-lg-0 mx-lg-auto">
+            <ul class="navbar-nav position-relative">
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link" href="/listings/contractors">Contractors</a>
+              </li>
+              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">Account</a>
+                <ul class="dropdown-menu">
+                  <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Auth Pages</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/signin">Sign In</a></li>
+                      <li><a class="dropdown-item" href="/signup">Sign Up</a></li>
+                      <li><a class="dropdown-item" href="/password-recovery">Password Recovery</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="/account/profile">My Profile</a></li>
+                  <li><a class="dropdown-item" href="/account/settings">Account Settings</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/about">About</a></li>
+                  <li><a class="dropdown-item" href="/blog">Blog</a></li>
+                  <li><a class="dropdown-item" href="/contact">Contact</a></li>
+                  <li><a class="dropdown-item" href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="d-flex gap-sm-1">
+          <div class="dropdown">
+            <button type="button" class="theme-switcher btn btn-icon btn-outline-secondary fs-lg border-0 animate-scale" data-bs-toggle="dropdown" data-bs-display="dynamic" aria-expanded="false" aria-label="Toggle theme (light)">
+              <span class="theme-icon-active d-flex animate-target">
+                <i class="fi-sun"></i>
+              </span>
+            </button>
+            <ul class="dropdown-menu start-50 translate-middle-x" style="--fn-dropdown-min-width: 9rem; --fn-dropdown-spacer: .5rem">
+              <li>
+                <button type="button" class="dropdown-item active" data-bs-theme-value="light" aria-pressed="true">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-sun"></i></span>
+                  <span class="theme-label">Light</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="dark" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-moon"></i></span>
+                  <span class="theme-label">Dark</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="auto" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-auto"></i></span>
+                  <span class="theme-label">Auto</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <a class="btn btn-icon btn-outline-secondary fs-lg border-0 animate-shake me-2" href="/signin" aria-label="Sign in to account">
+            <i class="fi-user animate-target"></i>
+          </a>
+
+          <a class="btn btn-primary animate-scale" href="/add-contractor">
+            <i class="fi-plus fs-lg animate-target ms-n2 me-1 me-sm-2"></i>
+            Join<span class="d-none d-xl-inline ms-1">Pro Network</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Page content -->
+    <main class="content-wrapper">
+      <div class="container py-5 mt-n3 mt-sm-0 my-xxl-3">
+        <div class="row pb-2 pb-sm-3 py-md-4 py-lg-5">
+
+          <!-- Intro + Phone -->
+          <div class="col-md-5 col-lg-6 mb-5 mb-md-0">
+            <h1 class="display-3 mb-sm-4">Contact us</h1>
+            <p class="pb-3 pb-md-0 mb-4 mb-md-5" style="max-width: 460px">Write to us if you have any difficulties in working with the service. We are open to communication and want to know more about those who trust us.</p>
+
+            <!-- Phone -->
+            <div class="d-flex align-items-center">
+              <div class="position-relative flex-shrink-0 bg-body-secondary rounded-circle rtl-flip" style="width: 90px; height: 90px">
+                <img src="/finder/assets/img/contact/v3/avatar.jpg" class="d-block rounded-circle" alt="Avatar" style="padding: 3px">
+                <span class="position-absolute top-0 start-0 w-100 h-100 border border-3 border-white rounded-circle d-none-dark"></span>
+                <span class="position-absolute top-0 start-0 w-100 h-100 border border-3 rounded-circle d-none d-block-dark"></span>
+                <div class="position-absolute d-flex align-items-center justify-content-center z-2" style="right: 0; bottom: 0; width: 16px; height: 16px; margin: 0 9px 3px 0">
+                  <span class="position-absolute top-0 start-0 w-100 h-100 bg-white rounded-circle d-none-dark"></span>
+                  <span class="position-absolute top-0 start-0 w-100 h-100 border border-3 rounded-circle d-none d-block-dark"></span>
+                  <span class="position-relative z-1 bg-info rounded-circle" style="width: 12px; height: 12px"></span>
+                </div>
+              </div>
+              <div class="ps-3 ps-sm-4">
+                <h5 class="mb-2">Questions?</h5>
+                <div class="nav gap-2 fs-sm">
+                  <span>Give us a call right now</span>
+                  <a class="nav-link hover-effect-underline fw-semibold p-0" href="tel:4065550120">(406)&nbsp;555&#8209;0120</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Contact form -->
+          <div class="col-md-7 col-lg-6">
+            <form class="needs-validation position-relative bg-body rounded-5" style="padding: 5px" novalidate>
+              <div class="position-relative z-1 my-2 mx-sm-2 m-lg-0 p-4 p-lg-5">
+                <h2 class="h4 mb-4">Get in touch!</h2>
+                <div class="mb-3">
+                  <input type="text" class="form-control form-control-lg" placeholder="Full name *" required>
+                  <div class="invalid-feedback">Please enter your full name!</div>
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control form-control-lg text-start" placeholder="Email *" required>
+                  <div class="invalid-feedback">Please provide a valid email address!</div>
+                </div>
+                <div class="mb-4">
+                  <textarea class="form-control form-control-lg" rows="5" placeholder="Your message *" required></textarea>
+                  <div class="invalid-feedback">Please write your message!</div>
+                </div>
+                <button type="submit" class="btn btn-lg btn-info w-100">Submit form</button>
+              </div>
+              <span class="position-absolute top-0 start-0 w-100 h-100 border border-5 rounded-5 opacity-50"></span>
+            </form>
+          </div>
+        </div>
+
+
+        <!-- Partner logos -->
+        <div class="row align-items-center pt-5 pb-sm-2 pb-md-3 pb-lg-5">
+          <div class="col-lg-3">
+            <h2 class="h5 text-center text-md-start mb-lg-0">Big companies trust Monaclick</h2>
+          </div>
+          <div class="col-lg-9 overflow-hidden">
+            <div class="ps-xxl-5">
+              <div class="row row-cols-2 row-cols-sm-3 row-cols-md-5 gx-3 gx-xl-5 justify-content-center justify-content-md-start">
+                <div class="col text-center">
+                  <a class="d-inline-flex" href="#!" style="max-width: 140px" aria-label="Company logo">
+                    <svg class="text-body-tertiary" xmlns="http://www.w3.org/2000/svg" width="140" viewBox="0 0 140 60" fill="currentColor"><path d="M29.039 39.75h18.759v-18H29.039v18zm15.148-10.732h-3.964v-3.803h3.964v3.803zm-11.538-3.803h3.966v7.267h7.572v3.803H32.649V25.215zm27.365-3.465c-1.855 0-3.669.528-5.211 1.517s-2.745 2.395-3.454 4.039-.896 3.454-.534 5.2 1.255 3.349 2.567 4.608 2.983 2.116 4.802 2.463a9.75 9.75 0 0 0 5.419-.512c1.714-.681 3.179-1.835 4.209-3.315s1.581-3.22 1.581-5c-.003-2.386-.992-4.674-2.751-6.361s-4.142-2.636-6.629-2.639zm0 14.535c-1.141 0-2.256-.325-3.205-.933a5.59 5.59 0 0 1-2.125-2.484c-.437-1.011-.551-2.124-.328-3.198a5.47 5.47 0 0 1 1.579-2.834c.807-.774 1.835-1.301 2.954-1.515s2.279-.104 3.333.315 1.955 1.128 2.589 2.039.972 1.98.972 3.075c-.002 1.467-.611 2.874-1.692 3.912s-2.547 1.621-4.077 1.624zm42.943-14.535c-1.855 0-3.668.528-5.211 1.516s-2.745 2.394-3.455 4.039-.896 3.454-.534 5.2 1.255 3.35 2.567 4.608 2.983 2.116 4.803 2.463 3.705.169 5.419-.512 3.178-1.835 4.209-3.315a8.74 8.74 0 0 0 1.581-5c-.003-2.386-.992-4.673-2.75-6.361s-4.142-2.636-6.629-2.639zm0 14.535c-1.141 0-2.256-.324-3.205-.933s-1.688-1.473-2.125-2.484a5.33 5.33 0 0 1-.329-3.198 5.47 5.47 0 0 1 1.579-2.834 5.85 5.85 0 0 1 2.954-1.515c1.119-.214 2.279-.104 3.333.315s1.955 1.128 2.589 2.039.972 1.981.972 3.075c-.002 1.467-.61 2.874-1.692 3.911s-2.546 1.622-4.076 1.624zM81.485 21.75c-1.855 0-3.669.528-5.211 1.517s-2.745 2.395-3.455 4.039-.895 3.454-.534 5.2 1.255 3.349 2.567 4.608 2.983 2.116 4.802 2.463a9.75 9.75 0 0 0 5.419-.512c1.714-.681 3.179-1.835 4.209-3.315s1.581-3.22 1.581-5c-.003-2.386-.992-4.674-2.75-6.361s-4.142-2.636-6.629-2.639zm0 14.535a5.95 5.95 0 0 1-3.013-.813 5.63 5.63 0 0 1-2.127-2.203c-.484-.908-.697-1.927-.615-2.944a5.4 5.4 0 0 1 1.077-2.819c.623-.827 1.472-1.472 2.453-1.865s2.056-.518 3.106-.362 2.035.588 2.846 1.248 1.416 1.521 1.749 2.49h-5.476v3.464h5.476c-.381 1.105-1.115 2.068-2.098 2.75s-2.165 1.051-3.378 1.053z"/></svg>
+                  </a>
+                </div>
+                <div class="col text-center">
+                  <a class="d-inline-flex" href="#!" style="max-width: 140px" aria-label="Company logo">
+                    <svg class="text-body-tertiary" xmlns="http://www.w3.org/2000/svg" width="140" viewBox="0 0 140 60" fill="currentColor"><path d="M39.198 26.45h2.999v8.865h4.934v1.478h-7.933V26.45zm13.601 10.491c-1.472 0-2.599-.227-3.38-.68s-1.172-1.093-1.172-1.921v-5.437c0-.827.391-1.468 1.172-1.921s1.908-.68 3.38-.68 2.599.227 3.381.68 1.172 1.093 1.172 1.921v5.437c0 .827-.391 1.468-1.172 1.921s-1.908.68-3.381.68zm0-1.477c1.036 0 1.554-.34 1.554-1.02V28.8c0-.68-.518-1.02-1.554-1.02s-1.554.34-1.554 1.02v5.644c0 .68.518 1.02 1.554 1.02zm10.835 1.477c-1.454 0-2.563-.222-3.326-.665-.763-.453-1.145-1.098-1.145-1.936v-5.437c0-.837.382-1.478 1.145-1.921.763-.453 1.872-.68 3.326-.68s2.563.226 3.326.68c.763.443 1.145 1.084 1.145 1.921v.887H65.27v-.99c0-.68-.518-1.02-1.554-1.02s-1.554.34-1.554 1.02v5.659c0 .67.518 1.005 1.554 1.005s1.554-.335 1.554-1.005v-2.024h-1.5v-1.477h4.334v3.384c0 .837-.382 1.482-1.145 1.936-.763.443-1.872.665-3.326.665zm10.726 0c-1.472 0-2.599-.227-3.38-.68s-1.172-1.093-1.172-1.921v-5.437c0-.827.391-1.468 1.172-1.921s1.908-.68 3.38-.68 2.599.227 3.38.68 1.172 1.093 1.172 1.921v5.437c0 .827-.391 1.468-1.172 1.921s-1.908.68-3.38.68zm0-1.477c1.036 0 1.554-.34 1.554-1.02V28.8c0-.68-.518-1.02-1.554-1.02s-1.554.34-1.554 1.02v5.644c0 .68.518 1.02 1.554 1.02zm6.587-9.014h2.999v10.343h-2.999V26.45zm5.246 0h4.416c1.49 0 2.608.217 3.353.65s1.118 1.069 1.118 1.906v1.02c0 .837-.372 1.473-1.118 1.906s-1.863.65-3.353.65h-1.417v4.211h-2.999V26.45zm4.416 4.654c.491 0 .854-.074 1.091-.222.254-.148.381-.399.381-.754v-1.226c0-.355-.127-.606-.381-.754-.236-.148-.6-.222-1.091-.222h-1.417v3.177h1.417zm10.106 5.837c-1.453 0-2.553-.222-3.298-.665-.745-.453-1.118-1.098-1.118-1.936v-.591h2.835v.709c0 .67.518 1.005 1.554 1.005.509 0 .89-.079 1.145-.236.272-.167.409-.433.409-.798 0-.433-.182-.813-.545-1.138-.363-.335-1.036-.734-2.018-1.197-1.236-.591-2.099-1.123-2.59-1.596-.49-.483-.736-1.024-.736-1.625 0-.818.381-1.448 1.145-1.891.763-.453 1.872-.68 3.327-.68 1.435 0 2.517.226 3.243.68.746.443 1.118 1.084 1.118 1.921v.429h-2.835V28.8c0-.355-.127-.611-.381-.768-.255-.167-.627-.251-1.118-.251-1 0-1.499.33-1.499.99 0 .374.182.724.545 1.049.381.325 1.063.719 2.045 1.182 1.253.591 2.116 1.128 2.589 1.61s.709 1.049.709 1.699c0 .847-.391 1.497-1.173 1.95-.763.453-1.881.68-3.353.68zm10.608 0c-1.454 0-2.563-.222-3.327-.665-.763-.453-1.144-1.098-1.144-1.936v-7.89h2.999v8.008c0 .355.126.611.381.768.272.158.655.236 1.145.236s.863-.079 1.117-.236c.273-.158.41-.414.41-.768V26.45h2.889v7.89c0 .837-.381 1.482-1.145 1.936-.763.443-1.872.665-3.325.665zm6.607-10.491h4.28l1.908 7.403h.054l1.909-7.403h4.28v10.343h-2.835v-7.831h-.054l-2.182 7.831h-2.508l-2.181-7.831h-.054v7.831h-2.617V26.45zM10.249 36.793c3.689 0 6.68-1.621 6.68-3.62s-2.991-3.62-6.68-3.62v2.534c1.107 0 2.004.486 2.004 1.086s-.897 1.086-2.004 1.086v2.534zm22.267-6.034a21.43 21.43 0 0 0-3.618-.302c-6.61 0-11.968 2.904-11.968 6.487A3.64 3.64 0 0 0 17.088 38h7.436c-.265-.323-.413-.68-.413-1.056 0-1.433 2.143-2.595 4.787-2.595 1.445 0 2.741.347 3.618.896v-4.486zm-21.093-4.827c.554 2.715 4.801 4.827 9.959 4.827s9.405-2.112 9.959-4.827h-7.166c-.442.601-1.526 1.026-2.793 1.026s-2.351-.425-2.793-1.026h-7.166z"/></svg>
+                  </a>
+                </div>
+                <div class="col text-center">
+                  <a class="d-inline-flex" href="#!" style="max-width: 140px" aria-label="Company logo">
+                    <svg class="text-body-tertiary" xmlns="http://www.w3.org/2000/svg" width="140" viewBox="0 0 140 60" fill="currentColor"><path d="M25.345 25.323a5.81 5.81 0 0 0-3.184-.948V18.75c2.267 0 4.483.66 6.368 1.896a11.3 11.3 0 0 1 4.222 5.049 11.06 11.06 0 0 1 .652 6.5c-.442 2.182-1.534 4.187-3.137 5.76a11.53 11.53 0 0 1-5.869 3.079c-2.224.434-4.528.211-6.623-.64a11.42 11.42 0 0 1-5.144-4.144c-1.26-1.85-1.932-4.025-1.932-6.25h5.732a5.55 5.55 0 0 0 .966 3.125 5.71 5.71 0 0 0 2.572 2.072 5.83 5.83 0 0 0 3.311.32c1.112-.217 2.133-.753 2.935-1.539s1.347-1.789 1.569-2.88.108-2.222-.326-3.25a5.65 5.65 0 0 0-2.111-2.524z"/><path d="M16.43 18.75c0 .739-.148 1.47-.436 2.153a5.62 5.62 0 0 1-1.242 1.825 5.74 5.74 0 0 1-1.859 1.219c-.695.283-1.441.428-2.193.428V30c1.505 0 2.996-.291 4.387-.856a11.48 11.48 0 0 0 3.719-2.439 11.24 11.24 0 0 0 2.485-3.65 11.07 11.07 0 0 0 .873-4.305H16.43z"/><path d="M85.001 26.88h-2.87v8.669h2.87V26.88zm-2.554-1.624c.3.285.675.428 1.125.428s.819-.143 1.107-.428a1.48 1.48 0 0 0 .432-1.07c0-.428-.144-.785-.432-1.07s-.657-.428-1.107-.428-.825.143-1.125.428c-.288.285-.432.642-.432 1.07a1.48 1.48 0 0 0 .432 1.07zM40.954 35.549V22.955h2.945v10.132h5.871v2.462h-8.816z"/><path d="M55.076 35.745c-.938 0-1.788-.196-2.551-.589-.75-.404-1.344-.951-1.782-1.641s-.657-1.463-.657-2.319a4.15 4.15 0 0 1 .657-2.301c.438-.678 1.032-1.213 1.782-1.605.75-.404 1.601-.607 2.551-.607s1.801.196 2.551.589a4.58 4.58 0 0 1 1.782 1.623c.438.678.657 1.445.657 2.301s-.219 1.629-.657 2.319-1.032 1.237-1.782 1.641c-.75.393-1.601.589-2.551.589zm0-2.48a2.28 2.28 0 0 0 1.088-.25c.313-.178.55-.422.713-.731.175-.321.263-.684.263-1.088s-.087-.755-.263-1.052a1.79 1.79 0 0 0-.731-.713c-.3-.178-.657-.268-1.069-.268-.4 0-.756.089-1.069.268a1.8 1.8 0 0 0-.732.713c-.176.309-.263.666-.263 1.07 0 .392.087.749.263 1.07a1.91 1.91 0 0 0 .732.731c.313.166.669.25 1.069.25zm7.26 5.673c.763.333 1.644.499 2.645.499.975 0 1.844-.184 2.607-.553a4.44 4.44 0 0 0 1.801-1.534c.438-.654.657-1.427.657-2.319V26.88h-2.814v.582a3.06 3.06 0 0 0-.713-.422c-.488-.226-1.044-.339-1.669-.339-.838 0-1.582.19-2.232.571a4.04 4.04 0 0 0-1.538 1.534c-.375.642-.563 1.368-.563 2.176 0 .797.188 1.522.563 2.176a4.18 4.18 0 0 0 1.538 1.552c.65.381 1.394.571 2.232.571a4.01 4.01 0 0 0 1.669-.339 3.38 3.38 0 0 0 .656-.387v.547c0 .607-.206 1.076-.619 1.409-.4.333-.957.499-1.669.499-.575 0-1.069-.095-1.482-.285-.4-.19-.763-.47-1.088-.838l-1.763 1.677c.438.595 1.032 1.053 1.782 1.374zm4.089-6.333c-.288.166-.631.25-1.032.25a2.13 2.13 0 0 1-1.05-.25 1.8 1.8 0 0 1-.675-.678 1.94 1.94 0 0 1-.244-.945 1.91 1.91 0 0 1 .244-.963c.163-.285.394-.511.694-.678a2.09 2.09 0 0 1 1.032-.25c.4 0 .744.083 1.032.25a1.64 1.64 0 0 1 .675.678c.162.285.244.606.244.963s-.081.678-.244.963c-.15.274-.375.494-.675.66zm9.661 3.14c-.938 0-1.789-.196-2.551-.589a4.71 4.71 0 0 1-1.782-1.641c-.438-.69-.657-1.463-.657-2.319s.219-1.623.657-2.301 1.031-1.213 1.782-1.605c.75-.404 1.6-.607 2.551-.607s1.8.196 2.55.589a4.58 4.58 0 0 1 1.782 1.623c.438.678.656 1.445.656 2.301s-.219 1.629-.656 2.319a4.71 4.71 0 0 1-1.782 1.641c-.75.393-1.601.589-2.55.589zm0-2.48c.412 0 .775-.083 1.088-.25a1.79 1.79 0 0 0 .713-.731c.175-.321.263-.684.263-1.088s-.087-.755-.263-1.052a1.79 1.79 0 0 0-.732-.713c-.3-.178-.657-.268-1.069-.268a2.11 2.11 0 0 0-1.069.268 1.79 1.79 0 0 0-.732.713c-.175.309-.263.666-.263 1.07a2.2 2.2 0 0 0 .263 1.07 1.91 1.91 0 0 0 .732.731c.312.166.669.25 1.069.25zm15.813 2.462a4.14 4.14 0 0 1-1.688-.339 3.62 3.62 0 0 1-.731-.426v4.243h-2.833V26.88h2.87v.598a3.57 3.57 0 0 1 .694-.42c.513-.238 1.076-.357 1.688-.357.863 0 1.626.196 2.288.589.675.392 1.201.928 1.576 1.605.388.678.581 1.451.581 2.319s-.193 1.641-.581 2.319a4.15 4.15 0 0 1-1.576 1.605c-.662.392-1.425.589-2.288.589zm-.525-2.462c.412 0 .769-.089 1.069-.268a1.92 1.92 0 0 0 .732-.731c.176-.309.263-.66.263-1.053 0-.404-.088-.761-.263-1.07a1.79 1.79 0 0 0-.732-.714c-.3-.178-.65-.267-1.05-.267s-.756.089-1.069.267c-.3.167-.538.404-.713.714s-.263.666-.263 1.07c0 .392.081.743.244 1.053a1.91 1.91 0 0 0 .732.731 2.08 2.08 0 0 0 1.05.268z"/><path d="M99.155 35.567c.525.131 1.056.196 1.594.196 1.138 0 2.038-.25 2.701-.749.675-.499 1.013-1.171 1.013-2.016 0-.547-.106-.987-.319-1.32a2.41 2.41 0 0 0-.825-.821 5.07 5.07 0 0 0-1.07-.482l-1.068-.303c-.338-.083-.613-.178-.826-.285s-.319-.25-.319-.428c0-.167.082-.291.244-.375.163-.095.406-.143.732-.143a2.93 2.93 0 0 1 1.031.196 2.39 2.39 0 0 1 .975.678l1.632-1.57a3.76 3.76 0 0 0-1.613-1.124c-.65-.262-1.362-.393-2.138-.393-.737 0-1.382.119-1.932.357s-.976.565-1.276.981c-.3.404-.45.886-.45 1.445 0 .523.106.957.319 1.302.212.333.488.595.825.785a4.92 4.92 0 0 0 1.069.446l1.069.303c.337.083.613.184.825.303.226.107.338.267.338.482 0 .166-.094.297-.282.392-.175.095-.431.143-.768.143-.488 0-.939-.083-1.351-.25a3.29 3.29 0 0 1-1.069-.731l-1.632 1.57c.313.321.688.606 1.126.856a6.55 6.55 0 0 0 1.444.553zm10.536.178c-.837 0-1.581-.16-2.231-.482-.638-.333-1.138-.785-1.501-1.356-.363-.583-.544-1.249-.544-1.998v-5.03h2.87v4.995a1.8 1.8 0 0 0 .15.767 1.2 1.2 0 0 0 .487.5c.213.119.469.178.769.178.426 0 .763-.125 1.014-.375.25-.262.375-.618.375-1.07V26.88h2.869v5.013c0 .761-.181 1.433-.544 2.016-.362.571-.862 1.023-1.5 1.356-.638.321-1.376.482-2.214.482zm8.555-8.865h-2.87v8.669h2.87v-5.066c0-.297.062-.547.187-.749a1.35 1.35 0 0 1 .544-.464c.226-.119.482-.178.769-.178.413 0 .757.125 1.032.375.288.238.432.577.432 1.017v5.066h2.869v-5.066c0-.297.063-.547.188-.749a1.35 1.35 0 0 1 .544-.464 1.62 1.62 0 0 1 .769-.178c.413 0 .756.125 1.032.375.287.238.431.577.431 1.017v5.066h2.87V30.18c0-.725-.163-1.344-.488-1.855a3.07 3.07 0 0 0-1.294-1.195c-.538-.285-1.157-.428-1.857-.428-.713 0-1.357.149-1.932.446-.374.189-.7.434-.98.733a3.16 3.16 0 0 0-.952-.769c-.5-.273-1.069-.41-1.707-.41-.675 0-1.281.137-1.819.41-.234.114-.447.25-.638.409v-.641z"/></svg>
+                  </a>
+                </div>
+                <div class="col text-center">
+                  <a class="d-inline-flex" href="#!" style="max-width: 140px" aria-label="Company logo">
+                    <svg class="text-body-tertiary" xmlns="http://www.w3.org/2000/svg" width="140" viewBox="0 0 140 60" fill="currentColor"><path d="M25.311 21.434l1.505-2.684 4.267 2.537-1.505 2.683c-.264.471.131 1.043.65.94l2.884-.573.933 4.981-2.884.572c-4.664.926-8.225-4.221-5.85-8.457zm-2.447 17.132l-1.642 2.684-4.656-2.536 1.642-2.684c.288-.471-.143-1.043-.709-.94l-3.145.572-1.018-4.981 3.146-.572c5.088-.926 8.973 4.221 6.382 8.457zm-.001-17.132l-1.641-2.684-4.656 2.537 1.642 2.683c.288.471-.143 1.043-.709.94l-3.146-.573-1.017 4.981 3.145.572c5.089.926 8.974-4.221 6.382-8.457h-.001z"/><path d="M25.312 38.566l1.504 2.684 4.268-2.536-1.505-2.684c-.264-.471.131-1.043.65-.94l2.883.572.933-4.981-2.884-.572c-4.664-.926-8.225 4.221-5.85 8.457h.001z"/><path d="M117.113 36.062v-5.148c0-.713.172-1.354.518-1.92.358-.578.866-1.031 1.522-1.36s1.439-.492 2.346-.492c.423-.004.845.047 1.253.153.382.091.728.221 1.038.391.322.159.597.351.824.578h.036c.243-.23.52-.424.823-.578a4.47 4.47 0 0 1 1.057-.391c.414-.104.842-.156 1.271-.153.907 0 1.689.163 2.345.492s1.164.781 1.522 1.36c.358.566.537 1.206.537 1.92v5.148h-2.793v-5.063c0-.283-.077-.538-.233-.764a1.65 1.65 0 0 0-.59-.578 1.67 1.67 0 0 0-.86-.221 1.76 1.76 0 0 0-.877.221c-.245.142-.449.341-.591.578-.145.231-.219.496-.215.764v5.063h-2.775v-5.063c0-.283-.077-.538-.233-.764-.145-.24-.355-.44-.608-.578a1.67 1.67 0 0 0-.86-.221c-.322 0-.614.074-.877.221-.245.142-.449.341-.591.578-.144.231-.219.496-.215.764v5.063h-2.774zm-6.07.204c-.943 0-1.761-.17-2.452-.51-.681-.351-1.206-.821-1.576-1.41-.37-.6-.555-1.264-.555-1.989v-5.013h2.775v4.945a1.63 1.63 0 0 0 .232.85 1.87 1.87 0 0 0 .627.612 1.94 1.94 0 0 0 .931.221 1.8 1.8 0 0 0 .896-.221 1.81 1.81 0 0 0 .644-.612c.155-.261.233-.544.233-.85v-4.945h2.775v5.013a3.81 3.81 0 0 1-.538 1.989c-.358.589-.876 1.059-1.557 1.41-.669.34-1.48.51-2.435.51zm-13.522-.204v-2.09h4.423c.119 0 .226-.023.322-.068a.7.7 0 0 0 .232-.221.54.54 0 0 0 0-.595c-.056-.087-.136-.158-.232-.204a.62.62 0 0 0-.322-.085h-1.612a4.66 4.66 0 0 1-1.629-.272c-.464-.182-.863-.49-1.146-.884-.274-.408-.412-.935-.412-1.58a2.54 2.54 0 0 1 .376-1.359 2.97 2.97 0 0 1 1.056-.986 3.04 3.04 0 0 1 1.487-.374h4.421v2.107h-3.992c-.159-.003-.312.052-.429.153a.5.5 0 0 0-.122.171c-.028.064-.041.133-.04.203a.57.57 0 0 0 .162.408c.117.101.27.156.429.153h1.576c.668 0 1.241.096 1.718.288.49.182.866.476 1.128.884.275.408.412.934.412 1.58 0 .51-.137.975-.412 1.393a2.87 2.87 0 0 1-1.074 1.003c-.442.25-.943.374-1.504.374h-4.816zm-6.046-8.92c.776 0 1.462.119 2.059.357.586.212 1.113.549 1.54.985a4.21 4.21 0 0 1 .985 1.495c.227.566.34 1.195.34 1.886 0 .861-.191 1.626-.573 2.294-.353.64-.886 1.175-1.539 1.546s-1.421.561-2.292.561c-.37 0-.722-.045-1.057-.136a3.48 3.48 0 0 1-.895-.391 2.43 2.43 0 0 1-.662-.629h-.054v4.639h-2.775v-7.885c0-.963.203-1.796.609-2.498.393-.691.991-1.258 1.718-1.632.74-.396 1.606-.594 2.596-.594v.001zm0 2.277c-.43 0-.805.102-1.128.306-.311.193-.549.465-.717.816-.167.339-.25.725-.25 1.155s.084.816.25 1.156a2.03 2.03 0 0 0 .717.816c.322.193.698.289 1.128.289s.8-.097 1.11-.289c.312-.206.56-.487.717-.816.179-.34.268-.725.268-1.156s-.089-.815-.268-1.155c-.167-.351-.406-.624-.717-.816-.31-.204-.68-.306-1.11-.306zm-9.14 6.644v-8.717h2.793v8.717h-2.793zm1.396-9.702c-.442 0-.823-.153-1.145-.459a1.45 1.45 0 0 1-.484-1.088c0-.419.161-.781.484-1.087.322-.317.704-.476 1.145-.476s.824.159 1.146.476c.322.306.483.668.483 1.087a1.45 1.45 0 0 1-.483 1.088 1.61 1.61 0 0 1-1.146.459zm-7.466 9.907c-.942 0-1.79-.198-2.542-.595-.738-.384-1.356-.947-1.79-1.631a4.32 4.32 0 0 1-.645-2.328c0-.872.215-1.648.645-2.328s1.052-1.247 1.79-1.631c.752-.408 1.6-.612 2.542-.612s1.784.203 2.525.612c.735.381 1.348.945 1.772 1.631.442.68.662 1.455.662 2.328 0 .861-.221 1.637-.662 2.328-.424.686-1.037 1.25-1.772 1.631-.752.397-1.594.595-2.525.595zm0-2.294c.442 0 .824-.102 1.146-.306a2.11 2.11 0 0 0 .752-.816c.179-.34.269-.725.269-1.156 0-.419-.089-.798-.269-1.139a2.11 2.11 0 0 0-.752-.815c-.322-.204-.704-.306-1.146-.306s-.83.102-1.163.306c-.323.204-.582.486-.752.816-.182.354-.274.744-.268 1.139 0 .43.089.815.268 1.155.17.33.43.612.752.816.334.203.722.306 1.163.306zm-13.995 5.54v-2.26h4.583c.179 0 .329-.056.448-.17.058-.049.104-.109.135-.177a.48.48 0 0 0 .044-.215v-1.92h-.054c-.227.25-.485.473-.77.663-.263.182-.561.317-.895.408-.355.095-.723.14-1.092.136-.812 0-1.54-.182-2.184-.544-.632-.374-1.134-.889-1.504-1.546-.357-.657-.537-1.405-.537-2.243 0-.827.185-1.58.555-2.26.382-.68.937-1.223 1.665-1.631s1.617-.612 2.668-.612c1.003 0 1.868.198 2.596.595.731.377 1.329.95 1.719 1.647.406.703.609 1.53.609 2.482v5.097c0 .781-.244 1.399-.734 1.852-.477.465-1.14.697-1.987.697l-5.264.001zm3.079-5.744c.43 0 .8-.091 1.11-.272.307-.189.554-.453.715-.764.17-.328.256-.689.251-1.054 0-.408-.083-.781-.25-1.121a1.91 1.91 0 0 0-.717-.799c-.31-.204-.68-.306-1.11-.306-.417 0-.787.096-1.11.289-.31.193-.549.453-.716.781s-.25.697-.25 1.105c0 .397.083.759.25 1.088.167.317.406.572.717.764.322.193.692.289 1.11.289zm-10.546 2.498c-.943 0-1.79-.198-2.542-.595a4.66 4.66 0 0 1-1.791-1.631 4.32 4.32 0 0 1-.645-2.328c0-.872.215-1.648.645-2.328a4.66 4.66 0 0 1 1.791-1.631c.752-.408 1.599-.612 2.542-.612s1.784.203 2.525.612c.735.381 1.348.945 1.772 1.631.442.68.662 1.455.662 2.328 0 .861-.221 1.637-.662 2.328-.424.686-1.037 1.25-1.772 1.631-.752.397-1.593.595-2.525.595zm0-2.294c.442 0 .823-.102 1.146-.306s.582-.486.752-.816c.179-.34.268-.725.268-1.156a2.41 2.41 0 0 0-.268-1.139c-.17-.33-.43-.611-.752-.815s-.705-.306-1.146-.306-.83.102-1.163.306c-.323.204-.582.486-.752.816-.182.354-.274.744-.268 1.139 0 .43.089.815.268 1.155.17.33.43.612.752.816a2.19 2.19 0 0 0 1.163.306zm-8.887 2.09c-.776 0-1.456-.163-2.041-.492-.569-.313-1.038-.765-1.36-1.308a3.47 3.47 0 0 1-.484-1.801v-8.292h3.008v8.496c0 .273.102.51.304.714a1.02 1.02 0 0 0 .752.306h3.312v2.378h-3.491z"/></svg>
+                  </a>
+                </div>
+                <div class="col text-center">
+                  <a class="d-inline-flex" href="#!" style="max-width: 140px" aria-label="Company logo">
+                    <svg class="text-body-tertiary" xmlns="http://www.w3.org/2000/svg" width="140" viewBox="0 0 140 60" fill="currentColor"><path d="M46.478 34.269c0 .557-.113.984-.339 1.283-.22.299-.588.448-1.103.448-.486 0-.831-.149-1.034-.448-.197-.299-.295-.727-.295-1.283v-9.29c0-.557.098-.984.295-1.283.203-.299.547-.448 1.034-.448.516 0 .883.149 1.103.448.226.299.339.727.339 1.283v9.29zm.842-2.699c0-.621.098-1.207.295-1.758a4.11 4.11 0 0 1 .904-1.459c.405-.416.909-.747 1.512-.993s1.321-.369 2.137-.369c.782 0 1.474.114 2.076.343s1.109.548 1.52.958c.411.404.724.888.938 1.45a5.05 5.05 0 0 1 .321 1.828c0 .615-.101 1.198-.304 1.749a4.08 4.08 0 0 1-.912 1.441c-.405.41-.912.738-1.52.984-.608.24-1.315.36-2.12.36-.794 0-1.494-.114-2.102-.343-.602-.234-1.109-.554-1.52-.958a4.08 4.08 0 0 1-.921-1.441 5.2 5.2 0 0 1-.304-1.793zm2.893 0a5.73 5.73 0 0 0 .104 1.107c.069.346.179.65.33.914a1.86 1.86 0 0 0 .608.633c.249.152.553.229.912.229.33 0 .617-.07.86-.211a1.68 1.68 0 0 0 .608-.589 2.84 2.84 0 0 0 .365-.905c.081-.357.122-.75.122-1.178 0-.387-.038-.753-.113-1.099a2.88 2.88 0 0 0-.339-.923 1.76 1.76 0 0 0-.608-.633c-.243-.158-.541-.237-.895-.237s-.654.076-.904.229-.452.36-.608.624-.269.571-.339.923a5.74 5.74 0 0 0-.104 1.116zm13.942 2.734a2.73 2.73 0 0 1-.574.747c-.22.205-.466.375-.738.51a3.73 3.73 0 0 1-.86.29c-.301.059-.611.088-.93.088a3.59 3.59 0 0 1-1.46-.29 3.22 3.22 0 0 1-1.138-.835c-.313-.369-.556-.82-.73-1.354s-.261-1.143-.261-1.828a6.52 6.52 0 0 1 .243-1.811c.162-.563.397-1.052.704-1.468a3.44 3.44 0 0 1 1.147-.984c.452-.24.967-.36 1.546-.36.66 0 1.245.129 1.755.387s.959.68 1.329 1.266v-.228c0-.422.113-.738.339-.949.232-.217.55-.325.956-.325.243 0 .449.041.617.123a.9.9 0 0 1 .4.352c.099.152.168.343.209.571.046.223.07.478.07.765v5.889c0 .715-.09 1.353-.269 1.916s-.446 1.037-.817 1.424-.846.68-1.425.879c-.579.205-1.268.308-2.068.308-.562 0-1.06-.026-1.494-.079-.428-.047-.799-.12-1.112-.22-.313-.111-.55-.234-.712-.369-.156-.135-.235-.311-.235-.527a1.17 1.17 0 0 1 .052-.352c.035-.111.087-.211.156-.299.075-.082.171-.149.287-.202.122-.047.269-.07.443-.07a4.51 4.51 0 0 1 .556.035l.591.07.652.079c.232.023.481.035.747.035a3.41 3.41 0 0 0 .851-.097c.249-.065.46-.179.634-.343s.307-.384.4-.659.139-.615.139-1.037v-1.046zm0-2.733a6.58 6.58 0 0 0-.096-1.169c-.058-.352-.159-.65-.304-.896a1.51 1.51 0 0 0-.582-.58c-.243-.141-.547-.211-.912-.211-.359 0-.657.073-.895.22a1.6 1.6 0 0 0-.556.607 2.91 2.91 0 0 0-.295.905c-.052.346-.078.715-.078 1.107 0 .896.156 1.57.469 2.021s.767.677 1.364.677c.278-.006.53-.059.756-.158a1.58 1.58 0 0 0 .599-.483 2.37 2.37 0 0 0 .391-.826 4.59 4.59 0 0 0 .139-1.213zm3.422-.001c0-.621.099-1.207.295-1.758a4.11 4.11 0 0 1 .904-1.459c.405-.416.909-.747 1.512-.993.608-.246 1.321-.369 2.137-.369.782 0 1.474.114 2.076.343s1.109.548 1.52.958c.411.404.724.888.938 1.45s.321 1.166.321 1.828c0 .615-.101 1.198-.304 1.749a4.09 4.09 0 0 1-.912 1.441c-.405.41-.912.738-1.52.984-.608.24-1.315.36-2.12.36-.793 0-1.494-.114-2.102-.343-.602-.234-1.109-.554-1.52-.958a4.08 4.08 0 0 1-.921-1.441 5.2 5.2 0 0 1-.304-1.793zm2.893 0a5.7 5.7 0 0 0 .104 1.107 3.04 3.04 0 0 0 .33.914 1.86 1.86 0 0 0 .608.633c.249.152.553.229.912.229.33 0 .617-.07.86-.211a1.68 1.68 0 0 0 .608-.589 2.84 2.84 0 0 0 .365-.905c.081-.357.122-.75.122-1.178 0-.387-.038-.753-.113-1.099-.07-.351-.182-.659-.339-.923a1.76 1.76 0 0 0-.608-.633c-.243-.158-.542-.237-.895-.237s-.654.076-.904.229-.452.36-.608.624-.269.571-.339.923a5.75 5.75 0 0 0-.104 1.116zm10.536-7.541a1.03 1.03 0 0 1-.13.519 1.21 1.21 0 0 1-.339.369 1.56 1.56 0 0 1-.487.229 2.19 2.19 0 0 1-.556.07 2.12 2.12 0 0 1-.582-.079 1.57 1.57 0 0 1-.478-.229 1.19 1.19 0 0 1-.33-.378 1.02 1.02 0 0 1-.122-.501.97.97 0 0 1 .113-.466 1.25 1.25 0 0 1 .322-.378 1.48 1.48 0 0 1 .478-.246c.185-.059.388-.088.608-.088a1.96 1.96 0 0 1 .556.079 1.56 1.56 0 0 1 .486.229 1.12 1.12 0 0 1 .33.369.96.96 0 0 1 .13.501zm-.13 10.239c0 .557-.113.984-.339 1.283-.22.299-.588.448-1.103.448-.487 0-.831-.149-1.034-.448-.197-.299-.295-.727-.295-1.283V28.89c0-.557.099-.984.295-1.283.203-.299.547-.448 1.034-.448.516 0 .883.149 1.103.448.226.299.339.727.339 1.283v5.379zm3.998-2.715a6.54 6.54 0 0 0 .087 1.099c.064.34.168.639.313.896a1.71 1.71 0 0 0 .591.598c.249.147.556.22.921.22.336 0 .617-.07.843-.211.231-.147.417-.346.556-.598.139-.258.237-.56.295-.905a6.19 6.19 0 0 0 .096-1.125 7.1 7.1 0 0 0-.07-.984 3.21 3.21 0 0 0-.26-.923 1.8 1.8 0 0 0-.53-.677c-.226-.176-.521-.264-.886-.264s-.675.059-.93.176c-.249.117-.452.296-.608.536-.151.24-.258.542-.322.905a7.25 7.25 0 0 0-.095 1.257zm-.009-2.663a2.97 2.97 0 0 1 .556-.817c.226-.234.475-.431.747-.589s.556-.275.851-.351a3.39 3.39 0 0 1 .894-.123c.533 0 1.014.12 1.443.36s.793.568 1.094.984a4.47 4.47 0 0 1 .704 1.459 6.39 6.39 0 0 1 .243 1.793c0 .662-.087 1.269-.261 1.819a4.34 4.34 0 0 1-.721 1.424 3.32 3.32 0 0 1-1.112.923 3.06 3.06 0 0 1-1.433.334c-.649 0-1.228-.152-1.738-.457s-.933-.732-1.268-1.283v3.164c0 .557-.113.984-.339 1.283-.22.299-.588.448-1.103.448-.486 0-.831-.149-1.034-.448-.197-.299-.295-.727-.295-1.283v-8.64c0-.557.098-.984.295-1.283.203-.299.547-.448 1.034-.448.516 0 .883.149 1.103.448.226.299.339.726.339 1.283zm9.589.624c0 .229.099.407.295.536.197.123.469.226.817.308l1.016.22 1.016.246c.33.088.64.193.93.316a2.92 2.92 0 0 1 .764.466 1.96 1.96 0 0 1 .521.668c.127.258.191.569.191.932 0 .457-.092.864-.277 1.222a2.58 2.58 0 0 1-.79.897c-.336.246-.738.436-1.208.571a5.84 5.84 0 0 1-1.555.211A11.13 11.13 0 0 1 94.619 36a6.29 6.29 0 0 1-1.329-.308c-.382-.141-.689-.313-.921-.519a.97.97 0 0 1-.347-.738c0-.246.078-.437.234-.571s.356-.202.6-.202a1.28 1.28 0 0 1 .33.053l.417.132.478.176.538.158a7.01 7.01 0 0 0 .712.158 5.49 5.49 0 0 0 .765.053 2.59 2.59 0 0 0 .477-.044c.156-.035.296-.085.417-.149a1 1 0 0 0 .313-.264.77.77 0 0 0 .147-.387c.017-.035.032-.07.043-.105a.41.41 0 0 0 .018-.123c0-.164-.076-.311-.226-.44-.145-.129-.351-.231-.617-.308l-1.277-.29-1.129-.281c-.342-.1-.655-.214-.939-.343-.278-.129-.515-.287-.712-.475a2.01 2.01 0 0 1-.451-.677c-.105-.264-.156-.583-.156-.958 0-.404.09-.765.269-1.081.185-.322.449-.592.791-.809s.755-.381 1.243-.492a7.07 7.07 0 0 1 1.65-.176c1.1 0 1.937.135 2.511.404s.869.609.869 1.037c0 .24-.079.425-.235.554-.156.123-.345.185-.564.185-.116 0-.238-.02-.365-.061l-.443-.149a4.15 4.15 0 0 0-.626-.149c-.237-.047-.533-.07-.886-.07l-.73.035c-.214.023-.4.064-.556.123a.89.89 0 0 0-.356.237.58.58 0 0 0-.122.378zm9.078 3.225c0 .275.035.516.105.721a1.55 1.55 0 0 0 .303.519 1.31 1.31 0 0 0 .443.308 1.59 1.59 0 0 0 .556.097 2.14 2.14 0 0 0 .67-.105c.214-.07.402-.179.564-.325a1.56 1.56 0 0 0 .4-.554 1.91 1.91 0 0 0 .148-.782V28.89c0-.557.098-.984.295-1.283.203-.299.548-.448 1.034-.448.515 0 .883.149 1.103.448.226.299.339.726.339 1.283v5.379c0 .557-.113.984-.339 1.283-.22.299-.588.448-1.103.448-.486 0-.831-.149-1.034-.448-.197-.299-.295-.727-.295-1.283a2.89 2.89 0 0 1-.479.738 2.95 2.95 0 0 1-.677.58 3.29 3.29 0 0 1-.851.369 3.62 3.62 0 0 1-1 .132 3.17 3.17 0 0 1-1.121-.202 2.79 2.79 0 0 1-.937-.615c-.273-.275-.49-.615-.652-1.02s-.243-.876-.243-1.415V28.89c0-.557.098-.984.295-1.283.203-.299.547-.448 1.034-.448.515 0 .883.149 1.103.448.226.299.339.726.339 1.283v3.85zm7.215-3.849c0-.557.099-.984.296-1.283s.547-.448 1.033-.448c.516 0 .884.149 1.104.448.226.299.339.726.339 1.283.116-.281.272-.536.469-.765.203-.234.432-.434.686-.598a3.33 3.33 0 0 1 .843-.378 3.14 3.14 0 0 1 .939-.141 3.24 3.24 0 0 1 .886.123 2.49 2.49 0 0 1 .817.378 2.64 2.64 0 0 1 .668.65c.191.263.339.58.444.949.179-.393.39-.724.633-.993a3.31 3.31 0 0 1 .791-.65 3.2 3.2 0 0 1 .886-.352 4.27 4.27 0 0 1 .938-.105 2.81 2.81 0 0 1 1.06.202 2.41 2.41 0 0 1 .895.615 2.84 2.84 0 0 1 .617 1.028c.157.41.234.891.234 1.441v3.973c0 .557-.112.984-.338 1.283-.22.299-.588.448-1.104.448-.486 0-.831-.149-1.033-.448s-.296-.727-.296-1.283v-3.85a2.2 2.2 0 0 0-.104-.703 1.44 1.44 0 0 0-.295-.527 1.13 1.13 0 0 0-.435-.325 1.29 1.29 0 0 0-.538-.114 2.01 2.01 0 0 0-.678.114c-.214.076-.402.193-.565.352a1.8 1.8 0 0 0-.382.606c-.093.246-.139.542-.139.888v3.56c0 .557-.113.984-.339 1.283-.22.299-.588.448-1.104.448-.486 0-.831-.149-1.033-.448s-.296-.727-.296-1.283v-3.683c0-.603-.124-1.06-.373-1.371-.244-.311-.577-.466-.999-.466-.249 0-.481.041-.696.123a1.56 1.56 0 0 0-.556.36c-.156.158-.281.354-.373.589s-.13.504-.13.809v3.639c0 .557-.113.984-.339 1.283-.22.299-.588.448-1.104.448-.486 0-.831-.149-1.033-.448s-.296-.727-.296-1.283V28.89zM25.983 34.5c-2.532 0-4.585-2.015-4.585-4.5s2.053-4.5 4.585-4.5 4.585 2.015 4.585 4.5-2.053 4.5-4.585 4.5zm-8.846-2.681c-1.314.223-2.215 1.446-1.711 2.637a10.96 10.96 0 0 0 3.285 4.3 11.61 11.61 0 0 0 7.41 2.493c2.699-.045 5.293-1.017 7.315-2.741a10.92 10.92 0 0 0 3.127-4.407c.461-1.207-.484-2.399-1.805-2.578s-2.508.748-3.161 1.869a6.34 6.34 0 0 1-1.363 1.629c-1.16.989-2.648 1.547-4.197 1.573s-3.056-.481-4.251-1.431a6.34 6.34 0 0 1-1.422-1.582c-.693-1.099-1.912-1.985-3.227-1.762zm20.22-.7a10.57 10.57 0 0 0 .089-1.374c0-6.073-5.132-10.995-11.463-10.995S14.52 23.673 14.52 29.745c0 .597.05 1.183.145 1.755.527-.691 1.348-1.185 2.236-1.335.96-.162 1.833.061 2.571.479-.044-.293-.066-.593-.066-.898 0-3.484 2.945-6.309 6.577-6.309s6.577 2.825 6.577 6.309c0 .23-.013.457-.038.68.722-.442 1.587-.695 2.553-.565.892.12 1.731.586 2.283 1.259z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <!-- Page footer -->
+    <footer class="footer bg-body border-top" data-bs-theme="dark">
+      <div class="container pb-md-2">
+        <div class="d-md-flex align-items-center justify-content-between border-bottom pt-5 pb-4 pb-md-5">
+          <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center gap-3 gap-sm-4 mb-4 mb-md-0">
+            <div class="d-flex align-items-center">
+              <i class="fi-mail fs-4 lh-0 text-body d-none d-sm-block me-2"></i>
+              <i class="fi-mail text-body d-sm-none me-2"></i>
+              <h6 class="ps-sm-1 mb-0">
+                <span class="h5 d-none d-sm-block mb-0">Subscribe to our newsletter</span>
+                <span class="d-sm-none">Subscribe to our newsletter</span>
+              </h6>
+            </div>
+            <button type="button" class="btn btn-primary">Subscribe</button>
+          </div>
+          <div class="h5 d-none d-sm-block text-center mb-0">
+            <span class="text-body-secondary fw-normal me-3">Need help?</span>
+            <a class="text-white text-decoration-none hover-effect-underline" href="/contact">Contact us</a>
+          </div>
+          <div class="h6 d-sm-none text-center mb-0">
+            <span class="text-body-secondary fw-normal me-2">Need help?</span>
+            <a class="text-white text-decoration-none hover-effect-underline" href="/contact">Contact us</a>
+          </div>
+        </div>
+
+        <div class="accordion row pt-4 pt-sm-5 mt-3 mt-sm-0" id="footerLinks">
+          <div class="col-md-4 col-lg-5 mb-4 mb-sm-5 mb-md-0">
+            <a class="d-inline-flex align-items-center text-dark-emphasis text-decoration-none mb-3" href="/">
+              <span class="flex-shrink-0 text-primary rtl-flip me-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"/><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"/><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"/><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"/></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"/><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"/></svg>
+              </span>
+              <span class="fs-4 fw-semibold">Monaclick</span>
+            </a>
+            <p class="fs-sm text-body-secondary pt-md-1" style="max-width: 260px">Connecting you with reliable local contractors for all your service needs.</p>
+            <div class="d-flex gap-3 pt-2 pt-md-3">
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/about" aria-label="Follow us on Instagram">
+                <i class="fi-instagram fs-sm"></i>
+              </a>
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/about" aria-label="Follow us on Facebook">
+                <i class="fi-facebook fs-sm"></i>
+              </a>
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/blog" aria-label="Follow us on X (Twitter)">
+                <i class="fi-x fs-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-8 col-md-5 col-lg-4">
+            <div class="accordion-item border-0">
+              <h6 class="accordion-header" id="categoryLinksHeading">
+                <span class="h5 d-none d-sm-block">Popular categories</span>
+                <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#categoryLinks" aria-expanded="false" aria-controls="categoryLinks">Popular categories</button>
+              </h6>
+              <div class="accordion-collapse collapse d-sm-block" id="categoryLinks" aria-labelledby="categoryLinksHeading" data-bs-parent="#footerLinks">
+                <div class="row row-cols-2">
+                  <div class="col">
+                    <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+<li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/listings/contractors">Contractors</a></li>
+</ul>
+                  </div>
+                  <div class="col">
+                    <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+<li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/account/profile">My profile</a></li>
+                      <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/admin">Admin</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <hr class="d-sm-none my-0">
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-3 col-lg-2 offset-lg-1">
+            <div class="accordion-item border-0">
+              <h6 class="accordion-header" id="companyLinksHeading">
+                <span class="h5 d-none d-sm-block">Company</span>
+                <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#companyLinks" aria-expanded="false" aria-controls="companyLinks">Company</button>
+              </h6>
+              <div class="accordion-collapse collapse d-sm-block" id="companyLinks" aria-labelledby="companyLinksHeading" data-bs-parent="#footerLinks">
+                <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/about">About</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/blog">Press &amp; announcements</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/about">Careers at Monaclick</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/contact">Contact us</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/terms-and-conditions">Terms of use</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/terms-and-conditions">Privacy</a></li>
+                </ul>
+              </div>
+              <hr class="d-sm-none my-0">
+            </div>
+          </div>
+        </div>
+
+        <div class="d-md-flex gap-4 pt-4 pt-sm-5">
+          <h6 class="mt-1 mb-md-0">
+            <span class="h5 text-nowrap d-none d-sm-block mb-0">Top cities</span>
+            <span class="text-nowrap d-sm-none">Top cities</span>
+          </h6>
+          <ul class="nav nav-pills gap-2 gap-md-3">
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=new+york">New York</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=chicago">Chicago</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=indianapolis">Indianapolis</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=boston">Boston</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=atlanta">Atlanta</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=cincinnati">Cincinnati</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=los+angeles">Los Angeles</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=dallas">Dallas</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=pittsburgh">Pittsburgh</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=tampa">Tampa</a></li>
+          </ul>
+        </div>
+
+        <div class="d-md-flex align-items-center py-4 pt-sm-5 mt-3 mt-sm-0">
+          <div class="d-flex gap-2 gap-sm-3 justify-content-center ms-md-auto mb-4 mb-md-0 order-md-2">
+            <div><img src="/finder/assets/img/payment-methods/visa-dark-mode.svg" alt="Visa"></div>
+            <div><img src="/finder/assets/img/payment-methods/mastercard.svg" alt="Mastercard"></div>
+            <div><img src="/finder/assets/img/payment-methods/paypal-dark-mode.svg" alt="PayPal"></div>
+            <div><img src="/finder/assets/img/payment-methods/google-pay-dark-mode.svg" alt="Google Pay"></div>
+            <div><img src="/finder/assets/img/payment-methods/apple-pay-dark-mode.svg" alt="Apple Pay"></div>
+          </div>
+          <p class="text-body-secondary fs-sm text-center text-md-start mb-0 me-md-4 order-md-1">&copy; All rights reserved. Developed by <span class="text-body fw-medium">US Logo and Web</span></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <div class="floating-buttons position-fixed top-50 end-0 z-sticky me-3 me-xl-4 pb-4">
+      <a class="btn-scroll-top btn btn-sm bg-body border-0 rounded-pill shadow animate-slide-end" href="#top">
+        Top
+        <i class="fi-arrow-right fs-base ms-1 me-n1 animate-target"></i>
+        <span class="position-absolute top-0 start-0 w-100 h-100 border rounded-pill z-0"></span>
+        <svg class="position-absolute top-0 start-0 w-100 h-100 z-1" viewBox="0 0 62 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x=".75" y=".75" width="60.5" height="30.5" rx="15.25" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+        </svg>
+      </a>
+      <a class="btn btn-sm btn-outline-secondary text-uppercase bg-body rounded-pill shadow animate-rotate ms-2 me-n5" href="#customizer" style="font-size: .625rem; letter-spacing: .05rem;" data-bs-toggle="offcanvas" role="button" aria-controls="customizer">
+        Customize<i class="fi-settings fs-base ms-1 me-n2 animate-target"></i>
+      </a>
+    </div>
+    <script src="/finder/assets/js/monaclick-global-footer.js?v=20260306-3"></script>
+
+    <script src="/finder/assets/js/theme.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+

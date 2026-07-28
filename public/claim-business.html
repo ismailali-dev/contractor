@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    <title>Monaclick | Claim Business</title>
+    <script src="/finder/assets/js/theme-switcher.js"></script>
+    <link rel="preload" href="/finder/assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/finder/assets/icons/finder-icons.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/finder/assets/icons/finder-icons.min.css">
+    <link rel="stylesheet" href="/finder/assets/css/theme.min.css">
+    <link rel="stylesheet" href="/finder/assets/css/monaclick-finder-colors.css">
+    <style>
+      body.claim-business-page {
+        background:
+          radial-gradient(circle at top left, rgba(216, 81, 81, 0.08), transparent 32%),
+          radial-gradient(circle at top right, rgba(252, 146, 49, 0.08), transparent 28%),
+          #fff;
+      }
+      .claim-shell {
+        min-height: calc(100vh - 81px);
+      }
+      .claim-card {
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+      }
+      .claim-accent-btn {
+        --fn-btn-bg: #f06418;
+        --fn-btn-border-color: #f06418;
+        --fn-btn-hover-bg: #db5b16;
+        --fn-btn-hover-border-color: #db5b16;
+        --fn-btn-active-bg: #c95215;
+        --fn-btn-active-border-color: #c95215;
+      }
+      .claim-done-btn {
+        --fn-btn-bg: #f06418;
+        --fn-btn-border-color: #f06418;
+        --fn-btn-hover-bg: #db5b16;
+        --fn-btn-hover-border-color: #db5b16;
+        --fn-btn-active-bg: #c95215;
+        --fn-btn-active-border-color: #c95215;
+      }
+      .claim-thank-wrap {
+        position: relative;
+        overflow: hidden;
+      }
+      .claim-thank-wrap::before,
+      .claim-thank-wrap::after {
+        content: "";
+        position: absolute;
+        border-radius: 999px;
+        pointer-events: none;
+      }
+      .claim-thank-wrap::before {
+        width: 220px;
+        height: 220px;
+        top: -80px;
+        left: -70px;
+        background: radial-gradient(circle, rgba(240, 100, 24, 0.16), rgba(240, 100, 24, 0));
+      }
+      .claim-thank-wrap::after {
+        width: 180px;
+        height: 180px;
+        right: -60px;
+        bottom: -70px;
+        background: radial-gradient(circle, rgba(255, 193, 7, 0.14), rgba(255, 193, 7, 0));
+      }
+      .claim-thank-icon {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 1rem;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, rgba(240, 100, 24, 0.14), rgba(255, 193, 7, 0.2));
+        color: #f06418;
+        box-shadow: inset 0 0 0 1px rgba(240, 100, 24, 0.08);
+      }
+      #claimOtp {
+        letter-spacing: .45em;
+        font-weight: 700;
+      }
+      .claim-password-wrap {
+        position: relative;
+      }
+      .claim-password-input {
+        padding-right: 3.35rem;
+      }
+      .claim-password-toggle {
+        position: absolute;
+        top: 50%;
+        right: .85rem;
+        transform: translateY(-50%);
+        width: 2.25rem;
+        height: 2.25rem;
+        border: 0;
+        border-radius: 999px;
+        background: transparent;
+        color: #64748b;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: color .2s ease, background-color .2s ease;
+      }
+      .claim-password-toggle:hover {
+        color: #f06418;
+        background: rgba(240, 100, 24, 0.08);
+      }
+      .claim-password-toggle:focus-visible {
+        outline: 2px solid rgba(240, 100, 24, 0.35);
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body class="claim-business-page d-flex flex-column min-vh-100">
+    <header class="navbar navbar-expand-lg bg-body navbar-sticky sticky-top z-fixed px-0 border-bottom" data-sticky-element>
+      <div class="container">
+        <button type="button" class="navbar-toggler me-3 me-lg-0" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand py-1 py-md-2 py-xl-1 me-2 me-sm-n4 me-md-n5 me-lg-0" href="/">
+          <span class="d-none d-sm-flex flex-shrink-0 text-primary rtl-flip me-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"/><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"/><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"/><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"/></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"/><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"/></svg>
+          </span>
+          Monaclick
+        </a>
+
+        <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
+          <div class="offcanvas-header py-3">
+            <h5 class="offcanvas-title" id="navbarNavLabel">Browse Monaclick</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body pt-2 pb-4 py-lg-0 mx-lg-auto">
+            <ul class="navbar-nav position-relative">
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0"><a class="nav-link" href="/">Home</a></li>
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link" href="/listings/contractors">Contractors</a>
+              </li>
+              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/about">About</a></li>
+                  <li><a class="dropdown-item" href="/blog">Blog</a></li>
+                  <li><a class="dropdown-item" href="/contact">Contact</a></li>
+                  <li><a class="dropdown-item" href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="d-flex gap-sm-1">
+          <div class="dropdown">
+            <button type="button" class="theme-switcher btn btn-icon btn-outline-secondary fs-lg border-0 animate-scale" data-bs-toggle="dropdown" data-bs-display="dynamic" aria-expanded="false" aria-label="Toggle theme (light)">
+              <span class="theme-icon-active d-flex animate-target"><i class="fi-sun"></i></span>
+            </button>
+            <ul class="dropdown-menu start-50 translate-middle-x" style="--fn-dropdown-min-width: 9rem; --fn-dropdown-spacer: .5rem">
+              <li><button type="button" class="dropdown-item active" data-bs-theme-value="light" aria-pressed="true"><span class="theme-icon d-flex fs-base me-2"><i class="fi-sun"></i></span><span class="theme-label">Light</span><i class="item-active-indicator fi-check ms-auto"></i></button></li>
+              <li><button type="button" class="dropdown-item" data-bs-theme-value="dark" aria-pressed="false"><span class="theme-icon d-flex fs-base me-2"><i class="fi-moon"></i></span><span class="theme-label">Dark</span><i class="item-active-indicator fi-check ms-auto"></i></button></li>
+              <li><button type="button" class="dropdown-item" data-bs-theme-value="auto" aria-pressed="false"><span class="theme-icon d-flex fs-base me-2"><i class="fi-auto"></i></span><span class="theme-label">Auto</span><i class="item-active-indicator fi-check ms-auto"></i></button></li>
+            </ul>
+          </div>
+
+          <a class="btn btn-icon btn-outline-secondary fs-lg border-0 animate-shake me-2" href="/signin" aria-label="Sign in to account">
+            <i class="fi-user animate-target"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container py-5 claim-shell d-flex align-items-center flex-grow-1">
+      <div class="row justify-content-center w-100">
+        <div class="col-md-9 col-lg-7 col-xl-5">
+          <div class="card claim-card rounded-4 overflow-hidden">
+            <div class="card-body p-4 p-sm-5">
+              <div class="text-center mb-4">
+                <span class="badge bg-faded-primary text-primary mb-3">Business Claim</span>
+                <h1 class="h3 mb-2" id="claimPageTitle">Claim your business</h1>
+                <p class="text-body-secondary mb-0" id="claimPageText">Enter your email to receive a 6-digit OTP.</p>
+              </div>
+
+              <div id="claimAlert"></div>
+
+              <div class="border rounded-4 bg-body-tertiary p-3 p-sm-4 mb-4" id="claimListingCard">
+                <div class="placeholder-glow" id="claimListingLoading">
+                  <span class="placeholder col-8 mb-2"></span>
+                  <span class="placeholder col-5"></span>
+                </div>
+                <div class="d-none" id="claimListingSummary">
+                  <div class="small text-body-secondary mb-1" id="claimListingModule"></div>
+                  <div class="fw-semibold fs-5" id="claimListingName"></div>
+                </div>
+              </div>
+
+              <form id="claimEmailForm" class="needs-validation" novalidate data-mc-no-loader>
+                <div class="mb-3">
+                  <label class="form-label" for="claimEmail">Email Address</label>
+                  <input class="form-control form-control-lg" type="email" id="claimEmail" placeholder="Enter your email" required>
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <button class="btn btn-primary claim-accent-btn btn-lg w-100" type="submit">Send OTP</button>
+              </form>
+
+              <form id="claimOtpForm" class="needs-validation d-none" novalidate data-mc-no-loader>
+                <div class="mb-3">
+                  <label class="form-label" for="claimOtp">Verification Code</label>
+                  <input class="form-control form-control-lg text-center" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" id="claimOtp" placeholder="Enter 6-digit OTP" required>
+                  <div class="invalid-feedback">Please enter the 6-digit code.</div>
+                </div>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary claim-accent-btn btn-lg" type="submit">Verify OTP</button>
+                  <button class="btn btn-outline-secondary" type="button" id="claimResendBtn">Resend OTP</button>
+                </div>
+              </form>
+
+              <div id="claimCompletePanel" class="d-none">
+                <div class="py-3 py-sm-4 rounded-4">
+                  <div class="text-center mb-4">
+                    <div class="claim-thank-icon">
+                      <i class="fi-lock fs-1"></i>
+                    </div>
+                    <h2 class="h2 fw-semibold mb-2">Set Your Password</h2>
+                    <p class="text-body-secondary mb-0">Create a password for your new account to finish claiming this business.</p>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="claimPassword">New Password</label>
+                    <div class="claim-password-wrap">
+                      <input class="form-control form-control-lg claim-password-input" type="password" id="claimPassword" placeholder="Enter password" minlength="8" autocomplete="new-password">
+                      <button class="claim-password-toggle" type="button" data-password-toggle="claimPassword" aria-label="Show password" aria-pressed="false">
+                        <i class="fi-eye" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label" for="claimPasswordConfirm">Confirm Password</label>
+                    <div class="claim-password-wrap">
+                      <input class="form-control form-control-lg claim-password-input" type="password" id="claimPasswordConfirm" placeholder="Confirm password" minlength="8" autocomplete="new-password">
+                      <button class="claim-password-toggle" type="button" data-password-toggle="claimPasswordConfirm" aria-label="Show password" aria-pressed="false">
+                        <i class="fi-eye" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary claim-done-btn btn-lg w-100" type="button" id="claimCompleteBtn">Create Account &amp; Claim</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer bg-body border-top" data-bs-theme="dark"></footer>
+
+    <script src="/finder/assets/js/monaclick-global-footer.js"></script>
+    <script src="/finder/assets/js/monaclick-claim-dynamic.js"></script>
+    <script src="/finder/assets/js/theme.min.js"></script>
+  </body>
+</html>
