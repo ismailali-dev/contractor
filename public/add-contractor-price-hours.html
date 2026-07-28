@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" data-pwa="true">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO Meta Tags -->
+    <title>Monaclick | Add Contractor - Price and Hours</title>
+    <meta name="description" content="Monaclick - Directory & Listings Bootstrap HTML Template">
+    <meta name="keywords" content="directory, listings, search, car dealer, real estate, city guide, business listings, medical directories, event listings, e-commerce, market, multipurpose, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
+    <meta name="author" content="US Logo and Web">
+
+    <!-- Webmanifest + Favicon / App icons -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="/finder/manifest.json">
+    <link rel="icon" type="image/png" href="/finder/assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/finder/assets/app-icons/icon-180x180.png">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="/finder/assets/js/theme-switcher.js"></script>
+    <style>#customizer{display:none!important;}</style>
+
+    <!-- Preloaded local web font (Inter) -->
+    <link rel="preload" href="/finder/assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Font icons -->
+    <link rel="preload" href="/finder/assets/icons/finder-icons.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/finder/assets/icons/finder-icons.min.css">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="/finder/assets/vendor/choices.js/public/assets/styles/choices.min.css">
+
+    <!-- Bootstrap + Theme styles -->
+    <link rel="preload" href="/finder/assets/css/theme.min.css" as="style">
+    <link rel="preload" href="/finder/assets/css/theme.rtl.min.css" as="style">
+    <link rel="stylesheet" href="/finder/assets/css/theme.min.css" id="theme-styles">
+
+    <!-- Customizer -->
+    
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Customizer offcanvas -->
+    <div class="offcanvas offcanvas-end" id="customizer" tabindex="-1">
+      <div class="offcanvas-header border-bottom">
+        <h4 class="h5 offcanvas-title">Customize theme</h4>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+        <!-- Customizer settings -->
+        <div class="customizer-collapse collapse show" id="customizerSettings">
+
+          <!-- Colors -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fi-swatches text-body-tertiary fs-5 me-2"></i>
+              <h5 class="fs-lg mb-0">Colors</h5>
+            </div>
+            <div class="row row-cols-2 g-3" id="theme-colors">
+              <div class="col">
+                <h6 class="fs-sm mb-2">Primary</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-primary" data-color-labels='["theme-primary", "primary", "primary-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#d85151">
+                  <label for="primary" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #d85151"></label>
+                  <input type="color" class="visually-hidden" id="primary" value="#d85151">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Success</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-success" data-color-labels='["theme-success", "success", "success-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#33b36b">
+                  <label for="success" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #33b36b"></label>
+                  <input type="color" class="visually-hidden" id="success" value="#33b36b">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Warning</h6>
+                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-warning" data-color-labels='["theme-warning", "warning", "warning-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#fc9231">
+                  <label for="warning" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #fc9231"></label>
+                  <input type="color" class="visually-hidden" id="warning" value="#fc9231">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Danger</h6>
+                <div class="color-swatch d-flex border rounded gap-2 p-2" id="theme-danger" data-color-labels='["theme-danger", "danger", "danger-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#f03d3d">
+                  <label for="danger" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #f03d3d"></label>
+                  <input type="color" class="visually-hidden" id="danger" value="#f03d3d">
+                </div>
+              </div>
+              <div class="col">
+                <h6 class="fs-sm mb-2">Info</h6>
+                <div class="color-swatch d-flex border rounded gap-2 p-2" id="theme-info" data-color-labels='["theme-info", "info", "info-rgb"]'>
+                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#3d7a81">
+                  <label for="info" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #3d7a81"></label>
+                  <input type="color" class="visually-hidden" id="info" value="#3d7a81">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direction -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center pb-1 mb-2">
+              <i class="fi-sort text-body-tertiary fs-lg me-2" style="transform: rotate(90deg)"></i>
+              <h5 class="fs-lg mb-0">Direction</h5>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border rounded p-3">
+              <div class="me-3">
+                <h6 class="mb-1">RTL</h6>
+                <p class="fs-sm mb-0">Change text direction</p>
+              </div>
+              <div class="form-check form-switch m-0">
+                <input type="checkbox" class="form-check-input" role="switch" id="rtl-switch">
+              </div>
+            </div>
+            <div class="alert alert-info p-2 mt-2 mb-0">
+              <div class="d-flex text-body-emphasis fs-xs py-1 pe-1">
+                <i class="fi-info text-info fs-lg mb-2 mb-sm-0" style="margin-top: .125rem"></i>
+                <div class="ps-2">To switch the text direction of your webpage from LTR to RTL, please consult the detailed instructions provided in the relevant section of our documentation.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Border width -->
+          <div class="pb-4 mb-2">
+            <div class="d-flex align-items-center pb-1 mb-2">
+              <i class="fi-menu text-body-tertiary fs-lg me-2"></i>
+              <h5 class="fs-lg mb-0">Border width, px</h5>
+            </div>
+            <div class="slider-input d-flex align-items-center gap-3 border rounded p-3" id="border-input">
+              <input type="range" class="form-range" min="0" max="10" step="1" value="1">
+              <input type="number" class="form-control" id="border-width" min="0" max="10" value="1" style="max-width: 5.5rem">
+            </div>
+          </div>
+
+          <!-- Rounding -->
+          <div class="d-flex align-items-center pb-1 mb-2">
+            <i class="fi-maximize text-body-tertiary fs-lg me-2"></i>
+            <h5 class="fs-lg mb-0">Rounding, rem</h5>
+          </div>
+          <div class="slider-input d-flex align-items-center gap-3 border rounded p-3">
+            <input type="range" class="form-range" min="0" max="5" step=".05" value="0.5">
+            <input type="number" class="form-control" id="border-radius" min="0" max="5" step=".05" value="0.5" style="max-width: 5.5rem">
+          </div>
+        </div>
+
+        <!-- Customizer code -->
+        <div class="customizer-collapse collapse" id="customizerCode">
+          <div class="nav mb-3">
+            <a class="nav-link position-relative fs-base p-0" href=".customizer-collapse" data-bs-toggle="collapse" aria-expanded="true" aria-controls="customizerSettings customizerCode">
+              <i class="fi-chevron-left fs-lg ms-n1 me-1"></i>
+              <span class="hover-effect-underline stretched-link">Back to settings</span>
+            </a>
+          </div>
+          <p class="fs-sm pb-1">To apply the provided styles to your webpage, enclose them within a <code>&lt;style&gt;</code> tag and insert this tag into the <code>&lt;head&gt;</code> section of your HTML document after the following link to the main stylesheet:<br><code>&lt;link href=&quot;assets/css/theme.min.css&quot;&gt;</code></p>
+          <div class="position-relative bg-body-tertiary rounded overflow-hidden pt-3">
+            <div class="position-absolute top-0 start-0 w-100 p-3">
+              <button type="button" class="btn btn-sm btn-outline-dark w-100" data-copy-text-from="#generated-styles" data-done-label="Code copied">
+                <i class="fi-copy fs-sm me-1"></i>
+                Copy code
+              </button>
+            </div>
+            <pre class="text-wrap bg-transparent border-0 fs-xs text-body-emphasis p-4 pt-5" id="generated-styles"></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offcanvas footer (Action buttons) -->
+      <div class="offcanvas-header border-top gap-3 d-none" id="customizer-btns">
+        <button type="button" class="btn btn-lg btn-secondary w-100 fs-sm" id="customizer-reset">
+          <i class="fi-trash fs-lg me-2 ms-n1"></i>
+          Reset
+        </button>
+        <button class="btn btn-lg btn-primary hiding-collapse-toggle w-100 fs-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".customizer-collapse" aria-expanded="false" aria-controls="customizerSettings customizerCode">
+          <i class="fi-code fs-lg me-2 ms-n1"></i>
+          Show code
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation bar (Page header) -->
+    <header class="navbar navbar-expand-lg bg-body navbar-sticky sticky-top z-fixed px-0" data-sticky-element>
+      <div class="container">
+        <button type="button" class="navbar-toggler me-3 me-lg-0" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand py-1 py-md-2 py-xl-1 me-2 me-sm-n4 me-md-n5 me-lg-0" href="/">
+          <span class="d-none d-sm-flex flex-shrink-0 text-primary rtl-flip me-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"/><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"/><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"/><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"/></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"/><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"/></svg>
+          </span>
+          Monaclick
+        </a>
+
+        <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
+          <div class="offcanvas-header py-3">
+            <h5 class="offcanvas-title" id="navbarNavLabel">Browse Monaclick</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body pt-2 pb-4 py-lg-0 mx-lg-auto">
+            <ul class="navbar-nav position-relative">
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link" href="/listings/contractors">Contractors</a>
+              </li>
+              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">Account</a>
+                <ul class="dropdown-menu">
+                  <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Auth Pages</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/signin">Sign In</a></li>
+                      <li><a class="dropdown-item" href="/signup">Sign Up</a></li>
+                      <li><a class="dropdown-item" href="/password-recovery">Password Recovery</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="/account/profile">My Profile</a></li>
+                  <li><a class="dropdown-item" href="/account/settings">Account Settings</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/about">About</a></li>
+                  <li><a class="dropdown-item" href="/blog">Blog</a></li>
+                  <li><a class="dropdown-item" href="/contact">Contact</a></li>
+                  <li><a class="dropdown-item" href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="d-flex gap-sm-1">
+          <div class="dropdown">
+            <button type="button" class="theme-switcher btn btn-icon btn-outline-secondary fs-lg border-0 animate-scale" data-bs-toggle="dropdown" data-bs-display="dynamic" aria-expanded="false" aria-label="Toggle theme (light)">
+              <span class="theme-icon-active d-flex animate-target">
+                <i class="fi-sun"></i>
+              </span>
+            </button>
+            <ul class="dropdown-menu start-50 translate-middle-x" style="--fn-dropdown-min-width: 9rem; --fn-dropdown-spacer: .5rem">
+              <li>
+                <button type="button" class="dropdown-item active" data-bs-theme-value="light" aria-pressed="true">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-sun"></i></span>
+                  <span class="theme-label">Light</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="dark" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-moon"></i></span>
+                  <span class="theme-label">Dark</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="auto" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2"><i class="fi-auto"></i></span>
+                  <span class="theme-label">Auto</span>
+                  <i class="item-active-indicator fi-check ms-auto"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <a class="btn btn-icon btn-outline-secondary fs-lg border-0 animate-shake me-2" href="/signin" aria-label="Sign in to account">
+            <i class="fi-user animate-target"></i>
+          </a>
+
+          <a class="btn btn-primary animate-scale" href="/add-contractor">
+            <i class="fi-plus fs-lg animate-target ms-n2 me-1 me-sm-2"></i>
+            Create<span class="d-none d-xl-inline ms-1">a listing</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Page content -->
+    <main class="content-wrapper">
+
+      <!-- Steps (Navigation) -->
+      <div class="sticky-top bg-info pt-3" style="margin-top: -76px">
+        <div class="d-block d-md-none" style="height: 62px"></div>
+        <div class="d-none d-md-block d-lg-none" style="height: 70px"></div>
+        <div class="d-none d-lg-block" style="height: 76px"></div>
+        <div class="container pt-md-1">
+          <div class="overflow-x-auto">
+            <div class="d-flex flex-nowrap align-items-center gap-1 pb-3 mb-md-1">
+              <div class="position-relative d-flex align-items-center gap-2 gap-sm-3 text-nowrap">
+                <div class="d-flex align-items-center justify-content-center bg-white rounded-circle flex-shrink-0" style="width: 44px; height: 44px">
+                  <i class="fi-check-circle fs-lg text-info"></i>
+                </div>
+                <a class="hover-effect-underline stretched-link fs-sm fw-semibold text-white text-decoration-none" href="add-contractor-location.html">Business location</a>
+              </div>
+              <hr class="w-100 text-white opacity-25 my-0 mx-2">
+              <div class="position-relative d-flex align-items-center gap-2 gap-sm-3 text-nowrap">
+                <div class="d-flex align-items-center justify-content-center bg-white rounded-circle flex-shrink-0" style="width: 44px; height: 44px">
+                  <i class="fi-check-circle fs-lg text-info"></i>
+                </div>
+                <a class="hover-effect-underline stretched-link fs-sm fw-semibold text-white text-decoration-none" href="add-contractor-services.html">Choose services</a>
+              </div>
+              <hr class="w-100 text-white opacity-25 my-0 mx-2">
+              <div class="position-relative d-flex align-items-center gap-2 gap-sm-3 text-nowrap">
+                <div class="d-flex align-items-center justify-content-center bg-white rounded-circle flex-shrink-0" style="width: 44px; height: 44px">
+                  <i class="fi-check-circle fs-lg text-info"></i>
+                </div>
+                <a class="hover-effect-underline stretched-link fs-sm fw-semibold text-white text-decoration-none" href="add-contractor-profile.html">Profile details</a>
+              </div>
+              <hr class="w-100 text-white opacity-25 my-0 mx-2">
+              <div class="d-flex align-items-center gap-2 gap-sm-3 text-nowrap">
+                <div class="d-flex align-items-center justify-content-center bg-white rounded-circle flex-shrink-0" style="width: 44px; height: 44px">
+                  <i class="fi-clock fs-lg text-info"></i>
+                </div>
+                <div class="fs-sm fw-semibold text-white">Price and hours</div>
+              </div>
+              <hr class="w-100 text-white opacity-25 my-0 mx-2">
+              <div class="d-flex align-items-center gap-2 gap-sm-3 text-nowrap">
+                <div class="d-flex align-items-center justify-content-center border border-white rounded-circle flex-shrink-0" style="width: 44px; height: 44px">
+                  <i class="fi-grid fs-lg text-white"></i>
+                </div>
+                <div class="fs-sm fw-semibold text-white">Create first project</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Price and hours page content -->
+      <div class="container py-5 mb-xxl-3">
+        <div class="row pt-md-1 pt-lg-2 pt-xl-3 pb-2 pb-sm-3 pb-md-4 pb-lg-5">
+
+          <!-- Inputs -->
+          <div class="col-lg-7">
+
+            <!-- Price -->
+            <h1 class="h3 pb-sm-1 pb-md-2">Add price</h1>
+            <label for="price" class="form-label">Price <span class="text-danger">*</span></label>
+            <div class="d-flex gap-2" style="max-width: 430px">
+              <div class="position-relative">
+                <i class="fi-dollar-sign fs-lg position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                <input type="number" class="form-control form-control-lg form-icon-start" id="price" min="5" placeholder="Set a fair price" required>
+              </div>
+              <div style="width: 160px">
+                <select class="form-select form-select-lg" data-select='{
+                  "classNames": {
+                    "containerInner": ["form-select", "form-select-lg"]
+                  }
+                }' aria-label="Select per period">
+                  <option value="">Per period</option>
+                  <option value="hour">per hour</option>
+                  <option value="day">per day</option>
+                  <option value="week">per week</option>
+                  <option value="month">per month</option>
+                </select>
+              </div>
+            </div>
+            <!-- Working hours -->
+            <div class="pt-5">
+              <h2 class="h3 pb-sm-2 pb-lg-3">Add working hours</h2>
+              <div class="vstack gap-3">
+
+                <!-- Monday -->
+                <div class="d-flex align-items-center gap-3 gap-sm-5">
+                  <div class="form-check form-switch w-100 m-0" data-bs-toggle="collapse" data-bs-target="#mondayHours" aria-controls="mondayHours" style="max-width: 132px">
+                    <input type="checkbox" class="form-check-input" role="switch" id="monday">
+                    <label for="monday" class="form-check-label w-100 fw-medium">Monday</label>
+                  </div>
+                  <div class="position-relative d-flex align-items-center w-100" style="max-width: 238px; height: 40px">
+                    <div class="position-absolute top-0 start-0 w-100 h-100">
+                      <div class="collapse bg-body transition-none show" id="mondayHours">
+                        <div class="d-flex align-items-center gap-2 gap-sm-3">
+                          <input type="text" class="form-control" data-input-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm">
+                          <div class="fs-sm">to</div>
+                          <input type="text" class="form-control" data-input-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fs-sm">Closed</div>
+                  </div>
+                </div>
+
+                <!-- Tuesday -->
+                <div class="d-flex align-items-center gap-3 gap-sm-5">
+                  <div class="form-check form-switch w-100 m-0" data-bs-toggle="collapse" data-bs-target="#tuesdayHours" aria-controls="tuesdayHours" style="max-width: 132px">
+                    <input type="checkbox" class="form-check-input" role="switch" id="tuesday">
+                    <label for="tuesday" class="form-check-label w-100 fw-medium">Tuesday</label>
+                  </div>
+                  <div class="position-relative d-flex align-items-center w-100" style="max-width: 238px; height: 40px">
+                    <div class="position-absolute top-0 start-0 w-100 h-100">
+                      <div class="collapse bg-body transition-none show" id="tuesdayHours">
+                        <div class="d-flex align-items-center gap-2 gap-sm-3">
+                          <input type="text" class="form-control" data-input-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm">
+                          <div class="fs-sm">to</div>
+                          <input type="text" class="form-control" data-input-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fs-sm">Closed</div>
+                  </div>
+                </div>
+
+                <!-- Wednesday -->
+                <div class="d-flex align-items-center gap-3 gap-sm-5">
+                  <div class="form-check form-switch w-100 m-0" data-bs-toggle="collapse" data-bs-target="#wednesdayHours" aria-controls="wednesdayHours" style="max-width: 132px">
+                    <input type="checkbox" class="form-check-input" role="switch" id="wednesday">
+                    <label for="wednesday" class="form-check-label w-100 fw-medium">Wednesday</label>
+                  </div>
+                  <div class="position-relative d-flex align-items-center w-100" style="max-width: 238px; height: 40px">
+                    <div class="position-absolute top-0 start-0 w-100 h-100">
+                      <div class="collapse bg-body transition-none show" id="wednesdayHours">
+                        <div class="d-flex align-items-center gap-2 gap-sm-3">
+                          <input type="text" class="form-control" data-input-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm">
+                          <div class="fs-sm">to</div>
+                          <input type="text" class="form-control" data-input-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fs-sm">Closed</div>
+                  </div>
+                </div>
+
+                <!-- Thursday -->
+                <div class="d-flex align-items-center gap-3 gap-sm-5">
+                  <div class="form-check form-switch w-100 m-0" data-bs-toggle="collapse" data-bs-target="#thursdayHours" aria-controls="thursdayHours" style="max-width: 132px">
+                    <input type="checkbox" class="form-check-input" role="switch" id="thursday" checked>
+                    <label for="thursday" class="form-check-label w-100 fw-medium">Thursday</label>
+                  </div>
+                  <div class="position-relative d-flex align-items-center w-100" style="max-width: 238px; height: 40px">
+                    <div class="position-absolute top-0 start-0 w-100 h-100">
+                      <div class="collapse bg-body transition-none show" id="thursdayHours">
+                        <div class="d-flex align-items-center gap-2 gap-sm-3">
+                          <input type="text" class="form-control" data-input-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm" value="11:00">
+                          <div class="fs-sm">to</div>
+                          <input type="text" class="form-control" data-input-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm" value="16:00">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fs-sm">Closed</div>
+                  </div>
+                </div>
+
+                <!-- Friday -->
+                <div class="d-flex align-items-center gap-3 gap-sm-5">
+                  <div class="form-check form-switch w-100 m-0" data-bs-toggle="collapse" data-bs-target="#fridayHours" aria-controls="fridayHours" style="max-width: 132px">
+                    <input type="checkbox" class="form-check-input" role="switch" id="friday" checked>
+                    <label for="friday" class="form-check-label w-100 fw-medium">Friday</label>
+                  </div>
+                  <div class="position-relative d-flex align-items-center w-100" style="max-width: 238px; height: 40px">
+                    <div class="position-absolute top-0 start-0 w-100 h-100">
+                      <div class="collapse bg-body transition-none show" id="fridayHours">
+                        <div class="d-flex align-items-center gap-2 gap-sm-3">
+                          <input type="text" class="form-control" data-input-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm" value="11:00">
+                          <div class="fs-sm">to</div>
+                          <input type="text" class="form-control" data-input-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm" value="16:00">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fs-sm">Closed</div>
+                  </div>
+                </div>
+
+                <!-- Saturday -->
+                <div class="d-flex align-items-center gap-3 gap-sm-5">
+                  <div class="form-check form-switch w-100 m-0" data-bs-toggle="collapse" data-bs-target="#saturdayHours" aria-controls="saturdayHours" style="max-width: 132px">
+                    <input type="checkbox" class="form-check-input" role="switch" id="saturday">
+                    <label for="saturday" class="form-check-label w-100 fw-medium">Saturday</label>
+                  </div>
+                  <div class="position-relative d-flex align-items-center w-100" style="max-width: 238px; height: 40px">
+                    <div class="position-absolute top-0 start-0 w-100 h-100">
+                      <div class="collapse bg-body transition-none" id="saturdayHours">
+                        <div class="d-flex align-items-center gap-2 gap-sm-3">
+                          <input type="text" class="form-control" data-input-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm">
+                          <div class="fs-sm">to</div>
+                          <input type="text" class="form-control" data-input-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fs-sm">Closed</div>
+                  </div>
+                </div>
+
+                <!-- Sunday -->
+                <div class="d-flex align-items-center gap-3 gap-sm-5">
+                  <div class="form-check form-switch w-100 m-0" data-bs-toggle="collapse" data-bs-target="#sundayHours" aria-controls="sundayHours" style="max-width: 132px">
+                    <input type="checkbox" class="form-check-input" role="switch" id="sunday">
+                    <label for="sunday" class="form-check-label w-100 fw-medium">Sunday</label>
+                  </div>
+                  <div class="position-relative d-flex align-items-center w-100" style="max-width: 238px; height: 40px">
+                    <div class="position-absolute top-0 start-0 w-100 h-100">
+                      <div class="collapse bg-body transition-none" id="sundayHours">
+                        <div class="d-flex align-items-center gap-2 gap-sm-3">
+                          <input type="text" class="form-control" data-input-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm">
+                          <div class="fs-sm">to</div>
+                          <input type="text" class="form-control" data-input-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fs-sm">Closed</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Next step button -->
+            <div class="pt-5 d-flex flex-wrap gap-3 align-items-center">
+              <button type="button" class="btn btn-lg btn-outline-secondary">Save draft</button>
+              <a class="btn btn-lg btn-dark" href="add-contractor-project.html">
+                Go to first project
+                <i class="fi-chevron-right fs-lg ms-1 me-n2"></i>
+              </a>
+            </div>
+          </div>
+
+
+          <!-- Illustration -->
+          <div class="col-lg-5 d-none d-lg-block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="526" viewBox="0 0 526 526" fill="none"><path d="M294.425 351.931s-6.228-1.339-4.487-5.759c.915-2.3 7.702-3.595 7.702-3.595s-.312-1.674 2.277-2.902 8.037-2.031 8.037-2.031l52.62 1.183c8.349 0 32.371-16.186 45.208-18.775 7.791-1.563 22.972 1.428 34.514 3.549a196.6 196.6 0 0 0 14.042 2.009s-3.572 8.194-4.844 17.146-.201 18.686-.201 18.686-12.324-3.483-21.03-2.612c-20.472 2.009-51.035 9.488-70.346 9.488-10.403 0-22.414-3.371-33.978-5.76-10.27-2.121-20.338-3.125-26.031-5.358-4.889-1.942-3.483-5.269-3.483-5.269z"/><path class="text-info" d="M283.934 286.832c0-35.764 28.933-64.742 64.63-64.742s64.63 28.978 64.63 64.742c0 12.435-3.505 24.044-9.555 33.889 0 0-28.263 8.796-42.127 16.231s-13.328 13.506-13.328 13.506-14.02-.335-18.351-1.652c-26.566-8.059-45.899-32.751-45.899-61.974z" fill="currentColor"/><path d="M287.93 286.631c0-33.509 27.08-60.678 60.478-60.678s60.478 27.169 60.478 60.678c0 13.797-4.22 26.344-11.944 36.546 0 0-2.3.893-6.229 2.947-7.121 3.706-18.842 10.068-26.589 13.462-10.537 4.621-13.886 7.724-13.886 7.724l-1.83.023c-33.398 0-60.478-27.17-60.478-60.702z" fill="currentColor" style="color: var(--fn-body-bg)"/><g class="text-info" fill="currentColor"><path d="M352.672 356.776c-2.702 0-4.622-.781-5.247-3.059-1.987-7.233 8.461-11.608 17.682-15.471l.959-.402c2.679-1.116 6.519-3.214 10.984-5.625 11.029-5.983 24.759-13.395 33.622-13.507 7.813-.089 14.399 1.206 21.989 2.701 4.242.849 8.64 1.697 13.73 2.412 1.764.245 4.443.558 7.97.893a.9.9 0 0 1 .804.982.9.9 0 0 1-.982.803l-8.06-.915c-5.134-.714-9.555-1.585-13.819-2.433-7.501-1.474-13.975-2.746-21.632-2.657-8.395.112-22.482 7.724-32.773 13.306-4.488 2.433-8.372 4.532-11.14 5.693l-.96.401c-8.528 3.572-18.195 7.635-16.632 13.328.803 2.969 7.01 1.518 13.573-.022 2.076-.491 4.242-.982 6.363-1.384 5.134-.96 8.84-2.3 12.412-3.594 5.403-1.965 10.515-3.796 19.535-3.818.491 0 .892.402.892.893s-.401.893-.892.893c-8.707.022-13.44 1.741-18.91 3.728-3.639 1.317-7.389 2.679-12.68 3.661-2.076.38-4.22.893-6.273 1.362-3.997.96-7.702 1.831-10.515 1.831z"/><path d="M357.493 369.144c-7.59 0-14.667-1.585-22.124-3.237-3.148-.692-6.385-1.429-9.666-2.009l-5.738-1.005c-12.1-2.076-23.53-4.041-25.986-7.747-.491-.736-.647-1.562-.446-2.388 1.339-5.671 12.814-6.341 22.19-5.917 3.706.179 9.377.737 14.891 1.295 7.122.715 14.489 1.451 17.413 1.317.514-.044.916.358.938.849s-.357.915-.848.937c-3.059.157-10.18-.558-17.682-1.317l-14.779-1.295c-11.943-.558-19.556 1.139-20.36 4.532-.089.335-.022.648.201.983 2.032 3.058 14.109 5.134 24.781 6.965l5.737 1.005c3.304.602 6.564 1.317 9.734 2.031 8.416 1.875 16.386 3.639 25.026 3.081 13.015-.848 25.785-2.925 38.153-4.934 10.18-1.652 20.695-3.371 31.456-4.42 4.264-.424 13.64 1.518 18.842 2.701.491.112.781.603.67 1.072-.112.491-.603.781-1.072.67-8.684-1.987-15.337-2.947-18.262-2.657-10.693 1.049-21.186 2.746-31.344 4.398-12.39 2.031-25.204 4.108-38.331 4.956-1.139.089-2.278.134-3.394.134z"/><path d="M294.827 352.802h-.134c-.245-.044-5.96-.96-6.05-5.112-.022-1.094.402-2.076 1.273-2.925 4.554-4.331 21.097-3.482 26.075-3.103.491.045.871.469.826.96s-.469.871-.96.826c-9.398-.692-21.498-.424-24.691 2.612-.491.469-.737.982-.714 1.563.067 2.634 4.465 3.371 4.509 3.371.491.067.826.536.759 1.027-.089.469-.468.781-.893.781zM527.565 391c-.089 0-.156-.022-.246-.045-.268-.089-27.616-7.992-43.89-13.551-5.983-2.054-9.087-3.974-10.582-4.889-.402-.246-.804-.491-.938-.536-.357-.111-.737-.067-1.295-.022-.937.067-2.232.178-4.509-.246-2.702-.491-6.564-1.585-9.377-2.388l-3.349-.916c-7.166-1.518-6.139-18.775-4.598-27.683 1.719-10.001 5.536-19.802 9.577-19.199l2.902.38c3.304.424 8.327 1.071 11.564 1.763 2.389.514 3.617 1.072 4.51 1.474.536.245.915.402 1.317.469.156.022.759-.09 1.34-.179 1.763-.313 4.71-.826 9.421-.737 14.533.313 38.354 1.898 38.577 1.92.491.022.871.469.848.96s-.468.871-.96.848c-.245-.022-24.021-1.607-38.51-1.919-4.532-.09-7.367.401-9.064.714-.915.156-1.473.268-1.92.201-.669-.089-1.205-.335-1.808-.625-.826-.38-1.942-.893-4.13-1.362-3.17-.692-8.126-1.317-11.408-1.741l-2.947-.402c-1.786-.29-5.581 6.496-7.523 17.726-2.054 11.832-1.407 24.624 3.214 25.606.648.134 1.898.491 3.483.938 2.791.781 6.586 1.875 9.22 2.344 2.032.38 3.148.29 4.041.223.67-.044 1.25-.089 1.942.09.357.111.737.334 1.384.736 1.541.96 4.421 2.724 10.203 4.711 16.208 5.559 43.511 13.439 43.801 13.529a.92.92 0 0 1 .625 1.116c-.178.446-.536.692-.915.692zm-55.254-25.249c-.447 0-.848-.335-.893-.804-1.808-16.119 1.741-27.46 5.023-34.112.223-.447.759-.625 1.205-.402s.626.759.402 1.205c-3.192 6.452-6.608 17.414-4.844 33.108a.92.92 0 0 1-.804 1.005h-.089z"/><path d="M297.596 343.76c-.491 0-.893-.379-.893-.87-.067-3.327 3.884-5.358 11.765-6.073.491-.044.938.313.982.827a.9.9 0 0 1-.826.982c-6.585.58-10.18 2.098-10.135 4.242.022.468-.38.892-.893.892zm50.946 4.51c-33.867 0-61.416-27.616-61.416-61.572s27.549-61.572 61.416-61.572 61.415 27.616 61.415 61.572c0 13.529-4.286 26.388-12.435 37.149-.29.402-.87.469-1.272.178s-.469-.87-.179-1.272c7.881-10.448 12.056-22.928 12.056-36.055 0-32.973-26.746-59.786-59.608-59.786s-59.607 26.813-59.607 59.786 26.745 59.786 59.607 59.786l1.563-.022c.491 0 .915.379.915.871a.88.88 0 0 1-.87.915c-.492.022-1.05.022-1.585.022z"/></g><g class="text-info" fill="currentColor"><path d="M348.542 290.963a4.28 4.28 0 0 1-4.264-4.265 4.28 4.28 0 0 1 4.264-4.264 4.28 4.28 0 0 1 4.264 4.264 4.28 4.28 0 0 1-4.264 4.265zm0-6.743c-1.361 0-2.455 1.117-2.455 2.456s1.094 2.456 2.455 2.456 2.456-1.116 2.456-2.456-1.094-2.456-2.456-2.456z"/><path d="M345.862 285.069c-.357 0-.692-.134-.937-.424l-1.786-2.054-21.812-24.937c-.469-.514-.402-1.317.112-1.786s1.317-.402 1.786.111l23.575 26.969a1.25 1.25 0 0 1-.112 1.786c-.245.223-.535.335-.826.335zm2.613 31.612c-.692 0-1.273-.559-1.273-1.273v-24.87a1.27 1.27 0 0 1 1.273-1.272c.714 0 1.272.558 1.272 1.272v24.87a1.29 1.29 0 0 1-1.272 1.273zm-.023 26.656c-.492 0-.893-.402-.893-.893v-3.729c0-.491.401-.893.893-.893s.893.402.893.893v3.729c0 .491-.402.893-.893.893zm.045-108.053c-.492 0-.893-.402-.893-.893v-3.728c0-.491.401-.893.893-.893s.893.402.893.893v3.728c.022.491-.38.893-.893.893zm-55.902 52.218c-.491 0-.893-.402-.893-.893s.402-.893.893-.893h3.728c.492 0 .893.402.893.893s-.401.893-.893.893h-3.728zm108.053-.067c-.491 0-.893-.402-.893-.893s.402-.893.893-.893h3.728c.491 0 .893.402.893.893s-.402.893-.893.893h-3.728zm-96.935-26.767c-.156 0-.312-.045-.468-.134l-3.193-1.898c-.424-.246-.558-.804-.312-1.228s.803-.558 1.227-.312l3.193 1.897c.424.246.558.804.312 1.228-.156.29-.446.447-.759.447zm92.715 55.477c-.156 0-.312-.045-.469-.134l-3.192-1.92c-.424-.246-.558-.804-.313-1.228s.804-.558 1.228-.313l3.193 1.92c.424.246.558.804.312 1.228-.156.291-.446.447-.759.447zm-73.224-74.32a.86.86 0 0 1-.782-.468l-1.808-3.26c-.246-.424-.089-.982.357-1.228a.89.89 0 0 1 1.228.358l1.808 3.259c.246.424.09.982-.357 1.228-.134.067-.29.111-.446.111zm51.48 92.939c-.313 0-.625-.179-.782-.469l-.915-1.675c-.246-.424-.089-.982.357-1.227a.89.89 0 0 1 1.228.357l.915 1.674c.246.424.09.982-.357 1.228-.156.067-.312.112-.446.112zm-.513-92.715c-.157 0-.313-.045-.447-.112a.91.91 0 0 1-.335-1.228l1.831-3.237a.91.91 0 0 1 1.228-.335.91.91 0 0 1 .335 1.228l-1.831 3.237a.88.88 0 0 1-.781.447zm-53.223 94.054a1.02 1.02 0 0 1-.447-.111.91.91 0 0 1-.334-1.228l1.83-3.237a.91.91 0 0 1 1.228-.335.91.91 0 0 1 .335 1.228l-1.831 3.237a.93.93 0 0 1-.781.446zm72.579-74.944c-.313 0-.603-.156-.782-.447-.245-.424-.111-.982.313-1.228l3.215-1.875c.424-.245.982-.111 1.228.313s.111.982-.313 1.228l-3.215 1.875c-.134.089-.29.134-.446.134zm-93.297 54.472c-.313 0-.603-.156-.781-.446-.246-.424-.112-.982.312-1.228l3.215-1.875c.424-.246.982-.112 1.228.312s.111.983-.313 1.228l-3.215 1.875c-.156.09-.312.134-.446.134z"/></g><g fill-rule="evenodd"><path d="M-2.406 327.263l49.829-3.282 20.249-1.92s6.117 1.072 8.461 19.155c.737 5.737 1.474 13.618.514 18.73-.915 4.912-3.46 7.166-3.46 7.166l-9.51 1.987-65.903 20.383s1.518-8.35.536-16.989c-.893-7.814-4.286-15.561-4.309-22.95-.022-15.561 3.594-22.28 3.594-22.28z"/><path d="M76.802 360.884s.625-11.609-.759-20.472-4.822-15.002-4.822-15.002 8.037-.983 18.44-2.903c7.791-1.428 16.9-4.04 24.915-3.505 12.278.804 114.504 23.464 114.504 23.464s5.804 1.317 6.652 3.483c1.407 3.616-4.398 5.536-4.398 5.536s.715 3.55-2.768 4.711c-10.56 3.572-36.613 8.349-52.664 11.117-5.001.871-6.43.38-10.091.291-9.823-.201-18.619-2.166-26.544-2.88-.804-.067-32.461-5.738-45.23-6.653-2.076-.134-17.235 2.813-17.235 2.813z"/><path class="text-warning" d="M108.481 299.156c0-20.004 11.609-43.779 27.259-60.612 6.921-7.435 16.989-16.454 25.808-22.526 7.545-5.202 14.444-8.037 14.444-8.037l6.05-6.943s-1.228-3.885-2.411-10.002c-1.318-6.853-1.474-16.877-.469-17.837 2.679-2.567 23.24-1.116 27.571 1.161 3.527 1.853-.469 8.059-.469 8.059s2.166-.424 3.237-.915c3.014-1.362 6.117-2.389 7.747-1.518 1.518.826 7.925 6.273 7.367 8.997-.335 1.585-6.653 3.839-11.609 7.478-4.576 3.371-7.992 8.573-7.992 8.573l.112 8.015s6.451 15.315 15.091 31.187c7.211 13.239 16.208 25.942 21.678 39.114 4.063 9.778 5.849 19.936 5.849 24.244 0 8.461-1.876 19.267-8.64 26.344-8.506 8.907-22.28 13.104-22.28 13.104l-26.21 3.036-13.037.335s-1.384-3.661-4.688-5.76c-3.639-2.299-8.975-4.219-14.757-7.099-7.769-3.862-16.387-8.773-23.151-12.011-16.364-7.836-22.861-6.474-22.861-6.474s-3.639-7.925-3.639-19.913z" fill="currentColor"/></g><g class="text-info" fill="currentColor"><path d="M173.023 356.285c-2.836 0-6.519-.871-10.471-1.786-2.076-.491-4.197-.983-6.273-1.362-5.291-.982-9.041-2.344-12.68-3.661-5.47-1.987-10.203-3.684-18.91-3.729-.491 0-.893-.401-.893-.893s.402-.893.893-.893c9.02.023 14.132 1.876 19.535 3.818 3.572 1.295 7.255 2.634 12.412 3.594 2.121.402 4.264.893 6.363 1.384 6.563 1.541 12.747 2.992 13.573.023 1.563-5.715-8.104-9.756-16.632-13.328l-.96-.402c-2.768-1.161-6.652-3.259-11.14-5.693-10.291-5.559-24.378-13.194-32.773-13.305-7.657-.112-14.131 1.183-21.632 2.656-4.264.849-8.684 1.719-13.819 2.434-1.786.245-4.487.558-8.059.915-.491.045-.938-.313-.982-.804a.9.9 0 0 1 .804-.982l7.97-.893c5.09-.714 9.488-1.585 13.73-2.411 7.612-1.496 14.177-2.791 21.989-2.701 8.841.111 22.593 7.545 33.622 13.506 4.465 2.411 8.304 4.487 10.983 5.626l.96.402c9.221 3.862 19.669 8.238 17.682 15.471-.67 2.232-2.59 3.014-5.291 3.014z"/><path d="M168.201 368.653c-1.117 0-2.255-.045-3.394-.112-13.104-.848-25.919-2.947-38.331-4.956-10.158-1.652-20.651-3.371-31.322-4.398-2.88-.29-9.309.67-18.105 2.679-.491.112-.96-.201-1.072-.67-.112-.491.201-.96.67-1.071 6.363-1.452 14.757-3.104 18.686-2.724 10.739 1.049 21.276 2.768 31.456 4.42 12.346 2.01 25.138 4.086 38.153 4.934 8.64.558 16.588-1.205 25.026-3.081 3.17-.714 6.43-1.429 9.734-2.031l5.76-1.005c10.671-1.831 22.749-3.907 24.78-6.965.224-.335.291-.648.201-.983-.558-2.366-3.773-3.973-8.617-4.308-6.988-.491-16.364.692-24.669 1.719-7.457.937-14.511 1.808-19.021 1.429a.92.92 0 0 1-.826-.983c.045-.491.491-.848.982-.826 4.309.38 11.252-.491 18.619-1.406 8.372-1.05 17.86-2.233 25.026-1.742 5.738.402 9.489 2.478 10.248 5.693.2.826.044 1.652-.447 2.389-2.456 3.706-13.886 5.67-25.986 7.747l-5.738 1.004c-3.259.581-6.518 1.317-9.666 2.01-7.479 1.652-14.556 3.237-22.146 3.237z"/><path d="M230.866 352.311a.89.89 0 0 1-.893-.759c-.067-.491.268-.96.759-1.027.044 0 4.465-.737 4.509-3.371.045-2.166-3.549-3.259-6.586-3.773-.491-.089-.826-.558-.736-1.049a.91.91 0 0 1 1.049-.737c5.425.96 8.149 2.835 8.082 5.604-.09 4.13-5.805 5.067-6.05 5.112h-.134zM-1.87 390.531c-.38 0-.737-.245-.848-.625-.156-.469.112-.982.58-1.139.603-.2 59.898-19.578 74.074-22.57 4.599-.982 5.246-13.774 3.192-25.607-1.942-11.229-5.76-17.993-7.524-17.725-17.257 2.612-69.274 5.112-69.81 5.134-.491.023-.915-.357-.938-.848a.9.9 0 0 1 .848-.938c.513-.022 52.463-2.522 69.631-5.112 4.019-.603 7.836 9.198 9.577 19.199 1.54 8.908 2.567 26.165-4.599 27.683-14.087 2.969-73.292 22.325-73.895 22.526-.089 0-.201.022-.29.022zm55.253-25.249h-.112c-.491-.045-.848-.491-.804-1.005 1.764-15.694-1.674-26.678-4.844-33.108-.223-.446-.045-.982.402-1.205s.982-.045 1.206.402c3.282 6.653 6.831 17.994 5.023 34.112-.045.469-.424.804-.871.804zm132.611-14.221a229.74 229.74 0 0 1-8.618-.179c-.491-.022-.893-.446-.87-.938s.446-.893.937-.87c4.131.156 8.082.201 11.743.134h.023c.491 0 .893.402.893.893s-.38.915-.893.915c-1.05.045-2.121.045-3.215.045zm53.288-190.453c-.357 0-.67-.179-.893-.447-.201-.29-.246-.647-.134-.982l2.992-8.528c.201-.558.803-.871 1.384-.67.558.201.87.826.67 1.384l-2.479 7.099h8.729c.603 0 1.072.492 1.072 1.072 0 .603-.491 1.072-1.072 1.072h-10.269z"/><path d="M282.437 159.983c-.268 0-.536-.09-.737-.291-10.247-9.711-30.116-9.845-40.095-.245-.425.424-1.117.402-1.519-.022-.424-.425-.401-1.117.023-1.519 10.939-10.515 31.88-10.403 43.087.224.424.402.446 1.094.044 1.518-.223.223-.513.335-.803.335zm.848-15.293h-10.247a1.072 1.072 0 1 1 0-2.143h8.729l-2.478-7.099a1.087 1.087 0 1 1 2.054-.715l2.992 8.528a1.1 1.1 0 0 1-.134.983c-.246.29-.558.446-.916.446z"/><path d="M240.131 144.087c-.29 0-.58-.111-.781-.335-.402-.424-.402-1.116.044-1.518 11.207-10.626 32.148-10.738 43.087-.223.424.424.447 1.094.023 1.518-.402.424-1.094.447-1.541.022-9.979-9.599-29.848-9.488-40.095.246a1.13 1.13 0 0 1-.737.29z"/></g></svg>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <!-- Page footer -->
+    <footer class="footer bg-body border-top" data-bs-theme="dark">
+      <div class="container pb-md-2">
+        <div class="d-md-flex align-items-center justify-content-between border-bottom pt-5 pb-4 pb-md-5">
+          <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center gap-3 gap-sm-4 mb-4 mb-md-0">
+            <div class="d-flex align-items-center">
+              <i class="fi-mail fs-4 lh-0 text-body d-none d-sm-block me-2"></i>
+              <i class="fi-mail text-body d-sm-none me-2"></i>
+              <h6 class="ps-sm-1 mb-0">
+                <span class="h5 d-none d-sm-block mb-0">Subscribe to our newsletter</span>
+                <span class="d-sm-none">Subscribe to our newsletter</span>
+              </h6>
+            </div>
+            <button type="button" class="btn btn-primary">Subscribe</button>
+          </div>
+          <div class="h5 d-none d-sm-block text-center mb-0">
+            <span class="text-body-secondary fw-normal me-3">Need help?</span>
+            <a class="text-white text-decoration-none hover-effect-underline" href="/contact">Contact us</a>
+          </div>
+          <div class="h6 d-sm-none text-center mb-0">
+            <span class="text-body-secondary fw-normal me-2">Need help?</span>
+            <a class="text-white text-decoration-none hover-effect-underline" href="/contact">Contact us</a>
+          </div>
+        </div>
+
+        <div class="accordion row pt-4 pt-sm-5 mt-3 mt-sm-0" id="footerLinks">
+          <div class="col-md-4 col-lg-5 mb-4 mb-sm-5 mb-md-0">
+            <a class="d-inline-flex align-items-center text-dark-emphasis text-decoration-none mb-3" href="/">
+              <span class="flex-shrink-0 text-primary rtl-flip me-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"/><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"/><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"/><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"/></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"/><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"/></svg>
+              </span>
+              <span class="fs-4 fw-semibold">Monaclick</span>
+            </a>
+            <p class="fs-sm text-body-secondary pt-md-1" style="max-width: 260px">Connecting you with reliable local contractors for all your service needs.</p>
+            <div class="d-flex gap-3 pt-2 pt-md-3">
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/about" aria-label="Follow us on Instagram">
+                <i class="fi-instagram fs-sm"></i>
+              </a>
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/about" aria-label="Follow us on Facebook">
+                <i class="fi-facebook fs-sm"></i>
+              </a>
+              <a class="btn btn-icon btn-sm btn-secondary rounded-circle" href="/blog" aria-label="Follow us on X (Twitter)">
+                <i class="fi-x fs-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-8 col-md-5 col-lg-4">
+            <div class="accordion-item border-0">
+              <h6 class="accordion-header" id="categoryLinksHeading">
+                <span class="h5 d-none d-sm-block">Popular categories</span>
+                <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#categoryLinks" aria-expanded="false" aria-controls="categoryLinks">Popular categories</button>
+              </h6>
+              <div class="accordion-collapse collapse d-sm-block" id="categoryLinks" aria-labelledby="categoryLinksHeading" data-bs-parent="#footerLinks">
+                <div class="row row-cols-2">
+                  <div class="col">
+                    <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+<li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/listings/contractors">Contractors</a></li>
+</ul>
+                  </div>
+                  <div class="col">
+                    <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+<li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/account/profile">My profile</a></li>
+                      <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/admin">Admin</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <hr class="d-sm-none my-0">
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-3 col-lg-2 offset-lg-1">
+            <div class="accordion-item border-0">
+              <h6 class="accordion-header" id="companyLinksHeading">
+                <span class="h5 d-none d-sm-block">Company</span>
+                <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#companyLinks" aria-expanded="false" aria-controls="companyLinks">Company</button>
+              </h6>
+              <div class="accordion-collapse collapse d-sm-block" id="companyLinks" aria-labelledby="companyLinksHeading" data-bs-parent="#footerLinks">
+                <ul class="nav flex-column gap-2 pt-sm-1 pt-lg-2 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/about">About</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/blog">Press &amp; announcements</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/about">Careers at Monaclick</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/contact">Contact us</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/terms-and-conditions">Terms of use</a></li>
+                  <li class="pt-1"><a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="/terms-and-conditions">Privacy</a></li>
+                </ul>
+              </div>
+              <hr class="d-sm-none my-0">
+            </div>
+          </div>
+        </div>
+
+        <div class="d-md-flex gap-4 pt-4 pt-sm-5">
+          <h6 class="mt-1 mb-md-0">
+            <span class="h5 text-nowrap d-none d-sm-block mb-0">Top cities</span>
+            <span class="text-nowrap d-sm-none">Top cities</span>
+          </h6>
+          <ul class="nav nav-pills gap-2 gap-md-3">
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=new+york">New York</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=chicago">Chicago</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=indianapolis">Indianapolis</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=boston">Boston</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=atlanta">Atlanta</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=cincinnati">Cincinnati</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=los+angeles">Los Angeles</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=dallas">Dallas</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=pittsburgh">Pittsburgh</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="/listings/contractors?q=tampa">Tampa</a></li>
+          </ul>
+        </div>
+
+        <div class="d-md-flex align-items-center py-4 pt-sm-5 mt-3 mt-sm-0">
+          <div class="d-flex gap-2 gap-sm-3 justify-content-center ms-md-auto mb-4 mb-md-0 order-md-2">
+            <div><img src="/finder/assets/img/payment-methods/visa-dark-mode.svg" alt="Visa"></div>
+            <div><img src="/finder/assets/img/payment-methods/mastercard.svg" alt="Mastercard"></div>
+            <div><img src="/finder/assets/img/payment-methods/paypal-dark-mode.svg" alt="PayPal"></div>
+            <div><img src="/finder/assets/img/payment-methods/google-pay-dark-mode.svg" alt="Google Pay"></div>
+            <div><img src="/finder/assets/img/payment-methods/apple-pay-dark-mode.svg" alt="Apple Pay"></div>
+          </div>
+          <p class="text-body-secondary fs-sm text-center text-md-start mb-0 me-md-4 order-md-1">&copy; All rights reserved. Developed by <span class="text-body fw-medium">US Logo and Web</span></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <div class="floating-buttons position-fixed top-50 end-0 z-sticky me-3 me-xl-4 pb-4">
+      <a class="btn-scroll-top btn btn-sm bg-body border-0 rounded-pill shadow animate-slide-end" href="#top">
+        Top
+        <i class="fi-arrow-right fs-base ms-1 me-n1 animate-target"></i>
+        <span class="position-absolute top-0 start-0 w-100 h-100 border rounded-pill z-0"></span>
+        <svg class="position-absolute top-0 start-0 w-100 h-100 z-1" viewBox="0 0 62 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x=".75" y=".75" width="60.5" height="30.5" rx="15.25" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+        </svg>
+      </a>
+      <a class="btn btn-sm btn-outline-secondary text-uppercase bg-body rounded-pill shadow animate-rotate ms-2 me-n5" href="#customizer" style="font-size: .625rem; letter-spacing: .05rem;" data-bs-toggle="offcanvas" role="button" aria-controls="customizer">
+        Customize<i class="fi-settings fs-base ms-1 me-n2 animate-target"></i>
+      </a>
+    </div>
+
+
+    <!-- Vendor scripts -->
+    <script src="/finder/assets/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="/finder/assets/vendor/cleave.js/dist/cleave.min.js"></script>
+    <script src="/finder/assets/js/monaclick-global-footer.js?v=20260314-1"></script>
+
+    <script src="/finder/assets/js/monaclick-contractor-wizard.js?v=20260408-1"></script>
+
+    <script src="/finder/assets/js/theme.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
